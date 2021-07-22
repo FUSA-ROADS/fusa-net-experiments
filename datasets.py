@@ -7,10 +7,10 @@ import torch
 from torch.utils.data import Dataset, ConcatDataset, DataLoader
 import torchaudio
 
-datasets_path = "."
+datasets_path = "/datasets"
 
 def get_label_transforms(dataset_name):
-    a = pd.read_json(join(datasets_path, "fusa_taxonomy.json")).T[dataset_name].to_dict()
+    a = pd.read_json("fusa_taxonomy.json").T[dataset_name].to_dict()
     transforms = {}
     for key, values in a.items():
         for value in values:
