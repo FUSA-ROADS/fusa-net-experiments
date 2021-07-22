@@ -13,5 +13,5 @@ FUSA_folder="/home/shared/FUSA"
 pwd
 date
 mkdir -p logs
-srun --container-name=pytorch --container-mounts=$FUSA_folder/datasets:/datasets python datasets.py
+srun --container-name=pytorch-21.06 --container-image=$FUSA_folder/containers/pytorch-21.06 --container-mounts=$FUSA_folder/datasets:/datasets python datasets.py
 mv slurm-*.out logs
