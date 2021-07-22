@@ -20,9 +20,9 @@ def get_label_transforms(dataset_name):
 class ESC(Dataset):
 
     def __init__(self):
-        df = pd.read_csv(join(datasets_path, "ESC-50-master/meta/esc50.csv"))
+        df = pd.read_csv(join(datasets_path, "ESC-50/meta/esc50.csv"))
         transforms = get_label_transforms("ESC")
-        self.audio_path = join(datasets_path, "ESC-50-master/audio")
+        self.audio_path = join(datasets_path, "ESC-50/audio")
         self.file_list = []
         self.labels = []
         self.categories = []
