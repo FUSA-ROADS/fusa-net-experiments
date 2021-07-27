@@ -41,6 +41,32 @@ class ESC(Dataset):
     def __len__(self) -> int:        
         return len(self.file_list)
 
+class UrbanSound8K(Dataset):
+    
+    def __init__(self):
+        df = pd.read_csv(join(datasets_path, "UrbanSound8K/metadata/UrbanSound8K.csv"))
+        transforms = get_label_transforms("UrbanSound")
+        self.audio_path = join(datasets_path, "UrbanSound8K/audio")
+        self.file_list = []
+        self.fold_list = []
+        self.labels = []
+        self.categories = []
+        for label in df["class"].unique():
+            if label in transforms:
+                self.categories += [transforms[label]]
+                mask = df["class"] == label
+                self.file_list += list(df["slice_file_name"].loc[mask])
+                self.fold_list += list(df["fold"].loc[mask])
+                self.labels += [transforms[label]]*sum(mask)
+        self.fold_list = ['fold' + str(fold) for fold in self.fold_list]
+
+    def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
+        waveform, sample_rate = torchaudio.load(
+            join(self.audio_path, self.fold_list[idx], self.file_list[idx]))
+        return (waveform, self.labels[idx])
+        
+    def __len__(self) -> int:        
+        return len(self.file_list)
 
 class FUSAv1(Dataset):
 

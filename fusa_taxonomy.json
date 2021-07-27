@@ -2,31 +2,37 @@
     "alerts/siren" :
     {
         "description" : "Sirenas de ambulancia, policía o bomberos",
-        "ESC" : ["siren"]
+        "ESC" : ["siren"],
+        "UrbanSound": ["siren"]
     },
     "alerts/alarms" :
     {
         "description" : "Alarmas de auto o casa",
-        "ESC" : []
+        "ESC" : [],
+        "UrbanSound": [""]
     },
     "alerts/horns" :
     {
         "description" : "Bocinas de auto, camión, etc",
-        "ESC" : ["car_horn"]
+        "ESC" : ["car_horn"],
+        "UrbanSound": ["car_horn"]
     },
     "animal/dog" :
     {
         "description" : "Ladridos de perro",
-        "ESC" : ["dog"]
+        "ESC" : ["dog"],
+        "UrbanSound": ["dog_bark"]
     },
     "animal/bird" :
     {
         "description" : "Graznidos y cantos de aves",
-        "ESC" : ["crow", "hen", "rooster", "chirping_birds"]
+        "ESC" : ["crow", "hen", "rooster", "chirping_birds"],
+        "UrbanSound": [""]
     },
     "animal/others" :
     {
         "description" : "Sonidos de otros animales e insectos",
-        "ESC" : ["cat", "sheep", "crickets", "insects"]
+        "ESC" : ["cat", "sheep", "crickets", "insects"],
+        "UrbanSound": [""]
     }
 }
