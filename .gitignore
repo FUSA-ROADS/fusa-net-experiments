@@ -1,5 +1,6 @@
 .vscode
 ESC-50
+logs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
