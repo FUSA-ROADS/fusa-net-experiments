@@ -6,6 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 import torch
 from torch.utils.data import Dataset, ConcatDataset, DataLoader
 import torchaudio
+from transforms import StereoToMono
 
 datasets_path = "/datasets"
 
@@ -21,17 +22,17 @@ class ESC(Dataset):
 
     def __init__(self):
         df = pd.read_csv(join(datasets_path, "ESC-50/meta/esc50.csv"))
-        transforms = get_label_transforms("ESC")
+        label_transforms = get_label_transforms("ESC")
         self.audio_path = join(datasets_path, "ESC-50/audio")
         self.file_list = []
         self.labels = []
         self.categories = []
         for label in df["category"].unique():
-            if label in transforms:
-                self.categories += [transforms[label]]
+            if label in label_transforms:
+                self.categories += [label_transforms[label]]
                 mask = df.category == label
                 self.file_list += list(df["filename"].loc[mask])
-                self.labels += [transforms[label]]*sum(mask)
+                self.labels += [label_transforms[label]]*sum(mask)
 
 
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
@@ -45,19 +46,19 @@ class UrbanSound8K(Dataset):
     
     def __init__(self):
         df = pd.read_csv(join(datasets_path, "UrbanSound8K/metadata/UrbanSound8K.csv"))
-        transforms = get_label_transforms("UrbanSound")
+        label_transforms = get_label_transforms("UrbanSound")
         self.audio_path = join(datasets_path, "UrbanSound8K/audio")
         self.file_list = []
         self.fold_list = []
         self.labels = []
         self.categories = []
         for label in df["class"].unique():
-            if label in transforms:
-                self.categories += [transforms[label]]
+            if label in label_transforms:
+                self.categories += [label_transforms[label]]
                 mask = df["class"] == label
                 self.file_list += list(df["slice_file_name"].loc[mask])
                 self.fold_list += list(df["fold"].loc[mask])
-                self.labels += [transforms[label]]*sum(mask)
+                self.labels += [label_transforms[label]]*sum(mask)
         self.fold_list = ['fold' + str(fold) for fold in self.fold_list]
 
     def __getitem__(self, idx: int) -> Tuple[torch.Tensor, int]:
@@ -94,7 +95,7 @@ class FUSAv1(Dataset):
     
 if __name__ == '__main__':
 
-    dataset = FUSAv1()
+    dataset = FUSAv1(transform=StereoToMono())
     loader = DataLoader(dataset, shuffle=True, batch_size=5)
     for x, y in loader:
         break
