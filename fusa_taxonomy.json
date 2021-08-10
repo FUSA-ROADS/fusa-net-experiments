@@ -20,7 +20,7 @@
     "humans/others" :
     {
         "description" : "Otros sonidos producidos por humanos",
-        "ESC" : ["crying baby", "sneezing", "clapping", "breathing", "coughing", "footsteps", "laughing", "brushing teeth", "snoring", "drinking sipping"],
+        "ESC" : ["crying_baby", "sneezing", "clapping", "breathing", "coughing", "footsteps", "laughing", "brushing_teeth", "snoring", "drinking_sipping"],
         "UrbanSound": ["children_playing"]
     },
     "Music/music" :
@@ -38,7 +38,7 @@
     "animal/bird" :
     {
         "description" : "Graznidos y cantos de aves",
-        "ESC" : ["crow", "hen", "rooster", "chirping birds"],
+        "ESC" : ["crow", "hen", "rooster", "chirping_birds"],
         "UrbanSound": [""]
     },
     "animal/others" :
@@ -68,7 +68,7 @@
     "environmental/others" :
     {
         "description" : "Otros sonidos naturales",
-        "ESC" : ["crackling fire", "sea waves", "thunderstorm"],
+        "ESC" : ["crackling_fire", "sea_waves", "thunderstorm"],
         "UrbanSound": [""]
     },
     "mechanical/impact" :
@@ -80,7 +80,7 @@
     "mechanical/cutting" :
     {
         "description" : "Motosierras y otros sonidos de corte",
-        "ESC" : ["chainsaw", "hand saw"],
+        "ESC" : ["chainsaw", "hand_saw"],
         "UrbanSound": [""]
     },
     "mechanical/explosives" :
@@ -146,13 +146,13 @@
     "alerts/horns" :
     {
         "description" : "Bocinas de autos, camiónes, etc",
-        "ESC" : ["car horn"],
+        "ESC" : ["car_horn"],
         "UrbanSound": ["car_horn"]
     },
     "alerts/bells" :
     {
         "description" : "Campanas de iglesias, etc",
-        "ESC" : ["church bells"],
+        "ESC" : ["church_bells"],
         "UrbanSound": [""]
     },
     "alerts/braking and skidding" :
@@ -164,7 +164,7 @@
     "alerts/others" :
     {
         "description" : "Alertas de otros tipos",
-        "ESC" : [""],
+        "ESC" : ["glass_breaking"],
         "UrbanSound": [""]
     }
 }
