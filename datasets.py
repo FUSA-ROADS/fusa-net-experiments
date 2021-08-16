@@ -108,7 +108,7 @@ class FUSAv1(Dataset):
         # TODO: Implemente overwrite features
         if self.return_logmel:
             logmel_path = splitext(file_path)[0]+"_logmel.pt"
-            if isfile(logmel_path):
+            if isfile(logmel_path) and not self.overwrite_features:
                 logmel = torch.load(logmel_path)
             else:
                 mel_params = self.kwargs['mel_transform']
