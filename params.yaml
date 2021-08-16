@@ -1,0 +1,10 @@
+sampling_frequency: 44100
+batch_size_train: 32
+learning_rate: 0.001
+
+mel_transform: 
+  n_mels: 64 # Number of mel coefficients
+  n_fft: 1024 # window size
+  hop_length: 512 # samples between windows
+  
+  
