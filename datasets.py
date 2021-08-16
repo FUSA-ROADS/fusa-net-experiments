@@ -83,7 +83,7 @@ class UrbanSound8K(ExternalDataset):
 
 class FUSAv1(Dataset):
 
-    def __init__(self, target_sample_rate: int=44100, overwrite_features: bool=False, waveform_transform=None, return_logmel=True):
+    def __init__(self, target_sample_rate: int=44100, overwrite_features: bool=False, waveform_transform=None, return_logmel=True, **kwargs):
         self.dataset = ConcatDataset([ESC(), UrbanSound8K()])
         self.categories = []
         for d in self.dataset.datasets:
@@ -94,6 +94,8 @@ class FUSAv1(Dataset):
         self.target_sample_rate = target_sample_rate
         self.overwrite_features = overwrite_features
         self.return_logmel = return_logmel
+        self.kwargs = kwargs        
+        
 
     def __getitem__(self, idx: int) -> Dict:
         file_path, label = self.dataset[idx]
@@ -109,7 +111,8 @@ class FUSAv1(Dataset):
             if isfile(logmel_path):
                 logmel = torch.load(logmel_path)
             else:
-                mel_transform = torchaudio.transforms.MelSpectrogram(sample_rate=self.target_sample_rate, n_fft=1024, hop_length=512, n_mels=64)
+                mel_params = self.kwargs['mel_transform']
+                mel_transform = torchaudio.transforms.MelSpectrogram(sample_rate=self.target_sample_rate, n_fft=mel_params['n_fft'], hop_length=mel_params['hop_length'], n_mels=mel_params['n_mels'])
                 logmel = mel_transform(waveform).log()
                 torch.save(logmel, logmel_path)
             sample['logmel'] = logmel
@@ -127,7 +130,9 @@ if __name__ == '__main__':
 
     from torch.utils.data import DataLoader
     from transforms import StereoToMono, Collate_and_transform
-    dataset = FUSAv1(waveform_transform=StereoToMono())
+    import yaml
+    params = yaml.safe_load(open("params.yaml"))
+    dataset = FUSAv1(target_sample_rate=params["sample_rate"], waveform_transform=StereoToMono(), **params)
     my_collate = Collate_and_transform(pad=True)
     loader = DataLoader(dataset, shuffle=True, batch_size=5, collate_fn=my_collate)
     for batch in loader:
