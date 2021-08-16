@@ -129,11 +129,11 @@ class FUSAv1(Dataset):
 if __name__ == '__main__':
 
     from torch.utils.data import DataLoader
-    from transforms import StereoToMono, Collate_and_transform
+    from transforms import StereoToMono, Collate_and_transform, RESIZER
     import yaml
     params = yaml.safe_load(open("params.yaml"))
-    dataset = FUSAv1(target_sample_rate=params["sample_rate"], waveform_transform=StereoToMono(), **params)
-    my_collate = Collate_and_transform(pad=True)
+    dataset = FUSAv1(target_sample_rate=params["sampling_frequency"], waveform_transform=StereoToMono(), **params)
+    my_collate = Collate_and_transform(resizer=RESIZER.PAD)
     loader = DataLoader(dataset, shuffle=True, batch_size=5, collate_fn=my_collate)
     for batch in loader:
         break
