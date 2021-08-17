@@ -8,7 +8,7 @@ from torch.utils.data import Dataset, ConcatDataset
 import torchaudio
 
 
-datasets_path = "."
+datasets_path = "./datasets"
 
 def get_label_transforms(dataset_name):
     a = pd.read_json("fusa_taxonomy.json").T[dataset_name].to_dict()
@@ -143,4 +143,5 @@ if __name__ == '__main__':
     import matplotlib.pyplot as plt
     fig, ax = plt.subplots(figsize=(8, 4))
     ax.imshow(batch['logmel'].detach().numpy()[0, 0])
+    
 
