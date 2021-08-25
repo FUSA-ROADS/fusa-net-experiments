@@ -1,5 +1,6 @@
 import sys 
 import yaml
+import numpy as np
 import torch
 from torch.utils.data import DataLoader, ConcatDataset, random_split
 import dvclive
@@ -7,7 +8,7 @@ import dvclive
 sys.path.append('..')
 from transforms import Collate_and_transform, RESIZER
 from datasets import FUSA_dataset, ESC
-"""
+
 if len(sys.argv) != 3:
     sys.stderr.write("Arguments error. Usage:\n")
     sys.stderr.write("\tpython train_esc.py data_path model_path\n")
@@ -18,11 +19,11 @@ model_path = sys.argv[2]
 """
 data_path = "../datasets"
 model_path = "model.pt"
-
+"""
 params = yaml.safe_load(open("../params.yaml"))
 print(params)
 dataset = FUSA_dataset(ConcatDataset([ESC(data_path)]), feature_params=params["features"])
-train_size = int(0.8*len(dataset))
+train_size = int(params["train"]["train_percent"]*len(dataset))
 valid_size = len(dataset) - train_size
 train_subset, valid_subset = random_split(dataset, (train_size, valid_size), generator=torch.Generator().manual_seed(params["train"]["random_seed"]))
 my_collate = Collate_and_transform(resizer=RESIZER.PAD)
@@ -33,6 +34,8 @@ from model import NaiveModel
 model = NaiveModel(n_classes=len(dataset.categories))
 criterion = torch.nn.CrossEntropyLoss(reduction='sum')
 optimizer = torch.optim.Adam(model.parameters(), lr=params['train']['learning_rate'])
+
+best_valid_loss = np.inf
 for epoch in range(params["train"]["nepochs"]):
     global_loss = 0.0
     model.train()
@@ -53,5 +56,7 @@ for epoch in range(params["train"]["nepochs"]):
             loss = criterion(y, batch['label'])
             global_loss += loss.item()            
     dvclive.log('valid/loss', global_loss/len(valid_subset))
-    dvclive.next_step()    
-    torch.save(model, model_path)
+    dvclive.next_step()
+
+    if global_loss < best_valid_loss: 
+        torch.save(model, model_path)
