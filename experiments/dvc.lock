@@ -4,11 +4,11 @@ stages:
     cmd: python train_esc.py ../datasets model.pt
     deps:
     - path: ../datasets.py
-      md5: 77aaa051b4eeab95e1417a7d82bde4bc
-      size: 5848
+      md5: b2020a74a58eecf25c22cb3f72527f71
+      size: 5770
     - path: ../features.py
-      md5: f98c9219c219f1bc91a85035a4d32a07
-      size: 1640
+      md5: 977d53647c8fd415c1a467dcda9db17a
+      size: 1753
     - path: ../transforms.py
       md5: b4f9c52c8cb21f01cf382713520b3bfc
       size: 2555
@@ -16,21 +16,23 @@ stages:
       md5: 162685631f3693b366a18c20ceb29fc2
       size: 806
     - path: train_esc.py
-      md5: 85d46cdfc05a5b7419b6d31ef77f5998
-      size: 2115
+      md5: e8c8a84442419568643f133b96f538d3
+      size: 2228
     params:
       ../params.yaml:
+        features.global_normalization: false
         features.mel_transform.n_mels: 64
+        features.mel_transform.normalized: false
         features.sampling_rate: 8000
         train.batch_size: 32
         train.learning_rate: 0.001
-        train.nepochs: 1
+        train.nepochs: 10
         train.random_seed: 1234
     outs:
     - path: model.pt
-      md5: e2280ab150cc32c5ea9fb3c9ce56bd53
+      md5: f157b5aed819e5142e74679991fb9bde
       size: 289615
     - path: training_metrics
-      md5: 482a9eaaabb7bc538f69af82bc9ec8f5.dir
-      size: 96
+      md5: b686fed12b08010c9d6d7b47a687cd16.dir
+      size: 771
       nfiles: 2
