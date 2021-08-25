@@ -1,5 +1,5 @@
 features:
-  sampling_rate: 44100
+  sampling_rate: 8000
   use_logmel: true
   overwrite: false
   number_of_channels: 1 # 1: mono, 2: stereo
@@ -11,7 +11,7 @@ features:
 
 train:
   random_seed: 1234
-  nepochs: 10
+  nepochs: 1
   learning_rate: 0.001
   batch_size: 32
 

@@ -1,0 +1,26 @@
+stages:
+  train_esc:
+    cmd: python train_esc.py ../datasets model.pt
+    deps:
+    - train_esc.py
+    - model.py  
+    - ../datasets.py
+    - ../transforms.py
+    - ../features.py
+    params:
+      - ../params.yaml:
+        - train:
+          - random_seed
+          - nepochs
+          - learning_rate
+          - batch_size
+        - features:
+          - sampling_rate
+          - mel_transform:
+            - n_mels
+    outs:
+    - model.pt
+    live:
+      training_metrics:
+        summary: true
+        html: true
