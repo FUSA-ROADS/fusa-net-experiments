@@ -1,17 +1,16 @@
-from os.path import join, isfile, splitext
+from os.path import join, isfile
 from typing import Dict, List, Tuple
 import warnings
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import torch
 from torch.utils.data import Dataset, ConcatDataset
-import torchaudio
 
+from features import get_waveform, LogMelTransform
 
-datasets_path = "./datasets"
-
-def get_label_transforms(dataset_name):
-    a = pd.read_json("fusa_taxonomy.json").T[dataset_name].to_dict()
+def get_label_transforms(datasets_path, dataset_name):
+    taxonomy_path = join(datasets_path, "..", "fusa_taxonomy.json")   
+    a = pd.read_json(taxonomy_path).T[dataset_name].to_dict()
     transforms = {}
     for key, values in a.items():
         for value in values:
@@ -28,10 +27,10 @@ class ExternalDataset(Dataset):
 
 class ESC(ExternalDataset):
 
-    def __init__(self):
+    def __init__(self, datasets_path):
         
         # TODO: Abstract parts of init
-        label_transforms = get_label_transforms("ESC")
+        label_transforms = get_label_transforms(datasets_path, "ESC")
         df = pd.read_csv(join(datasets_path, "ESC-50/meta/esc50.csv"))
         ESC_classes = df["category"].unique()
         # Verify that there are no typos in FUSA_taxonomy
@@ -59,9 +58,9 @@ class ESC(ExternalDataset):
 
 class UrbanSound8K(ExternalDataset):
     
-    def __init__(self):
+    def __init__(self, datasets_path):
         df = pd.read_csv(join(datasets_path, "UrbanSound8K/metadata/UrbanSound8K.csv"))
-        label_transforms = get_label_transforms("UrbanSound")
+        label_transforms = get_label_transforms(datasets_path,"UrbanSound")
         self.audio_path = join(datasets_path, "UrbanSound8K/audio")
         self.file_list = []
         self.fold_list = []
@@ -80,50 +79,46 @@ class UrbanSound8K(ExternalDataset):
     def _file_path(self, idx: int) -> str:
         return join(self.audio_path, self.fold_list[idx], self.file_list[idx])
 
+class FUSA_dataset(Dataset):
 
-class FUSAv1(Dataset):
-
-    def __init__(self, target_sample_rate: int=44100, overwrite_features: bool=False, waveform_transform=None, return_logmel=True, **kwargs):
-        self.dataset = ConcatDataset([ESC(), UrbanSound8K()])
+    def __init__(self, dataset: ConcatDataset, feature_params: Dict, waveform_transform=None):
+        #self.dataset = ConcatDataset([ESC(datasets_path), UrbanSound8K(datasets_path)])
+        self.dataset = dataset
         self.categories = []
         for d in self.dataset.datasets:
             self.categories += d.categories
         self.categories = sorted(list(set(self.categories)))
         self.le = LabelEncoder().fit(self.categories)
+
         self.waveform_transform = waveform_transform
-        self.target_sample_rate = target_sample_rate
-        self.overwrite_features = overwrite_features
-        self.return_logmel = return_logmel
-        self.kwargs = kwargs        
-        
+        self.params = feature_params
+        self.return_logmel = feature_params["use_logmel"]  
+        # Precompute logmel features if needed      
+        if feature_params["use_logmel"]:
+            for file_path, label in self.dataset:
+                LogMelTransform(file_path, feature_params["mel_transform"], feature_params["overwrite"])                
 
     def __getitem__(self, idx: int) -> Dict:
         file_path, label = self.dataset[idx]
-        waveform, sample_rate = torchaudio.load(file_path)
-        # Force resample
-        waveform = torchaudio.transforms.Resample(sample_rate, self.target_sample_rate)(waveform)
+        waveform = get_waveform(file_path, self.params)
         if self.waveform_transform is not None:
             waveform = self.waveform_transform(waveform)
         sample = {'waveform': waveform, 'label': torch.from_numpy(self.le.transform([label]))}
-        # TODO: Implemente overwrite features
         if self.return_logmel:
-            logmel_path = splitext(file_path)[0]+"_logmel.pt"
-            if isfile(logmel_path) and not self.overwrite_features:
-                logmel = torch.load(logmel_path)
-            else:
-                mel_params = self.kwargs['mel_transform']
-                mel_transform = torchaudio.transforms.MelSpectrogram(sample_rate=self.target_sample_rate, n_fft=mel_params['n_fft'], hop_length=mel_params['hop_length'], n_mels=mel_params['n_mels'])
-                logmel = mel_transform(waveform).log()
-                torch.save(logmel, logmel_path)
-            sample['logmel'] = logmel
-                
+            sample['logmel'] = LogMelTransform(file_path)()              
         return sample
 
     def __len__(self) -> int:
-        return self.dataset.__len__()
+        return len(self.dataset)
 
     def label_int2string(self, label_batch: torch.Tensor) -> List[int]:
         return list(self.le.inverse_transform(label_batch.numpy().ravel()))
+
+class FUSAv1(FUSA_dataset):
+    def __init__(self, datasets_path, feature_params, waveform_transform=None):
+        dataset = ConcatDataset([ESC(datasets_path), UrbanSound8K(datasets_path)])
+        super().__init__(dataset, feature_params, waveform_transform)
+
         
     
 if __name__ == '__main__':
@@ -132,7 +127,7 @@ if __name__ == '__main__':
     from transforms import StereoToMono, Collate_and_transform, RESIZER
     import yaml
     params = yaml.safe_load(open("params.yaml"))
-    dataset = FUSAv1(target_sample_rate=params["sampling_frequency"], waveform_transform=StereoToMono(), **params)
+    dataset = FUSAv1(datasets_path="./datasets", feature_params=params["features"])
     my_collate = Collate_and_transform(resizer=RESIZER.PAD)
     loader = DataLoader(dataset, shuffle=True, batch_size=5, collate_fn=my_collate)
     for batch in loader:
