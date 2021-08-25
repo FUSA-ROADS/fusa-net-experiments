@@ -27,8 +27,7 @@ valid_size = len(dataset) - train_size
 train_subset, valid_subset = random_split(dataset, (train_size, valid_size), generator=torch.Generator().manual_seed(params["train"]["random_seed"]))
 my_collate = Collate_and_transform(resizer=RESIZER.PAD)
 train_loader = DataLoader(train_subset, shuffle=True, batch_size=params["train"]["batch_size"], collate_fn=my_collate)
-valid_loader = DataLoader(train_subset, batch_size=256, collate_fn=my_collate)
-
+valid_loader = DataLoader(valid_subset, batch_size=256, collate_fn=my_collate)
 
 from model import NaiveModel
 model = NaiveModel(n_classes=len(dataset.categories))
