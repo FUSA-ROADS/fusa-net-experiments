@@ -27,7 +27,8 @@ class LogMelTransform:
 
     def __init__(self, waveform_path: str, params: Dict={}, eps: float=1e-3):
         self.logmel_path = splitext(waveform_path)[0]+"_logmel.pt"
-        if not isfile(self.logmel_path) or params["overwrite"]:
+        overwrite = params["overwrite"] if "overwrite" in params else False
+        if not isfile(self.logmel_path) or overwrite:
             waveform =  get_waveform(waveform_path, params)
             sample_rate = params["sampling_rate"]
             mel_params = params["mel_transform"]
