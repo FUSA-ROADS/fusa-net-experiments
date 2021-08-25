@@ -5,7 +5,7 @@ import torch
 from torch.utils.data import DataLoader, ConcatDataset, random_split
 import dvclive
 
-sys.path.append('..')
+sys.path.append('../..')
 from transforms import Collate_and_transform, RESIZER
 from datasets import FUSA_dataset, ESC
 
@@ -20,7 +20,7 @@ model_path = sys.argv[2]
 data_path = "../datasets"
 model_path = "model.pt"
 """
-params = yaml.safe_load(open("../params.yaml"))
+params = yaml.safe_load(open("../../params.yaml"))
 print(params)
 dataset = FUSA_dataset(ConcatDataset([ESC(data_path)]), feature_params=params["features"])
 train_size = int(params["train"]["train_percent"]*len(dataset))
