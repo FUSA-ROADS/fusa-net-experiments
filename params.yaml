@@ -1,13 +1,15 @@
 features:
   sampling_rate: 8000
   use_logmel: true
-  overwrite: false
+  overwrite: true
   number_of_channels: 1 # 1: mono, 2: stereo
   combine_channels: 'mean' # 'left', 'right', 'mean'
+  global_normalization: false
   mel_transform:
     n_mels: 64 # Number of mel coefficients
     n_fft: 1024 # window size
     hop_length: 512 # samples between windows
+    normalized:  false # normalize by STFT magnitude
 
 train:
   random_seed: 1234

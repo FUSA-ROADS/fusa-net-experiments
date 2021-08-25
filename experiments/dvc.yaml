@@ -11,11 +11,12 @@ stages:
       - ../params.yaml:
         - train.random_seed
         - train.nepochs
-        - train.nepochs
         - train.learning_rate
         - train.batch_size
         - features.sampling_rate
-        - features.mel_transform.n_mels          
+        - features.global_normalization
+        - features.mel_transform.n_mels  
+        - features.mel_transform.normalized
     outs:
     - model.pt
     live:
