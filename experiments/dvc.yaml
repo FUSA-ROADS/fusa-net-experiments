@@ -9,15 +9,13 @@ stages:
     - ../features.py
     params:
       - ../params.yaml:
-        - train:
-          - random_seed
-          - nepochs
-          - learning_rate
-          - batch_size
-        - features:
-          - sampling_rate
-          - mel_transform:
-            - n_mels
+        - train.random_seed
+        - train.nepochs
+        - train.nepochs
+        - train.learning_rate
+        - train.batch_size
+        - features.sampling_rate
+        - features.mel_transform.n_mels          
     outs:
     - model.pt
     live:
