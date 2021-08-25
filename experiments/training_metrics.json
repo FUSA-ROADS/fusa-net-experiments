@@ -1,9 +1,0 @@
-{
-    "step": 0,
-    "train": {
-        "loss": NaN
-    },
-    "valid": {
-        "loss": NaN
-    }
-}
