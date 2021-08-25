@@ -25,14 +25,14 @@ def get_waveform(file_path: str, params: Dict) -> torch.Tensor:
 
 class LogMelTransform:
 
-    def __init__(self, waveform_path: str, params: Dict={}, overwrite: bool=False):
+    def __init__(self, waveform_path: str, params: Dict={}, overwrite: bool=False, eps: float=1e-3):
         self.logmel_path = splitext(waveform_path)[0]+"_logmel.pt"
         if not isfile(self.logmel_path) or overwrite:
             waveform =  get_waveform(waveform_path, params)
             sample_rate = params["sampling_rate"]
             mel_params = params["mel_transform"]
-            mel_transform = torchaudio.transforms.MelSpectrogram(sample_rate=sample_rate, n_fft=mel_params['n_fft'], hop_length=mel_params['hop_length'], n_mels=mel_params['n_mels'])
-            logmel = mel_transform(waveform).log()
+            mel_transform = torchaudio.transforms.MelSpectrogram(sample_rate=sample_rate, n_fft=mel_params['n_fft'], hop_length=mel_params['hop_length'], n_mels=mel_params['n_mels'], normalized=mel_params["normalized"])
+            logmel = (mel_transform(waveform)+eps).log()
             torch.save(logmel, self.logmel_path)
 
     def __call__(self):
