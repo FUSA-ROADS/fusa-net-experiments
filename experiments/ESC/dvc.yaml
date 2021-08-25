@@ -1,14 +1,14 @@
 stages:
   train_esc:
-    cmd: python train_esc.py ../datasets model.pt
+    cmd: python train_esc.py ../../datasets model.pt
     deps:
     - train_esc.py
     - model.py  
-    - ../datasets.py
-    - ../transforms.py
-    - ../features.py
+    - ../../datasets.py
+    - ../../transforms.py
+    - ../../features.py
     params:
-      - ../params.yaml:
+      - ../../params.yaml:
         - train.random_seed
         - train.nepochs
         - train.learning_rate
