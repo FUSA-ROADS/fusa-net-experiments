@@ -25,9 +25,9 @@ def get_waveform(file_path: str, params: Dict) -> torch.Tensor:
 
 class LogMelTransform:
 
-    def __init__(self, waveform_path: str, params: Dict={}, overwrite: bool=False, eps: float=1e-3):
+    def __init__(self, waveform_path: str, params: Dict={}, eps: float=1e-3):
         self.logmel_path = splitext(waveform_path)[0]+"_logmel.pt"
-        if not isfile(self.logmel_path) or overwrite:
+        if not isfile(self.logmel_path) or params["overwrite"]:
             waveform =  get_waveform(waveform_path, params)
             sample_rate = params["sampling_rate"]
             mel_params = params["mel_transform"]

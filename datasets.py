@@ -92,11 +92,10 @@ class FUSA_dataset(Dataset):
 
         self.waveform_transform = waveform_transform
         self.params = feature_params
-        self.return_logmel = feature_params["use_logmel"]  
-        # Precompute logmel features if needed      
+        # Precompute logmel spectrogram if it does not exist or if overwrite is enabled     
         if feature_params["use_logmel"]:
-            for file_path, label in self.dataset:
-                LogMelTransform(file_path, feature_params["mel_transform"], feature_params["overwrite"])                
+            for file_path, _ in self.dataset:
+                LogMelTransform(file_path, feature_params) 
 
     def __getitem__(self, idx: int) -> Dict:
         file_path, label = self.dataset[idx]
@@ -104,7 +103,7 @@ class FUSA_dataset(Dataset):
         if self.waveform_transform is not None:
             waveform = self.waveform_transform(waveform)
         sample = {'waveform': waveform, 'label': torch.from_numpy(self.le.transform([label]))}
-        if self.return_logmel:
+        if self.params["use_logmel"]:
             sample['logmel'] = LogMelTransform(file_path)()              
         return sample
 
