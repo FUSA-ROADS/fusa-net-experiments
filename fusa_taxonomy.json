@@ -3,168 +3,196 @@
     {
         "description" : "Personas hablando o conversando",
         "ESC" : [""],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Speech"]
     },
     "humans/shouting" :
     {
         "description" : "Personas gritando",
         "ESC" : [""],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Shout", "Screaming"]
     },
     "humans/crowd" :
     {
         "description" : "Grupos de personas hablando simultaneamente",
         "ESC" : [""],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Chatter", "Crowd"]
     },
     "humans/others" :
     {
         "description" : "Otros sonidos producidos por humanos",
-        "ESC" : ["crying_baby", "sneezing", "clapping", "breathing", "coughing", "footsteps", "laughing", "brushing_teeth", "snoring", "drinking_sipping"],
-        "UrbanSound": ["children_playing"]
+        "ESC" : ["crying baby", "sneezing", "clapping", "breathing", "coughing", "footsteps", "laughing", "brushing teeth", "snoring", "drinking sipping"],
+        "UrbanSound": ["children_playing"],
+        "AudioSet": ["Whispering", "Laughter", "Crying, sobbing", "Wail, moan", "Sigh", "Humming", "Groan", "Grunt", "Yawn", "Whistling", "Breathing", "Cough", "Sneeze", "Sniff", "Hubbub, speech noise, speech babble", "Clapping", "Cheering", "Applause", "Children playing", "Children shouting"]
     },
     "Music/music" :
     {
         "description" : "Canto e instrumentos musicales acústicos o amplificados, bandas, conciertos, etc",
         "ESC" : [""],
-        "UrbanSound": ["street_music"]
+        "UrbanSound": ["street_music"],
+        "AudioSet": ["Singing", "Guitar", "Ukelele", "Piano", "Organ", "Synthesizer", "Drum", "Orchestra", "Trumpet", "String section", "Violin, fiddle", "Cello", "Flute", "Saxophone", "Clarinet", "Harp", "Choir", "Accordion", "Musical ensamble", "Bass"]
     },
     "animal/dog" :
     {
         "description" : "Ladridos de perro",
         "ESC" : ["dog"],
-        "UrbanSound": ["dog_bark"]
+        "UrbanSound": ["dog_bark"],
+        "AudioSet": ["Bark", "Yip", "Howl", "Bow-wow", "Growling", "Whimper", "Bay"]
     },
     "animal/bird" :
     {
         "description" : "Graznidos y cantos de aves",
-        "ESC" : ["crow", "hen", "rooster", "chirping_birds"],
-        "UrbanSound": [""]
+        "ESC" : ["crow", "hen", "rooster", "chirping birds"],
+        "UrbanSound": [""],
+        "AudioSet": ["Bird vocalization, bird call, bird song", "Pigeon, dove", "Crow", "Owl", "Gull, seagull", "Bird flight, flapping wings"]
     },
     "animal/others" :
     {
         "description" : "Sonidos de otros animales e insectos",
         "ESC" : ["cat", "sheep", "crickets", "insects", "frog", "pig", "cow"],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Meow", "Cat communication", "Croak", "Cricket", "Mosquito", "Buzz", "Clip-clop", "Neigh, whinny", "Snort (horse)", "Moo"]
     },
     "environmental/rain" :
     {
         "description" : "Lluvia de diversa intensidad",
         "ESC" : ["rain"],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Rain", "Rain on surface"]
     },
     "environmental/wind" :
     {
         "description" : "Viento soplando",
         "ESC" : ["wind"],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Wind", "Wind noise (microphone)", "Rustling leaves", "Howl (wind)"]
     },
     "environmental/water" :
     {
         "description" : "Flujo de agua o cuerpos de agua",
         "ESC" : [""],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Stream", "Splash, splatter", "Slosh"]
     },
     "environmental/others" :
     {
         "description" : "Otros sonidos naturales",
-        "ESC" : ["crackling_fire", "sea_waves", "thunderstorm"],
-        "UrbanSound": [""]
+        "ESC" : ["crackling fire", "sea waves", "thunderstorm"],
+        "UrbanSound": [""],
+        "AudioSet": ["Waterfall", "Ocean", "Thunderstorm", "Thunder", "Fire", "Crackle", "Wildfire"]
     },
     "mechanical/impact" :
     {
         "description" : "Taladros, martillos neumáticos y otros sonidos de impacto sobre material",
         "ESC" : [""],
-        "UrbanSound": ["jackhammer"]
+        "UrbanSound": ["jackhammer"],
+        "AudioSet": ["Hammer", "Jackhammer"]
     },
     "mechanical/cutting" :
     {
         "description" : "Motosierras y otros sonidos de corte",
-        "ESC" : ["chainsaw", "hand_saw"],
-        "UrbanSound": [""]
+        "ESC" : ["chainsaw", "hand saw"],
+        "UrbanSound": [""],
+        "AudioSet": ["Sawing", "Chop", "Splinter"]
     },
     "mechanical/explosives" :
     {
         "description" : "Sonidos de explosiones y disparos",
         "ESC" : ["fireworks"],
-        "UrbanSound": ["gun_shot"]
+        "UrbanSound": ["gun_shot"],
+        "AudioSet": ["Gunshot, gunfire", "Fireworks", "Firecracker", "Burst, pop", "Eruption", "Boom", "Machine gun", "Artillery fire", "Fusillade"]
     },
     "mechanical/digging" :
     {
         "description" : "Retroexcabadoras y otros sonidos relacionados a excabación",
         "ESC" : [""],
-        "UrbanSound": ["drilling"]
+        "UrbanSound": ["drilling"],
+        "AudioSet": ["Drill"]
     },
     "mechanical/others" :
     {
         "description" : "Otros sonidos mecánicos o de motores estáticos",
         "ESC" : ["engine"],
-        "UrbanSound": ["engine_idling"]
+        "UrbanSound": ["engine_idling"],
+        "AudioSet": ["Filing (rasp)", "Sanding", "Power tool", "Crack", "Snap", "Bang", "Smash, crash", "Whack, thwack", "Breaking", "Crushing", "Tearing", "Light engine (high frequency)", "Medium engine (mid frequency)", "Heavy engine (low frequency)"]
     },
     "vehicles/motorcycles" :
     {
         "description" : "Motocicletas",
         "ESC" : [""],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Motorcycle"]
     },
     "vehicles/cars" :
     {
         "description" : "Autos o vehículos ligeros",
         "ESC" : [""],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Car", "Car passing by", "Race car, auto racing"]
     },
     "vehicles/bus" :
     {
         "description" : "Buses o camiones medianos y pesados",
         "ESC" : [""],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Truck", "Bus"]
     },
     "vehicles/airborne" :
     {
         "description" : "Helicopteros, avionetas, aviones, etc",
         "ESC" : ["helicopter", "airplane"],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Aircraft", "Aircraft engine", "Helicopter", "Fixed-wing aircraft, airplane", "Jet engine", "Engine starting", "Idling"]
     },
     "vehicles/others" :
     {
         "description" : "Otros sonidos mecánicos dinámicos o móviles",
         "ESC" : ["train"],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Boat, Water vehicle", "Rail transport", "Bicycle", "Skateboard", "Train", "Railroad car, train wagon", "Train wheels squealing", "Traffic noise, roadway noise", "Ship", "Motorboat, speedboat"]
     },
     "alerts/siren" :
     {
         "description" : "Sirenas de ambulancia, policía o bomberos",
         "ESC" : ["siren"],
-        "UrbanSound": ["siren"]
+        "UrbanSound": ["siren"],
+        "AudioSet": ["Siren", "Police car (siren)", "Ambulance (siren)", "Fire engine, fire truck (siren)"]
     },
     "alerts/alarms" :
     {
         "description" : "Alarmas de autos, casas, etc",
         "ESC" : [""],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Alarm", "Car alarm", "Fire alarm"]
     },
     "alerts/horns" :
     {
         "description" : "Bocinas de autos, camiónes, etc",
-        "ESC" : ["car_horn"],
-        "UrbanSound": ["car_horn"]
+        "ESC" : ["car horn"],
+        "UrbanSound": ["car_horn"],
+        "AudioSet": ["Vehicle horn, car horn, honking", "Air horn, truck horn"]
     },
     "alerts/bells" :
     {
         "description" : "Campanas de iglesias, etc",
-        "ESC" : ["church_bells"],
-        "UrbanSound": [""]
+        "ESC" : ["church bells"],
+        "UrbanSound": [""],
+        "AudioSet": ["Church bell", "Bicycle bell"]
     },
     "alerts/braking and skidding" :
     {
         "description" : "Frenados o derrapes de vehículos",
         "ESC" : [""],
-        "UrbanSound": [""]
+        "UrbanSound": [""],
+        "AudioSet": ["Skidding", "Tire squeal", "Air breack"]
     },
     "alerts/others" :
     {
         "description" : "Alertas de otros tipos",
-        "ESC" : ["glass_breaking"],
-        "UrbanSound": [""]
+        "ESC" : [""],
+        "UrbanSound": [""],
+        "AudioSet": ["Emergency vehicle", "Reversing beeps", "Accelerating, revving, vroom"]
     }
 }
