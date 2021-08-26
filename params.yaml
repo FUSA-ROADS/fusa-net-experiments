@@ -14,7 +14,7 @@ features:
 train:
   random_seed: 1234
   train_percent: 0.8
-  nepochs: 10
+  nepochs: 50
   learning_rate: 0.001
   batch_size: 32
 
