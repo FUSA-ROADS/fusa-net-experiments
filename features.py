@@ -10,6 +10,7 @@ def get_waveform(file_path: str, params: Dict) -> torch.Tensor:
     target_ch = params["number_of_channels"]
     if not origin_sr == target_sr:
         waveform = torchaudio.transforms.Resample(origin_sr, target_sr)(waveform)
+    # TODO: Separar las pistas como audios independientes (duplicar a nivel de dataset)
     if target_ch == 1 and origin_ch == 2:
         how_to = params['combine_channels']
         if how_to == 'mean':
@@ -24,7 +25,7 @@ def get_waveform(file_path: str, params: Dict) -> torch.Tensor:
         return waveform
 
 class LogMelTransform:
-
+    # TODO: (1) cortar en waveform si hay más de 512 zeros seguidos (2) buscar valor absoluto minimo en espectrograma mel (proxy del ruido)
     def __init__(self, waveform_path: str, params: Dict={}, eps: float=1e-3):
         self.logmel_path = splitext(waveform_path)[0]+"_logmel.pt"
         overwrite = params["overwrite"] if "overwrite" in params else False
