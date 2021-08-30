@@ -23,7 +23,7 @@
     "humans/others" :
     {
         "description" : "Otros sonidos producidos por humanos",
-        "ESC" : ["crying baby", "sneezing", "clapping", "breathing", "coughing", "footsteps", "laughing", "brushing teeth", "snoring", "drinking sipping"],
+        "ESC" : ["crying_baby", "sneezing", "clapping", "breathing", "coughing", "footsteps", "laughing", "brushing_teeth", "snoring", "drinking_sipping"],
         "UrbanSound": ["children_playing"],
         "AudioSet": ["Whispering", "Laughter", "Crying, sobbing", "Wail, moan", "Sigh", "Humming", "Groan", "Grunt", "Yawn", "Whistling", "Breathing", "Cough", "Sneeze", "Sniff", "Hubbub, speech noise, speech babble", "Clapping", "Cheering", "Applause", "Children playing", "Children shouting", "Babbling", "Baby laughter", "Baby cry, infant cry", "Snicker", "Walk, footsteps", "Belly laugh"]
     },
@@ -44,7 +44,7 @@
     "animal/bird" :
     {
         "description" : "Graznidos y cantos de aves",
-        "ESC" : ["crow", "hen", "rooster", "chirping birds"],
+        "ESC" : ["crow", "hen", "rooster", "chirping_birds"],
         "UrbanSound": [""],
         "AudioSet": ["Bird", "Bird vocalization, bird call, bird song", "Pigeon, dove", "Crow", "Owl", "Gull, seagull", "Bird flight, flapping wings", "Chirp, tweet", "Fowl", "Caw"]
     },
@@ -53,7 +53,7 @@
         "description" : "Sonidos de otros animales e insectos",
         "ESC" : ["cat", "sheep", "crickets", "insects", "frog", "pig", "cow"],
         "UrbanSound": [""],
-        "AudioSet": ["Meow", "Cat", "Cat communication", "Croak", "Cricket", "Mosquito", "Buzz", "Clip-clop", "Neigh, whinny", "Snort (horse)", "Moo", "Chicken, rooster", "Sheep", "Frog", "Insect", "Pig", "Animal", "Bee, wasp, etc.", "Fly, housefly", "Crowing, cock-a-doodle-doo", "Cattle, bovinae", "Livestock, farm animals, working animals", "Domestic animals, pets", "Oink", "Duck", "Cowbell"]
+        "AudioSet": ["Meow", "Cat", "Cat communication", "Croak", "Cricket", "Mosquito", "Buzz", "Clip-clop", "Neigh, whinny", "Snort (horse)", "Moo", "Chicken, rooster", "Sheep", "Frog", "Insect", "Pig", "Animal", "Bee, wasp, etc.", "Fly, housefly", "Crowing, cock-a-doodle-doo", "Cattle, bovinae", "Livestock, farm animals, working animals", "Domestic animals, pets", "Oink", "Duck", "Cowbell", "Roar"]
     },
     "environmental/rain" :
     {
@@ -79,7 +79,7 @@
     "environmental/others" :
     {
         "description" : "Otros sonidos naturales",
-        "ESC" : ["crackling fire", "sea waves", "thunderstorm"],
+        "ESC" : ["crackling_fire", "sea_waves", "thunderstorm"],
         "UrbanSound": [""],
         "AudioSet": ["Waterfall", "Ocean", "Thunderstorm", "Thunder", "Fire", "Crackle", "Wildfire", "Patter", "Environmental noise", "Waves, surf"]
     },
@@ -88,12 +88,12 @@
         "description" : "Taladros, martillos neumáticos y otros sonidos de impacto sobre material",
         "ESC" : [""],
         "UrbanSound": ["jackhammer"],
-        "AudioSet": ["Hammer", "Jackhammer"]
+        "AudioSet": ["Jackhammer"]
     },
     "mechanical/cutting" :
     {
         "description" : "Motosierras y otros sonidos de corte",
-        "ESC" : ["chainsaw", "hand saw"],
+        "ESC" : ["chainsaw"],
         "UrbanSound": [""],
         "AudioSet": ["Chainsaw", "Sawing", "Chop", "Splinter"]
     },
@@ -116,7 +116,7 @@
         "description" : "Otros sonidos mecánicos o de motores estáticos",
         "ESC" : ["engine"],
         "UrbanSound": ["engine_idling"],
-        "AudioSet": ["Engine", "Filing (rasp)", "Sanding", "Power tool", "Crack", "Snap", "Bang", "Smash, crash", "Whack, thwack", "Breaking", "Crushing", "Tearing", "Light engine (high frequency)", "Medium engine (mid frequency)", "Heavy engine (low frequency)", "Engine knocking", "Idling", "Engine starting", "Lawn mower"]
+        "AudioSet": ["Engine", "Sanding", "Power tool", "Light engine (high frequency)", "Medium engine (mid frequency)", "Heavy engine (low frequency)", "Engine knocking", "Idling", "Engine starting", "Lawn mower"]
     },
     "vehicles/motorcycles" :
     {
@@ -170,16 +170,16 @@
     "alerts/horns" :
     {
         "description" : "Bocinas de autos, camiónes, etc",
-        "ESC" : ["car horn"],
+        "ESC" : ["car_horn"],
         "UrbanSound": ["car_horn"],
         "AudioSet": ["Vehicle horn, car horn, honking", "Air horn, truck horn", "Toot"]
     },
     "alerts/bells" :
     {
         "description" : "Campanas de iglesias, etc",
-        "ESC" : ["church bells"],
+        "ESC" : ["church_bells"],
         "UrbanSound": [""],
-        "AudioSet": ["Church bell", "Bicycle bell", "Change ringing (campanology)"]
+        "AudioSet": ["Bell", "Church bell", "Bicycle bell", "Change ringing (campanology)"]
     },
     "alerts/braking and skidding" :
     {
