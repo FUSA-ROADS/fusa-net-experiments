@@ -1,4 +1,4 @@
-{
+
     "humans/talk" :
     {
         "description" : "Personas hablando o conversando",
@@ -88,12 +88,12 @@
         "description" : "Taladros, martillos neumáticos y otros sonidos de impacto sobre material",
         "ESC" : [""],
         "UrbanSound": ["jackhammer"],
-        "AudioSet": ["Jackhammer"]
+        "AudioSet": ["Jackhammer", "Hammer"]
     },
     "mechanical/cutting" :
     {
         "description" : "Motosierras y otros sonidos de corte",
-        "ESC" : ["chainsaw"],
+        "ESC" : ["chainsaw", "hand_saw"],
         "UrbanSound": [""],
         "AudioSet": ["Chainsaw", "Sawing", "Chop", "Splinter"]
     },
@@ -116,7 +116,7 @@
         "description" : "Otros sonidos mecánicos o de motores estáticos",
         "ESC" : ["engine"],
         "UrbanSound": ["engine_idling"],
-        "AudioSet": ["Engine", "Sanding", "Power tool", "Light engine (high frequency)", "Medium engine (mid frequency)", "Heavy engine (low frequency)", "Engine knocking", "Idling", "Engine starting", "Lawn mower"]
+        "AudioSet": ["Tools", "Engine", "Sanding", "Power tool", "Light engine (high frequency)", "Medium engine (mid frequency)", "Heavy engine (low frequency)", "Engine knocking", "Idling", "Engine starting", "Lawn mower"]
     },
     "vehicles/motorcycles" :
     {
