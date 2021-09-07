@@ -14,8 +14,8 @@ def dir_path(path):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Process some integers.')
-    parser.add_argument('--root_path', dest='root_path', help='path to the root of this repo', type=dir_path, default='../../datasets')
-    parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=dir_path, default='model.pt')  
+    parser.add_argument('--root_path', dest='root_path', help='path to the root of this repo', type=dir_path, default='../../')
+    parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=str, default='model.pt')  
     parser.add_argument('--train', action='store_true')  
     parser.add_argument('--evaluate', action='store_true')  
 
