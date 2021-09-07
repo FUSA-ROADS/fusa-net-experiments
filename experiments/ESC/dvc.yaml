@@ -17,7 +17,6 @@ stages:
     outs:  
     - model.pt
     - traced_model.pt
-    - index_to_name.json
     live:
       training_metrics:
         summary: true
