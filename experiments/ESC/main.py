@@ -14,19 +14,18 @@ def dir_path(path):
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Process some integers.')
-    parser.add_argument('--data_path', dest='data_path', help='path to datasets folder', type=dir_path, default='../../datasets')
+    parser.add_argument('--root_path', dest='root_path', help='path to the root of this repo', type=dir_path, default='../../datasets')
     parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=dir_path, default='model.pt')  
     parser.add_argument('--train', action='store_true')  
     parser.add_argument('--evaluate', action='store_true')  
 
     args = parser.parse_args()
-    data_path = args.data_path
     model_path = args.model_path
 
     params = yaml.safe_load(open("params.yaml"))
     print(params)
     
-    train_loader, valid_loader = create_dataloaders(data_path, params)
+    train_loader, valid_loader = create_dataloaders(args.root_path, params)
     if args.train:
         train((train_loader, valid_loader), params, model_path)
         create_model_trace(model_path)
