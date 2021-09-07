@@ -36,3 +36,36 @@ stages:
       md5: d3e0553f5b91e0c0a5df271f33080e5d.dir
       size: 3746
       nfiles: 2
+  train:
+    cmd: python main.py --train --root_path ../../ --model_path model.pt
+    deps:
+    - path: esc.py
+      md5: d09b91a9e2513358bfbc7402e78cb0b3
+      size: 3461
+    - path: main.py
+      md5: dad8b2c36e187cf7884dc48c07a57a2e
+      size: 1187
+    - path: model.py
+      md5: 162685631f3693b366a18c20ceb29fc2
+      size: 806
+    params:
+      params.yaml:
+        features.global_normalization: false
+        features.mel_transform.n_mels: 64
+        features.mel_transform.normalized: false
+        features.sampling_rate: 8000
+        train.batch_size: 32
+        train.learning_rate: 0.001
+        train.nepochs: 50
+        train.random_seed: 1234
+    outs:
+    - path: model.pt
+      md5: 5c419b9acfd2dc3b0b43062d29e09fa5
+      size: 289423
+    - path: traced_model.pt
+      md5: 023b8a099c32fe550307ba06c2df004d
+      size: 297005
+    - path: training_metrics
+      md5: f9e13a3fa0bee87d9b4b464ded61dc48.dir
+      size: 3742
+      nfiles: 2
