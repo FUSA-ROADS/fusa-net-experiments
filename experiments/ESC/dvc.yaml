@@ -1,5 +1,5 @@
 stages:
-  train_esc:
+  esc:
     cmd: python main.py --train --data_path "../../datasets" --model_path "model.pt"
     deps:
     - main.py
@@ -14,7 +14,7 @@ stages:
       - features.global_normalization
       - features.mel_transform.n_mels  
       - features.mel_transform.normalized
-  outs:
+    outs:  
     - model.pt
     - index_to_name.json
     live:
