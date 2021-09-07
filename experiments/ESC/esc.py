@@ -26,7 +26,7 @@ def create_dataloaders(data_path: str, params: Dict):
 def train(loaders: Tuple, params: Dict, model_path: str) -> None:
     train_loader, valid_loader = loaders 
     n_train, n_valid = len(train_loader.dataset), len(valid_loader.dataset)
-    n_classes = train_loader.dataset.dataset.categories
+    n_classes = len(train_loader.dataset.dataset.categories)
     model = NaiveModel(n_classes=n_classes)
     criterion = torch.nn.CrossEntropyLoss(reduction='sum')
     optimizer = torch.optim.Adam(model.parameters(), lr=params['train']['learning_rate'])
