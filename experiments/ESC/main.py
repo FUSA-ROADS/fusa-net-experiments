@@ -1,7 +1,7 @@
 import os.path
 import yaml
 import argparse
-from esc import create_dataloaders, train, evaluate_model
+from esc import create_dataloaders, train, create_model_trace, evaluate_model
 
 
 def dir_path(path):
@@ -29,6 +29,7 @@ if __name__ == "__main__":
     train_loader, valid_loader = create_dataloaders(data_path, params)
     if args.train:
         train((train_loader, valid_loader), params, model_path)
+        create_model_trace(model_path)
     elif args.evaluate:
         evaluate_model((train_loader, valid_loader), params, model_path)
     
