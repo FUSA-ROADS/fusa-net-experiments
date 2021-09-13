@@ -1,4 +1,3 @@
-import sys
 import json
 from typing import Dict, Tuple
 import numpy as np
@@ -24,6 +23,9 @@ def create_dataloaders(data_path: str, params: Dict):
     return train_loader, valid_loader
 
 def train(loaders: Tuple, params: Dict, model_path: str) -> None:
+    """
+    Make more abstract to other models
+    """
     train_loader, valid_loader = loaders 
     n_train, n_valid = len(train_loader.dataset), len(valid_loader.dataset)
     n_classes = len(train_loader.dataset.dataset.categories)
@@ -37,7 +39,7 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
         model.train()
         for batch in train_loader:
             optimizer.zero_grad()
-            y = model.forward(batch['logmel'])
+            y = model.forward(batch['mel_transform'])
             loss = criterion(y, batch['label'])
             loss.backward()
             optimizer.step()
@@ -48,7 +50,7 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
         model.eval()
         with torch.no_grad():
             for batch in valid_loader:
-                y = model.forward(batch['logmel'])
+                y = model.forward(batch['mel_transform'])
                 loss = criterion(y, batch['label'])
                 global_loss += loss.item()            
         dvclive.log('valid/loss', global_loss/n_valid)
@@ -65,7 +67,7 @@ def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
     labels = []
     with torch.no_grad():
         for batch in valid_loader:
-            preds.append(model.forward(batch['logmel']).argmax(dim=1).numpy())
+            preds.append(model.forward(batch['mel_transform']).argmax(dim=1).numpy())
             labels.append(batch['label'].numpy())
 
     from sklearn.metrics import classification_report
