@@ -3,7 +3,7 @@ stages:
     cmd: python main.py --train --root_path ../../ --model_path model.pt
     deps:
     - main.py
-    - esc.py
+    - trainer.py
     - model.py  
     params:
       - train.random_seed
