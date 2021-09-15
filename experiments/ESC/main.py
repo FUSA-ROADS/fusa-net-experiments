@@ -1,8 +1,14 @@
 import os.path
 import yaml
+import json
 import argparse
-from esc import create_dataloaders, train, create_model_trace, evaluate_model
+import torch
+from torch.utils.data import ConcatDataset
+from fusanet_utils.external_datasets import ESC
+from fusanet_utils.fusa_datasets import FUSA_dataset
 
+import trainer
+import naive_conv_model
 
 def dir_path(path):
     if os.path.exists(path):
@@ -18,17 +24,24 @@ if __name__ == "__main__":
     parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=str, default='model.pt')  
     parser.add_argument('--train', action='store_true')  
     parser.add_argument('--evaluate', action='store_true')  
-
     args = parser.parse_args()
-    model_path = args.model_path
 
+    print("Main: Loading parameters, dataset and model")
     params = yaml.safe_load(open("params.yaml"))
     print(params)
-    
-    train_loader, valid_loader = create_dataloaders(args.root_path, params)
+    # Create dataset for the experiment and save dictionary of classes index to names
+    dataset = FUSA_dataset(ConcatDataset([ESC(args.root_path)]), feature_params=params["features"])
+    with open('index_to_name.json', 'w') as f:
+        json.dump(dataset.label_dictionary(), f)
+    # Save initial model
+    model = naive_conv_model.NaiveModel(n_classes=len(dataset.categories))
+    torch.save(model, args.model_path)
+    print("Main: Creating dataloaders")
+    loaders = trainer.create_dataloaders(dataset, params)
     if args.train:
-        train((train_loader, valid_loader), params, model_path)
-        create_model_trace(model_path)
-    elif args.evaluate:
-        evaluate_model((train_loader, valid_loader), params, model_path)
+        print("Main: Training")
+        trainer.train(loaders, params, args.model_path)
+    if args.evaluate:
+        print("Main: Evaluating")
+        trainer.evaluate_model(loaders, params, args.model_path)
     

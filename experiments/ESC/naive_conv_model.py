@@ -1,3 +1,4 @@
+import torch
 import torch.nn as nn
 
 class NaiveModel(nn.Module):
@@ -13,8 +14,17 @@ class NaiveModel(nn.Module):
         self.linear2 = nn.Linear(n_hidden, n_classes) 
 
     def forward(self, x):
+        x = x['mel_transform']
         z = self.activation(self.conv1(x))
         z = self.activation(self.conv2(z))
         z = self.global_time_pooling(z)
         z = self.activation(self.linear1(z.view(-1, self.linear_size)))
         return self.linear2(z)
+
+    def create_trace(self, path='traced_model.pt'):
+        dummy_example = {'mel_transform': torch.randn(10, 1, 64, 500)}
+        traced_model = torch.jit.trace(self, (dummy_example))
+        traced_model.save(path)
+
+
+    
