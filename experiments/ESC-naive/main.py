@@ -8,7 +8,7 @@ from fusanet_utils.external_datasets import ESC
 from fusanet_utils.fusa_datasets import FUSA_dataset
 
 import trainer
-import naive_conv_model
+from model import NaiveModel
 
 def dir_path(path):
     if os.path.exists(path):
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     with open('index_to_name.json', 'w') as f:
         json.dump(dataset.label_dictionary(), f)
     # Save initial model
-    model = naive_conv_model.NaiveModel(n_classes=len(dataset.categories))
+    model = NaiveModel(n_classes=len(dataset.categories))
     torch.save(model, args.model_path)
     print("Main: Creating dataloaders")
     loaders = trainer.create_dataloaders(dataset, params)
