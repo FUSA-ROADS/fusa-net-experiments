@@ -4,14 +4,14 @@ import torch
 from torch.utils.data import DataLoader, random_split
 from sklearn.metrics import classification_report
 import dvclive    
-from fusanet_utils.transforms import Collate_and_transform, RESIZER
+from fusanet_utils.transforms import Collate_and_transform
 
 
 def create_dataloaders(dataset, params: Dict):
     train_size = int(params["train"]["train_percent"]*len(dataset))
     valid_size = len(dataset) - train_size
     train_subset, valid_subset = random_split(dataset, (train_size, valid_size), generator=torch.Generator().manual_seed(params["train"]["random_seed"]))
-    my_collate = Collate_and_transform(resizer=RESIZER.PAD)
+    my_collate = Collate_and_transform(params['features'])
     train_loader = DataLoader(train_subset, shuffle=True, batch_size=params["train"]["batch_size"], collate_fn=my_collate)
     valid_loader = DataLoader(valid_subset, batch_size=256, collate_fn=my_collate)    
     return train_loader, valid_loader

@@ -4,6 +4,7 @@ features:
   number_of_channels: 1 # 1: mono, 2: stereo
   combine_channels: 'mean' # 'left', 'right', 'mean'
   global_normalization: false
+  collate_resize: 'pad' # 'pad', 'crop', 'none'
   mel_transform:
     n_mels: 64 # Number of mel coefficients
     n_fft: 1024 # window size
