@@ -25,7 +25,7 @@
         "description" : "Otros sonidos producidos por humanos",
         "ESC" : ["crying_baby", "sneezing", "clapping", "breathing", "coughing", "footsteps", "laughing", "brushing_teeth", "snoring", "drinking_sipping"],
         "UrbanSound": ["children_playing"],
-        "AudioSet": ["Whispering", "Laughter", "Crying, sobbing", "Wail, moan", "Sigh", "Humming", "Groan", "Grunt", "Yawn", "Whistling", "Breathing", "Cough", "Sneeze", "Sniff", "Hubbub, speech noise, speech babble", "Clapping", "Cheering", "Applause", "Children playing", "Children shouting", "Babbling", "Baby laughter", "Baby cry, infant cry", "Snicker", "Walk, footsteps", "Belly laugh"]
+        "AudioSet": ["Laughter", "Crying, sobbing", "Wail, moan", "Sigh", "Humming", "Groan", "Grunt", "Yawn", "Whistling", "Breathing", "Cough", "Sneeze", "Sniff", "Hubbub, speech noise, speech babble", "Clapping", "Cheering", "Applause", "Children playing", "Children shouting", "Babbling", "Baby laughter", "Baby cry, infant cry", "Snicker", "Walk, footsteps", "Belly laugh"]
     },
     "Music/music" :
     {
@@ -74,14 +74,14 @@
         "description" : "Flujo de agua o cuerpos de agua",
         "ESC" : [""],
         "UrbanSound": [""],
-        "AudioSet": ["Water", "Stream", "Splash, splatter", "Slosh"]
+        "AudioSet": ["Waterfall", "Water", "Stream", "Splash, splatter", "Slosh"]
     },
     "environmental/others" :
     {
         "description" : "Otros sonidos naturales",
         "ESC" : ["crackling_fire", "sea_waves", "thunderstorm"],
         "UrbanSound": [""],
-        "AudioSet": ["Waterfall", "Ocean", "Thunderstorm", "Thunder", "Fire", "Crackle", "Wildfire", "Patter", "Environmental noise", "Waves, surf"]
+        "AudioSet": ["Ocean", "Thunderstorm", "Thunder", "Fire", "Crackle", "Wildfire", "Patter", "Environmental noise", "Waves, surf"]
     },
     "mechanical/impact" :
     {
@@ -116,7 +116,7 @@
         "description" : "Otros sonidos mecánicos o de motores estáticos",
         "ESC" : ["engine"],
         "UrbanSound": ["engine_idling"],
-        "AudioSet": ["Tools", "Engine", "Sanding", "Power tool", "Light engine (high frequency)", "Medium engine (mid frequency)", "Heavy engine (low frequency)", "Engine knocking", "Idling", "Engine starting", "Lawn mower"]
+        "AudioSet": ["Sanding", "Light engine (high frequency)", "Medium engine (mid frequency)", "Heavy engine (low frequency)", "Engine knocking", "Idling", "Engine starting", "Lawn mower"]
     },
     "vehicles/motorcycles" :
     {
@@ -151,7 +151,7 @@
         "description" : "Otros sonidos mecánicos dinámicos o móviles",
         "ESC" : ["train"],
         "UrbanSound": [""],
-        "AudioSet": ["Boat, Water vehicle", "Rail transport", "Bicycle", "Skateboard", "Train", "Railroad car, train wagon", "Train wheels squealing", "Traffic noise, roadway noise", "Ship", "Motorboat, speedboat", "Vehicle"]
+        "AudioSet": ["Boat, Water vehicle", "Rail transport", "Bicycle", "Skateboard", "Train", "Railroad car, train wagon", "Train wheels squealing", "Ship", "Motorboat, speedboat"]
     },
     "alerts/siren" :
     {
