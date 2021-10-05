@@ -28,8 +28,8 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
     n_train, n_valid = len(train_loader.dataset), len(valid_loader.dataset)    
     model = torch.load(model_path)
     model.fc_audioset = nn.Linear(2048, 15)
-    criterion = torch.nn.CrossEntropyLoss(reduction='mean') 
-    #criterion = torch.nn.BCELoss()
+    #criterion = torch.nn.CrossEntropyLoss(reduction='mean') 
+    criterion = torch.nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=params['train']['learning_rate'])
     #optimizer = torch.optim.Adam(model.parameters(), lr=params['train']['learning_rate'], 
     #    betas=(0.9, 0.999), eps=1e-08, weight_decay=0., amsgrad=True)
@@ -44,10 +44,11 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
         global_loss = 0.0
         model.train()
         for batch in train_loader:
-            waveforms, labels = batch['waveform'].to(device), batch['label'].to(device)
+            waveforms, labels = batch['waveform'].to(device), batch['label']
+            labels = (torch.zeros(len(labels), 15).scatter_(1, labels.unsqueeze(1), 1.)).to(device)
             optimizer.zero_grad()
-            y = model.forward(waveforms)
-            loss = criterion(y['embedding_clipwise_output'], labels)
+            y = model.forward(waveforms)['clipwise_output']
+            loss = criterion(y, labels)
             loss.backward()
             optimizer.step()
             global_loss += loss.item()
@@ -58,9 +59,10 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
         model.eval()
         with torch.no_grad():
             for batch in valid_loader:
-                waveforms, labels = batch['waveform'].to(device), batch['label'].to(device)
-                y = model.forward(waveforms)
-                loss = criterion(y['embedding_clipwise_output'], labels)
+                waveforms, labels = batch['waveform'].to(device), batch['label']
+                labels = (torch.zeros(len(labels), 15).scatter_(1, labels.unsqueeze(1), 1.)).to(device)
+                y = model.forward(waveforms)['clipwise_output']
+                loss = criterion(y, labels)
                 global_loss += loss.item()            
         print(f"{epoch}, valid/loss {global_loss/n_valid:0.4f}")
         dvclive.log('valid/loss', global_loss/n_valid)
@@ -68,11 +70,12 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
 
         if global_loss < best_valid_loss: 
             torch.save(model, model_path)
-            #model.create_trace()
+            model.create_trace()
 
 def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
     train_loader, valid_loader = loaders 
     model = torch.load(model_path)
+    model = model.cpu()
     model.fc_audioset = nn.Linear(2048, 15)
     model.eval()
     
