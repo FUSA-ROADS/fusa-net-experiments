@@ -1,0 +1,65 @@
+import os.path
+import yaml
+import json
+import argparse
+import torch
+from torch.utils.data import ConcatDataset
+from fusanet_utils.external_datasets import ESC
+from fusanet_utils.fusa_datasets import FUSA_dataset
+
+import trainer
+
+from model import Wavegram_Logmel_Cnn14
+
+def dir_path(path):
+    if os.path.exists(path):
+        return path
+    else:
+        raise argparse.ArgumentTypeError(f"{path} is not a valid path")
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser.add_argument('--root_path', dest='root_path', help='path to the root of this repo', type=dir_path, default='../../')
+    parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=str, default='model.pt')  
+    parser.add_argument('--train', action='store_true')  
+    parser.add_argument('--evaluate', action='store_true')  
+    args = parser.parse_args()
+
+    print("Main: Loading parameters, dataset and model")
+    params = yaml.safe_load(open("params.yaml"))
+    # Create dataset for the experiment and save dictionary of classes index to names
+    dataset = FUSA_dataset(ConcatDataset([ESC(args.root_path)]), feature_params=params["features"])
+    with open('index_to_name.json', 'w') as f:
+        json.dump(dataset.label_dictionary(), f)
+
+    # Save initial model
+    """
+    feature_params = params["features"]
+    mel_transform_params = feature_params['mel_transform']
+
+    model = Wavegram_Logmel_Cnn14(
+        n_classes=15,
+        sampling_rate=feature_params["sampling_rate"],
+        n_fft=mel_transform_params['n_fft'],
+        hop_length=mel_transform_params['hop_length'],
+        n_mels=mel_transform_params['n_mels'],
+        fmin=mel_transform_params['fmin'],
+        fmax=mel_transform_params['fmax']
+        )
+
+    checkpoint = torch.load('Wavegram_Logmel_Cnn14_mAP=0.439.pth')
+    model.load_state_dict(checkpoint['model'])
+    torch.save(model, 'model.pt')
+    """
+
+    print("Main: Creating dataloaders")
+    loaders = trainer.create_dataloaders(dataset, params)
+    if args.train:
+        print("Main: Training")
+        trainer.train(loaders, params, args.model_path)
+    if args.evaluate:
+        print("Main: Evaluating")
+        trainer.evaluate_model(loaders, params, args.model_path)
+    
