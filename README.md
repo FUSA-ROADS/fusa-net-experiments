@@ -4,6 +4,17 @@ El archivo `FUSA_taxonomy.json` define las equivalencies entre las clases propia
 
 Los experimentos esperan que esté instalado el paquete [`fusanet_utils`](https://github.com/fusa-project/fusa-net-utils)
 
+## Instalación librerías
+Crear un entorno virtual y activarlo:
+```
+virtualenv fusa-training
+source fusa-training/bin/activate
+```
+
+Luego, instalar las librerías requeridas:
+```
+pip install -r requirements.txt
+```
 
 ## DVC
 
