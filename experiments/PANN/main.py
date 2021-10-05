@@ -40,7 +40,7 @@ if __name__ == "__main__":
     mel_transform_params = feature_params['mel_transform']
 
     model = Wavegram_Logmel_Cnn14(
-        n_classes=15,
+        n_classes=527,
         sampling_rate=feature_params["sampling_rate"],
         n_fft=mel_transform_params['n_fft'],
         hop_length=mel_transform_params['hop_length'],
