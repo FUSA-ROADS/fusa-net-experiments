@@ -234,6 +234,6 @@ class Wavegram_Logmel_Cnn14(nn.Module):
         
     def create_trace(self, path='traced_model.pt'):
         dummy_example = torch.randn(1, 1, 160000)
-        traced_model = torch.jit.trace(self, (dummy_example.cuda()))
+        traced_model = torch.jit.trace(self, (dummy_example.cuda()), strict=False)
         #traced_model = torch.jit.trace(self, (dummy_example))
         traced_model.save(path)
