@@ -26,7 +26,8 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
     device = 'cuda'
 
     n_train, n_valid = len(train_loader.dataset), len(valid_loader.dataset)    
-    model = torch.load(model_path)   
+    model = torch.load(model_path)
+    model.fc_audioset = nn.Linear(2048, 15)
     criterion = torch.nn.CrossEntropyLoss(reduction='mean') 
     #criterion = torch.nn.BCELoss()
     optimizer = torch.optim.Adam(model.parameters(), lr=params['train']['learning_rate'])
@@ -46,7 +47,7 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
             waveforms, labels = batch['waveform'].to(device), batch['label'].to(device)
             optimizer.zero_grad()
             y = model.forward(waveforms)
-            loss = criterion(y['embedding'], labels)
+            loss = criterion(y['embedding_clipwise_output'], labels)
             loss.backward()
             optimizer.step()
             global_loss += loss.item()
@@ -59,7 +60,7 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
             for batch in valid_loader:
                 waveforms, labels = batch['waveform'].to(device), batch['label'].to(device)
                 y = model.forward(waveforms)
-                loss = criterion(y['embedding'], labels)
+                loss = criterion(y['embedding_clipwise_output'], labels)
                 global_loss += loss.item()            
         print(f"{epoch}, valid/loss {global_loss/n_valid:0.4f}")
         dvclive.log('valid/loss', global_loss/n_valid)
@@ -72,7 +73,7 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
 def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
     train_loader, valid_loader = loaders 
     model = torch.load(model_path)
-    model.fc_audioset = nn.Linear(2048, 15, bias=True)
+    model.fc_audioset = nn.Linear(2048, 15)
     model.eval()
     
     preds = []

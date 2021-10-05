@@ -223,8 +223,13 @@ class Wavegram_Logmel_Cnn14(nn.Module):
         x = F.relu_(self.fc1(x))
         embedding = F.dropout(x, p=0.5, training=self.training)
         clipwise_output = torch.sigmoid(self.fc_audioset(x))
+        embedding_clipwise_output = torch.sigmoid(self.fc_audioset(embedding))
+        #clipwise_output = self.fc_audioset(x)
         
-        output_dict = {'clipwise_output': clipwise_output, 'embedding': embedding}
+        output_dict = {
+            'clipwise_output': clipwise_output,
+            'embedding': embedding,
+            'embedding_clipwise_output': embedding_clipwise_output}
 
         return output_dict
         
