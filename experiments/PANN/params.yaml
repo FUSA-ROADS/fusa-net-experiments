@@ -5,13 +5,7 @@ features:
   combine_channels: 'mean' # 'left', 'right', 'mean'
   global_normalization: false
   collate_resize: 'pad' # 'pad', 'crop', 'none'
-  mel_transform:
-    n_mels: 64 # Number of mel coefficients
-    n_fft: 1024 # window size
-    hop_length: 320 # samples between windows
-    normalized:  false # normalize by STFT magnitude
-    fmin: 50
-    fmax: 14000
+
 
 train:
   random_seed: 1234

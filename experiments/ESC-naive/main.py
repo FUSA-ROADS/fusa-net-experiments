@@ -4,8 +4,8 @@ import json
 import argparse
 import torch
 from torch.utils.data import ConcatDataset
-from fusanet_utils.external_datasets import ESC
-from fusanet_utils.fusa_datasets import FUSA_dataset
+from fusanet_utils.datasets.external import ESC
+from fusanet_utils.datasets.fusa import FUSA_dataset
 
 import trainer
 from model import NaiveModel
