@@ -24,6 +24,7 @@ if __name__ == "__main__":
     parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=str, default='model.pt')  
     parser.add_argument('--train', action='store_true')  
     parser.add_argument('--evaluate', action='store_true')  
+    parser.add_argument('--cuda', action='store_true')
     args = parser.parse_args()
 
     print("Main: Loading parameters, dataset and model")
@@ -40,7 +41,7 @@ if __name__ == "__main__":
     loaders = trainer.create_dataloaders(dataset, params)
     if args.train:
         print("Main: Training")
-        trainer.train(loaders, params, args.model_path)
+        trainer.train(loaders, params, args.model_path, args.cuda)
     if args.evaluate:
         print("Main: Evaluating")
         trainer.evaluate_model(loaders, params, args.model_path)

@@ -16,7 +16,7 @@ def create_dataloaders(dataset, params: Dict):
     valid_loader = DataLoader(valid_subset, batch_size=256, collate_fn=my_collate)    
     return train_loader, valid_loader
 
-def train(loaders: Tuple, params: Dict, model_path: str) -> None:
+def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
     """
     Make more abstract to other models
     """
@@ -26,14 +26,25 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
     criterion = torch.nn.CrossEntropyLoss(reduction='sum')
     optimizer = torch.optim.Adam(model.parameters(), lr=params['train']['learning_rate'])
 
+    if cuda and torch.cuda.device_count() > 0:
+        print('GPU number: {}'.format(torch.cuda.device_count()))
+        device = 'cuda'
+    else:
+        device = 'cpu'
+    print(f'Using {device}')  
+
     best_valid_loss = np.inf
     for epoch in range(params["train"]["nepochs"]):
-        global_loss = 0.0
+        global_loss = 0.0  
+        model.to(device)
         model.train()
         for batch in train_loader:
+            marshalled_batch = {}
+            for key in batch:
+                marshalled_batch[key] = batch[key].to(device)
             optimizer.zero_grad()
-            y = model.forward(batch)
-            loss = criterion(y, batch['label'])
+            y = model.forward(marshalled_batch)
+            loss = criterion(y, marshalled_batch['label'])
             loss.backward()
             optimizer.step()
             global_loss += loss.item()
@@ -44,15 +55,19 @@ def train(loaders: Tuple, params: Dict, model_path: str) -> None:
         model.eval()
         with torch.no_grad():
             for batch in valid_loader:
-                y = model.forward(batch)
-                loss = criterion(y, batch['label'])
+                marshalled_batch = {}
+                for key in batch:
+                    marshalled_batch[key] = batch[key].to(device)
+                y = model.forward(marshalled_batch)
+                loss = criterion(y, marshalled_batch['label'])
                 global_loss += loss.item()            
         print(f"{epoch}, valid/loss {global_loss/n_valid:0.4f}")
         dvclive.log('valid/loss', global_loss/n_valid)
         dvclive.next_step()
 
-        if global_loss < best_valid_loss: 
+        if global_loss < best_valid_loss:
             torch.save(model, model_path)
+            if device == 'cuda': model.cpu()
             model.create_trace()
 
 def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
