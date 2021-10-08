@@ -22,9 +22,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Process some integers.')
     parser.add_argument('--root_path', dest='root_path', help='path to the root of this repo', type=dir_path, default='../../')
-    parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=str, default='model.pt')  
-    parser.add_argument('--train', action='store_true')  
-    parser.add_argument('--evaluate', action='store_true')  
+    parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=str, default='model.pt')
+    parser.add_argument('--train', action='store_true')
+    parser.add_argument('--evaluate', action='store_true')
+    parser.add_argument('--cuda', action='store_true')
     args = parser.parse_args()
 
     print("Main: Loading parameters, dataset and model")
@@ -36,29 +37,26 @@ if __name__ == "__main__":
 
     # Save initial model
     """
-    feature_params = params["features"]
-    mel_transform_params = feature_params['mel_transform']
-
     model = Wavegram_Logmel_Cnn14(
         n_classes=527,
-        sampling_rate=feature_params["sampling_rate"],
-        n_fft=mel_transform_params['n_fft'],
-        hop_length=mel_transform_params['hop_length'],
-        n_mels=mel_transform_params['n_mels'],
-        fmin=mel_transform_params['fmin'],
-        fmax=mel_transform_params['fmax']
+        sampling_rate=32000,
+        n_fft=1024,
+        hop_length=320,
+        n_mels=64,
+        fmin=50,
+        fmax=14000
         )
-
+    
     checkpoint = torch.load('Wavegram_Logmel_Cnn14_mAP=0.439.pth')
     model.load_state_dict(checkpoint['model'])
     torch.save(model, 'model.pt')
     """
-
+    
     print("Main: Creating dataloaders")
     loaders = trainer.create_dataloaders(dataset, params)
     if args.train:
         print("Main: Training")
-        trainer.train(loaders, params, args.model_path)
+        trainer.train(loaders, params, args.model_path, args.cuda)
     if args.evaluate:
         print("Main: Evaluating")
         trainer.evaluate_model(loaders, params, args.model_path)
