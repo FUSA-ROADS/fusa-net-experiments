@@ -201,7 +201,8 @@ class Wavegram_Logmel_Cnn14(nn.Module):
         x = self.conv_block1(x, pool_size=(2, 2), pool_type='avg')
 
         # Concatenate Wavegram and Log mel spectrogram along the channel dimension
-        x = torch.cat((x, a1), dim=1)
+        min_len = torch.min(torch.tensor([x.shape[2], a1.shape[2]]))
+        x = torch.cat((x[:, :, :min_len,:], a1[:, :, :min_len,:]), dim=1)
 
         x = F.dropout(x, p=0.2, training=self.training)
         x = self.conv_block2(x, pool_size=(2, 2), pool_type='avg')
@@ -223,7 +224,6 @@ class Wavegram_Logmel_Cnn14(nn.Module):
         x = F.relu_(self.fc1(x))
         embedding = F.dropout(x, p=0.5, training=self.training)
         clipwise_output = torch.sigmoid(self.fc_audioset(x))
-        #clipwise_output = self.fc_audioset(x)
         
         output_dict = {
             'clipwise_output': clipwise_output,
@@ -234,6 +234,5 @@ class Wavegram_Logmel_Cnn14(nn.Module):
         
     def create_trace(self, path='traced_model.pt'):
         dummy_example = torch.randn(1, 1, 160000)
-        traced_model = torch.jit.trace(self, (dummy_example.cuda()), strict=False)
-        #traced_model = torch.jit.trace(self, (dummy_example))
+        traced_model = torch.jit.trace(self, (dummy_example), strict=False)
         traced_model.save(path)
