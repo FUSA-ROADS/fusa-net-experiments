@@ -66,8 +66,8 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
         dvclive.next_step()
 
         if global_loss < best_valid_loss:
-            torch.save(model, model_path)
             if device == 'cuda': model.cpu()
+            torch.save(model, model_path)
             model.create_trace()
 
 def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
