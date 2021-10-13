@@ -5,9 +5,9 @@ El archivo `FUSA_taxonomy.json` define las equivalencies entre las clases propia
 Los experimentos esperan que esté instalado el paquete [`fusanet_utils`](https://github.com/fusa-project/fusa-net-utils)
 
 ## Instalación librerías
-Crear un entorno virtual y activarlo:
+Crear un entorno virtual con Python 3.8 y activarlo:
 ```
-virtualenv fusa-training
+virtualenv fusa-training --python=python3.8
 source fusa-training/bin/activate
 ```
 
