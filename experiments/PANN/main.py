@@ -35,26 +35,25 @@ if __name__ == "__main__":
     with open('index_to_name.json', 'w') as f:
         json.dump(dataset.label_dictionary(), f)
 
-    # Save initial model
-    """
-    model = Wavegram_Logmel_Cnn14(
-        n_classes=527,
-        sampling_rate=32000,
-        n_fft=1024,
-        hop_length=320,
-        n_mels=64,
-        fmin=50,
-        fmax=14000
-        )
-    
-    checkpoint = torch.load('Wavegram_Logmel_Cnn14_mAP=0.439.pth')
-    model.load_state_dict(checkpoint['model'])
-    torch.save(model, 'model.pt')
-    """
-    
     print("Main: Creating dataloaders")
     loaders = trainer.create_dataloaders(dataset, params)
     if args.train:
+
+        # Save initial model
+        model = Wavegram_Logmel_Cnn14(
+            n_classes=527,
+            sampling_rate=32000,
+            n_fft=1024,
+            hop_length=320,
+            n_mels=64,
+            fmin=50,
+            fmax=14000
+            )
+
+        checkpoint = torch.load('Wavegram_Logmel_Cnn14_mAP=0.439.pth')
+        model.load_state_dict(checkpoint['model'])
+        torch.save(model, args.model_path)
+
         print("Main: Training")
         trainer.train(loaders, params, args.model_path, args.cuda)
     if args.evaluate:

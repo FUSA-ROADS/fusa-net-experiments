@@ -34,12 +34,14 @@ if __name__ == "__main__":
     dataset = FUSA_dataset(ConcatDataset([ESC(args.root_path)]), feature_params=params["features"])
     with open('index_to_name.json', 'w') as f:
         json.dump(dataset.label_dictionary(), f)
-    # Save initial model
-    model = NaiveModel(n_classes=len(dataset.categories))
-    torch.save(model, args.model_path)
     print("Main: Creating dataloaders")
     loaders = trainer.create_dataloaders(dataset, params)
     if args.train:
+
+        # Save initial model
+        model = NaiveModel(n_classes=len(dataset.categories))
+        torch.save(model, args.model_path)
+        
         print("Main: Training")
         trainer.train(loaders, params, args.model_path, args.cuda)
     if args.evaluate:
