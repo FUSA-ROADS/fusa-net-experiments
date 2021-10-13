@@ -12,8 +12,6 @@ stages:
       - train.batch_size
       - features.sampling_rate
       - features.global_normalization
-      - features.mel_transform.n_mels  
-      - features.mel_transform.normalized
     outs:  
     - model.pt
     - traced_model.pt
