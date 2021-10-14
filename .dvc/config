@@ -1,5 +1,5 @@
 [core]
     remote = patagon
 ['remote "patagon"']
-    url = ssh://patagon.uach.cl:/home/shared/FUSA/datasets/remote
+    url = ssh://patagon.uach.cl:/home/shared/FUSA/remote-storage
     port = 2237
