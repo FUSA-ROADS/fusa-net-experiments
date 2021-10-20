@@ -6,7 +6,7 @@ charset-normalizer==2.0.6
 cycler==0.10.0
 decorator==5.1.0
 dvclive==0.2.3
-fusanet-utils @ git+git://github.com/fusa-project/fusa-net-utils.git@33d822431ccfbd6a0fa5b3fa163aa7caae6ae8a0
+fusanet-utils @ git+git://github.com/fusa-project/fusa-net-utils.git@main
 idna==3.2
 joblib==1.0.1
 kiwisolver==1.3.2
