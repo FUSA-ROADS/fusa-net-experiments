@@ -39,6 +39,7 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
     best_valid_loss = np.inf
     for epoch in range(params["train"]["nepochs"]):
         global_loss = 0.0
+        global_accuracy = 0.0  
         model.to(device)
         model.train()
         for batch in train_loader:
@@ -53,10 +54,15 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
             loss.backward()
             optimizer.step()
             global_loss += loss.item()
+            accuracy = torch.sum(y.argmax(dim=1) == marshalled_batch['label'].argmax(dim=1))
+            global_accuracy += accuracy.item()
         print(f"{epoch}, train/loss {global_loss/n_train:0.4f}")
+        print(f"{epoch}, train/accuracy {global_accuracy/n_train:0.4f}")
         dvclive.log('train/loss', global_loss/n_train)
+        dvclive.log('train/accuracy', global_accuracy/n_train)
         
         global_loss = 0.0
+        global_accuracy = 0.0  
         model.eval()
         with torch.no_grad():
             for batch in valid_loader:
@@ -68,8 +74,12 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
                 y = model.forward(marshalled_batch['waveform'])['clipwise_output']
                 loss = criterion(y, marshalled_batch['label'])
                 global_loss += loss.item()            
+                accuracy = torch.sum(y.argmax(dim=1) == marshalled_batch['label'].argmax(dim=1))
+                global_accuracy += accuracy.item()
         print(f"{epoch}, valid/loss {global_loss/n_valid:0.4f}")
+        print(f"{epoch}, valid/accuracy {global_accuracy/n_valid:0.4f}")
         dvclive.log('valid/loss', global_loss/n_valid)
+        dvclive.log('valid/accuracy', global_accuracy/n_valid)
         dvclive.next_step()
 
         if global_loss < best_valid_loss:
