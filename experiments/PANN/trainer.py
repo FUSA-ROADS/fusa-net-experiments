@@ -13,7 +13,7 @@ def create_dataloaders(dataset, params: Dict):
     train_subset, valid_subset = random_split(dataset, (train_size, valid_size), generator=torch.Generator().manual_seed(params["train"]["random_seed"]))
     my_collate = Collate_and_transform(params['features'])
     train_loader = DataLoader(train_subset, shuffle=True, batch_size=params["train"]["batch_size"], collate_fn=my_collate)
-    valid_loader = DataLoader(valid_subset, batch_size=8, collate_fn=my_collate)    
+    valid_loader = DataLoader(valid_subset, batch_size=8, collate_fn=my_collate)
     return train_loader, valid_loader
 
 def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
@@ -88,7 +88,7 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
             model.create_trace()
 
 def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
-    train_loader, valid_loader = loaders 
+    train_loader, valid_loader = loaders
     model = torch.load(model_path)
     model.eval()
     
@@ -103,4 +103,4 @@ def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
     preds = np.concatenate(preds)
     labels = np.concatenate(labels)
     label_list = list(train_loader.dataset.dataset.label_dictionary().values())
-    print(classification_report(preds, labels, target_names=label_list))
+    print(classification_report(labels, preds, target_names=label_list))
