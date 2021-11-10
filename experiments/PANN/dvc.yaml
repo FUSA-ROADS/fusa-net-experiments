@@ -6,12 +6,15 @@ stages:
     - trainer.py
     - model.py  
     params:
-      - train.random_seed
-      - train.nepochs
-      - train.learning_rate
-      - train.batch_size
-      - features.sampling_rate
-      - features.global_normalization
+    - train.dataset
+    - train.random_seed
+    - train.nepochs
+    - train.learning_rate
+    - train.batch_size
+    - features.sampling_rate
+    - features.global_normalization
+    - features.collate_resize
+    - features.number_of_channels
     outs:  
     - model.pt
     - traced_model.pt
