@@ -4,7 +4,7 @@ import json
 import argparse
 import torch
 from torch.utils.data import ConcatDataset
-from fusanet_utils.datasets.external import ESC
+from fusanet_utils.datasets.external import ESC, UrbanSound8K
 from fusanet_utils.datasets.fusa import FUSA_dataset
 
 import trainer
@@ -29,15 +29,21 @@ if __name__ == "__main__":
 
     print("Main: Loading parameters, dataset and model")
     params = yaml.safe_load(open("params.yaml"))
-    print(params)
+    
+    dataset_param = params['train']['dataset']
+    if dataset_param == 'ESC':
+        train_dataset = [ESC(args.root_path)]
+    elif dataset_param == 'US':
+        train_dataset = [UrbanSound8K(args.root_path)]
+    else:
+        train_dataset = [ESC(args.root_path), UrbanSound8K(args.root_path)]
     # Create dataset for the experiment and save dictionary of classes index to names
-    dataset = FUSA_dataset(ConcatDataset([ESC(args.root_path)]), feature_params=params["features"])
+    dataset = FUSA_dataset(ConcatDataset(train_dataset), feature_params=params["features"])
     with open('index_to_name.json', 'w') as f:
         json.dump(dataset.label_dictionary(), f)
     print("Main: Creating dataloaders")
     loaders = trainer.create_dataloaders(dataset, params)
     if args.train:
-
         # Save initial model
         model = NaiveModel(n_classes=len(dataset.categories))
         torch.save(model, args.model_path)
