@@ -12,7 +12,8 @@ stages:
     - train.learning_rate
     - train.batch_size
     - features.sampling_rate
-    - features.global_normalization
+    - features.waveform_normalization.scope
+    - features.waveform_normalization.type
     - features.collate_resize
     - features.number_of_channels
     - features.mel_transform.n_mels

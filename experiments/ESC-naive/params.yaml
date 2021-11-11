@@ -3,13 +3,15 @@ features:
   overwrite: false
   number_of_channels: 1 # 1: mono, 2: stereo
   combine_channels: 'mean' # 'left', 'right', 'mean'
-  global_normalization: false
   collate_resize: 'pad' # 'pad', 'crop', 'none'
   mel_transform:
     n_mels: 64 # Number of mel coefficients
     n_fft: 1024 # window size
     hop_length: 512 # samples between windows
     normalized:  false # normalize by STFT magnitude
+  waveform_normalization:
+    scope: 'local'
+    type: 'zscore'
 
 train:
   random_seed: 1234
@@ -17,5 +19,5 @@ train:
   nepochs: 50
   learning_rate: 0.001
   batch_size: 32
-  dataset: 'ESC' # 'ESC' / 'US' / 'both'
+  dataset: 'US' # 'ESC' / 'US' / 'both'
 
