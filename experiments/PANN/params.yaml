@@ -5,7 +5,9 @@ features:
   combine_channels: 'mean' # 'left', 'right', 'mean'
   global_normalization: false
   collate_resize: 'pad' # 'pad', 'crop', 'none'
-
+  waveform_normalization:
+    scope: 'local'
+    type: 'zscore'
 
 train:
   random_seed: 1234
