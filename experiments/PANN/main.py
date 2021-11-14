@@ -1,5 +1,6 @@
 import os.path
 import yaml
+import logging
 import json
 import argparse
 import torch
@@ -8,7 +9,6 @@ from fusanet_utils.datasets.external import ESC, UrbanSound8K
 from fusanet_utils.datasets.fusa import FUSA_dataset
 
 import trainer
-
 from model import Wavegram_Logmel_Cnn14
 
 def dir_path(path):
@@ -26,9 +26,25 @@ if __name__ == "__main__":
     parser.add_argument('--train', action='store_true')
     parser.add_argument('--evaluate', action='store_true')
     parser.add_argument('--cuda', action='store_true')
+    parser.add_argument('--verbose', help="Print info level logs", action="store_true")
+    parser.add_argument('--debug', help="Print debug level logs", action="store_true")
     args = parser.parse_args()
 
-    print("Main: Loading parameters, dataset and model")
+    # Logging
+    logging_level = logging.WARNING
+    if args.verbose:
+        logging_level = logging.INFO
+    if args.debug:
+        logging_level = logging.DEBUG
+    main_logger = logging.getLogger()
+    main_logger.setLevel(logging_level)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setLevel(logging_level)
+    formatter = logging.Formatter("%(name)s - %(levelname)s - %(message)s")
+    stream_handler.setFormatter(formatter)
+    main_logger.addHandler(stream_handler)
+
+    main_logger.info("Loading parameters, dataset and model")
     params = yaml.safe_load(open("params.yaml"))    
     
     dataset_param = params['train']['dataset']
@@ -42,11 +58,9 @@ if __name__ == "__main__":
     dataset = FUSA_dataset(ConcatDataset(train_dataset), feature_params=params["features"])
     with open('index_to_name.json', 'w') as f:
         json.dump(dataset.label_dictionary(), f)
-
-    print("Main: Creating dataloaders")
+    main_logger.info("Creating dataloaders")
     loaders = trainer.create_dataloaders(dataset, params)
     if args.train:
-
         # Save initial model
         model = Wavegram_Logmel_Cnn14(
             n_classes=527,
@@ -57,14 +71,12 @@ if __name__ == "__main__":
             fmin=50,
             fmax=14000
             )
-
         checkpoint = torch.load('Wavegram_Logmel_Cnn14_mAP=0.439.pth')
         model.load_state_dict(checkpoint['model'])
         torch.save(model, args.model_path)
-
-        print("Main: Training")
+        main_logger.info("Main: Training")
         trainer.train(loaders, params, args.model_path, args.cuda)
     if args.evaluate:
-        print("Main: Evaluating")
+        main_logger.info("Main: Evaluating")
         trainer.evaluate_model(loaders, params, args.model_path)
     

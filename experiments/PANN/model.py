@@ -1,9 +1,11 @@
+import logging
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
 from torchlibrosa.stft import Spectrogram, LogmelFilterBank
 from torchlibrosa.augmentation import SpecAugmentation
+
+logger = logging.getLogger(__name__)
 
 def do_mixup(x, mixup_lambda):
     """Mixup x of even indexes (0, 2, 4, ...) with x of odd indexes 
@@ -173,25 +175,38 @@ class Wavegram_Logmel_Cnn14(nn.Module):
         """
         Input: (batch_size, data_length)"""
         input = torch.squeeze(input, 1)
+        logger.debug(f"{input.shape}") 
 
         # Wavegram
         a1 = F.relu_(self.pre_bn0(self.pre_conv0(input[:, None, :])))
+        logger.debug(f"{a1.shape}") 
         a1 = self.pre_block1(a1, pool_size=4)
+        logger.debug(f"{a1.shape}") 
         a1 = self.pre_block2(a1, pool_size=4)
+        logger.debug(f"{a1.shape}") 
         a1 = self.pre_block3(a1, pool_size=4)
+        logger.debug(f"{a1.shape}") 
         a1 = a1.reshape((a1.shape[0], -1, 32, a1.shape[-1])).transpose(2, 3)
+        logger.debug(f"{a1.shape}") 
         a1 = self.pre_block4(a1, pool_size=(2, 1))
+        logger.debug(f"{a1.shape}") 
 
         # Log mel spectrogram
         x = self.spectrogram_extractor(input)   # (batch_size, 1, time_steps, freq_bins)
+        logger.debug(f"{x.shape}") 
         x = self.logmel_extractor(x)    # (batch_size, 1, time_steps, n_mels)
+        logger.debug(f"{x.shape}")
         
         x = x.transpose(1, 3)
+        logger.debug(f"{x.shape}") 
         x = self.bn0(x)
+        logger.debug(f"{x.shape}") 
         x = x.transpose(1, 3)
+        logger.debug(f"{x.shape}") 
 
         if self.training:
             x = self.spec_augmenter(x)
+            logger.debug(f"{x.shape}")
 
         # Mixup on spectrogram
         if self.training and mixup_lambda is not None:
@@ -199,31 +214,43 @@ class Wavegram_Logmel_Cnn14(nn.Module):
             a1 = do_mixup(a1, mixup_lambda)
         
         x = self.conv_block1(x, pool_size=(2, 2), pool_type='avg')
+        logger.debug(f"{x.shape}")
 
         # Concatenate Wavegram and Log mel spectrogram along the channel dimension
         min_len = torch.min(torch.tensor([x.shape[2], a1.shape[2]]))
         x = torch.cat((x[:, :, :min_len,:], a1[:, :, :min_len,:]), dim=1)
+        logger.debug(f"{x.shape}")
 
         x = F.dropout(x, p=0.2, training=self.training)
         x = self.conv_block2(x, pool_size=(2, 2), pool_type='avg')
+        logger.debug(f"{x.shape}")
         x = F.dropout(x, p=0.2, training=self.training)
         x = self.conv_block3(x, pool_size=(2, 2), pool_type='avg')
+        logger.debug(f"{x.shape}")
         x = F.dropout(x, p=0.2, training=self.training)
         x = self.conv_block4(x, pool_size=(2, 2), pool_type='avg')
+        logger.debug(f"{x.shape}")
         x = F.dropout(x, p=0.2, training=self.training)
         x = self.conv_block5(x, pool_size=(2, 2), pool_type='avg')
+        logger.debug(f"{x.shape}")
         x = F.dropout(x, p=0.2, training=self.training)
         x = self.conv_block6(x, pool_size=(1, 1), pool_type='avg')
+        logger.debug(f"{x.shape}")
         x = F.dropout(x, p=0.2, training=self.training)
         x = torch.mean(x, dim=3)
+        logger.debug(f"{x.shape}")
         
         (x1, _) = torch.max(x, dim=2)
         x2 = torch.mean(x, dim=2)
         x = x1 + x2
+        logger.debug(f"{x.shape}")
         x = F.dropout(x, p=0.5, training=self.training)
         x = F.relu_(self.fc1(x))
+        logger.debug(f"{x.shape}")
         embedding = F.dropout(x, p=0.5, training=self.training)
+        logger.debug(f"{embedding.shape}")
         clipwise_output = torch.sigmoid(self.fc_audioset(x))
+        logger.debug(f"{clipwise_output.shape}")
         
         output_dict = {
             'clipwise_output': clipwise_output,
