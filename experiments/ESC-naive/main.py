@@ -26,10 +26,16 @@ if __name__ == "__main__":
     parser.add_argument('--train', action='store_true')  
     parser.add_argument('--evaluate', action='store_true')  
     parser.add_argument('--cuda', action='store_true')
+    parser.add_argument('--verbose', help="Print info level logs", action="store_true")
+    parser.add_argument('--debug', help="Print debug level logs", action="store_true")
     args = parser.parse_args()
 
     # Logging
-    logging_level = logging.DEBUG
+    logging_level = logging.WARNING
+    if args.verbose:
+        logging_level = logging.INFO
+    if args.debug:
+        logging_level = logging.DEBUG
     main_logger = logging.getLogger()
     main_logger.setLevel(logging_level)
     stream_handler = logging.StreamHandler()
