@@ -1,5 +1,6 @@
 import os.path
 import yaml
+import logging
 import json
 import argparse
 import torch
@@ -27,7 +28,17 @@ if __name__ == "__main__":
     parser.add_argument('--cuda', action='store_true')
     args = parser.parse_args()
 
-    print("Main: Loading parameters, dataset and model")
+    # Logging
+    logging_level = logging.DEBUG
+    main_logger = logging.getLogger()
+    main_logger.setLevel(logging_level)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setLevel(logging_level)
+    formatter = logging.Formatter("%(name)s - %(levelname)s - %(message)s")
+    stream_handler.setFormatter(formatter)
+    main_logger.addHandler(stream_handler)
+
+    main_logger.info("Loading parameters, dataset and model")
     params = yaml.safe_load(open("params.yaml"))
     
     dataset_param = params['train']['dataset']
@@ -41,16 +52,16 @@ if __name__ == "__main__":
     dataset = FUSA_dataset(ConcatDataset(train_dataset), feature_params=params["features"])
     with open('index_to_name.json', 'w') as f:
         json.dump(dataset.label_dictionary(), f)
-    print("Main: Creating dataloaders")
+    main_logger.info("Creating dataloaders")
     loaders = trainer.create_dataloaders(dataset, params)
     if args.train:
         # Save initial model
         model = NaiveModel(n_classes=len(dataset.categories))
         torch.save(model, args.model_path)
         
-        print("Main: Training")
+        main_logger.info("Main: Training")
         trainer.train(loaders, params, args.model_path, args.cuda)
     if args.evaluate:
-        print("Main: Evaluating")
+        main_logger.info("Main: Evaluating")
         trainer.evaluate_model(loaders, params, args.model_path)
     

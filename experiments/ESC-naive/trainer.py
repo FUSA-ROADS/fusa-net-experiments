@@ -1,4 +1,5 @@
 from typing import Dict, Tuple
+import logging
 import numpy as np
 import torch
 from torch.utils.data import DataLoader, random_split
@@ -6,6 +7,7 @@ from sklearn.metrics import classification_report
 import dvclive    
 from fusanet_utils.transforms import Collate_and_transform
 
+logger = logging.getLogger(__name__)
 
 def create_dataloaders(dataset, params: Dict):
     train_size = int(params["train"]["train_percent"]*len(dataset))
@@ -27,14 +29,15 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
     optimizer = torch.optim.Adam(model.parameters(), lr=params['train']['learning_rate'])
 
     if cuda and torch.cuda.device_count() > 0:
-        print('GPU number: {}'.format(torch.cuda.device_count()))
+        logger.info('GPU number: {}'.format(torch.cuda.device_count()))
         device = 'cuda'
     else:
         device = 'cpu'
-    print(f'Using {device}')  
+    logger.info(f'Using {device}')  
 
     best_valid_loss = np.inf
     for epoch in range(params["train"]["nepochs"]):
+        logger.info(f"Starting epoch {epoch}")
         global_loss = 0.0  
         global_accuracy = 0.0  
         model.to(device)
@@ -51,8 +54,8 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
             global_loss += loss.item()
             accuracy = torch.sum(y.argmax(dim=1) == marshalled_batch['label'])
             global_accuracy += accuracy.item()
-        print(f"{epoch}, train/loss {global_loss/n_train:0.4f}")
-        print(f"{epoch}, train/accuracy {global_accuracy/n_train:0.4f}")
+        logger.info(f"{epoch}, train/loss {global_loss/n_train:0.4f}")
+        logger.info(f"{epoch}, train/accuracy {global_accuracy/n_train:0.4f}")
         dvclive.log('train/loss', global_loss/n_train)
         dvclive.log('train/accuracy', global_accuracy/n_train)
         
@@ -69,8 +72,8 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
                 global_loss += loss.item()
                 accuracy = torch.sum(y.argmax(dim=1) == marshalled_batch['label'])
                 global_accuracy += accuracy.item() 
-        print(f"{epoch}, valid/loss {global_loss/n_valid:0.4f}")
-        print(f"{epoch}, valid/accuracy {global_accuracy/n_valid:0.4f}")
+        logger.info(f"{epoch}, valid/loss {global_loss/n_valid:0.4f}")
+        logger.info(f"{epoch}, valid/accuracy {global_accuracy/n_valid:0.4f}")
         dvclive.log('valid/loss', global_loss/n_valid)
         dvclive.log('valid/accuracy', global_accuracy/n_valid)
         dvclive.next_step()
@@ -94,7 +97,7 @@ def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
     preds = np.concatenate(preds)
     labels = np.concatenate(labels)
     label_list = list(train_loader.dataset.dataset.label_dictionary().values())
-    print(classification_report(labels, preds, target_names=label_list))
+    logger.info(classification_report(labels, preds, target_names=label_list))
 
 
 
