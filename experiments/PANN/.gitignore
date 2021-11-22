@@ -1,4 +1,7 @@
 /model.pt
 /traced_model.pt
-/training_metrics
 /Wavegram_Logmel_Cnn14_mAP=0.439.pth
+/experiment_01
+/experiment_17
+/experiment_02
+/training_metrics

@@ -1,17 +1,17 @@
 features:
   sampling_rate: 32000
-  overwrite: false
+  overwrite: true
   number_of_channels: 1 # 1: mono, 2: stereo
   combine_channels: 'mean' # 'left', 'right', 'mean'
   collate_resize: 'pad' # 'pad', 'crop', 'none'
   waveform_normalization:
-    scope: 'local'
+    scope: 'global'
     type: 'zscore'
 
 train:
   random_seed: 1234
   train_percent: 0.8
-  nepochs: 10
+  nepochs: 2
   learning_rate: 0.001
-  batch_size: 8
+  batch_size: 4
   dataset: 'ESC' # 'ESC' / 'US' / 'both'
