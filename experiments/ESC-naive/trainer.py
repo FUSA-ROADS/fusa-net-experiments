@@ -3,9 +3,10 @@ import logging
 import numpy as np
 import torch
 from torch.utils.data import DataLoader, random_split
-from sklearn.metrics import classification_report
+from sklearn.metrics import classification_report, f1_score
 import dvclive    
 from fusanet_utils.transforms import Collate_and_transform
+import pandas as pd
 
 logger = logging.getLogger(__name__)
 
@@ -72,10 +73,13 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
                 global_loss += loss.item()
                 accuracy = torch.sum(y.argmax(dim=1) == marshalled_batch['label'])
                 global_accuracy += accuracy.item() 
+        f1_score_macro = f1_score(marshalled_batch['label'].cpu(), y.cpu().argmax(dim=1), average='macro')
         logger.info(f"{epoch}, valid/loss {global_loss/n_valid:0.4f}")
         logger.info(f"{epoch}, valid/accuracy {global_accuracy/n_valid:0.4f}")
+        logger.info(f"{epoch}, f1_score macro {f1_score_macro}")
         dvclive.log('valid/loss', global_loss/n_valid)
         dvclive.log('valid/accuracy', global_accuracy/n_valid)
+        dvclive.log('f1_score macro', f1_score_macro)
         dvclive.next_step()
 
         if global_loss < best_valid_loss:
@@ -97,7 +101,10 @@ def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
     preds = np.concatenate(preds)
     labels = np.concatenate(labels)
     label_list = list(train_loader.dataset.dataset.label_dictionary().values())
-    logger.info(classification_report(labels, preds, target_names=label_list))
+    report = classification_report(labels, preds, target_names=label_list, output_dict=True)
+    df_classification_report = pd.DataFrame(report).transpose()
+    df_classification_report.to_csv('report.csv')
+    logger.info('Reporte exportado con éxito')
 
 
 
