@@ -62,9 +62,10 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
         
         global_loss = 0.0
         global_accuracy = 0.0  
+        global_f1_score = 0.0
         model.eval()
         with torch.no_grad():
-            for batch in valid_loader:
+            for n_batch, batch in enumerate(valid_loader, start=1):
                 marshalled_batch = {}
                 for key in batch:
                     marshalled_batch[key] = batch[key].to(device)
@@ -73,13 +74,13 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
                 global_loss += loss.item()
                 accuracy = torch.sum(y.argmax(dim=1) == marshalled_batch['label'])
                 global_accuracy += accuracy.item() 
-        f1_score_macro = f1_score(marshalled_batch['label'].cpu(), y.cpu().argmax(dim=1), average='macro')
+                global_f1_score += f1_score(marshalled_batch['label'].cpu(), y.cpu().argmax(dim=1), average='macro')
         logger.info(f"{epoch}, valid/loss {global_loss/n_valid:0.4f}")
         logger.info(f"{epoch}, valid/accuracy {global_accuracy/n_valid:0.4f}")
-        logger.info(f"{epoch}, f1_score macro {f1_score_macro}")
+        logger.info(f"{epoch}, f1_score macro {global_f1_score/n_batch:0.4f}")
         dvclive.log('valid/loss', global_loss/n_valid)
         dvclive.log('valid/accuracy', global_accuracy/n_valid)
-        dvclive.log('f1_score macro', f1_score_macro)
+        dvclive.log('f1_score macro', global_f1_score/n_batch)
         dvclive.next_step()
 
         if global_loss < best_valid_loss:
