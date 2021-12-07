@@ -4,11 +4,12 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader, random_split
 from sklearn.metrics import classification_report, f1_score
-import dvclive    
+from dvclive import Live
 from fusanet_utils.transforms import Collate_and_transform
 import torch.nn as nn
 import pandas as pd
 
+live = Live()
 logger = logging.getLogger(__name__)
 
 def create_dataloaders(dataset, params: Dict):
@@ -62,8 +63,8 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
             global_accuracy += accuracy.item()
         logger.info(f"{epoch}, train/loss {global_loss/n_train:0.4f}")
         logger.info(f"{epoch}, train/accuracy {global_accuracy/n_train:0.4f}")
-        dvclive.log('train/loss', global_loss/n_train)
-        dvclive.log('train/accuracy', global_accuracy/n_train)
+        live.log('train/loss', global_loss/n_train)
+        live.log('train/accuracy', global_accuracy/n_train)
         
         global_loss = 0.0
         global_accuracy = 0.0 
@@ -85,10 +86,10 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
         logger.info(f"{epoch}, valid/loss {global_loss/n_valid:0.4f}")
         logger.info(f"{epoch}, valid/accuracy {global_accuracy/n_valid:0.4f}")
         logger.info(f"{epoch}, f1_score macro {global_f1_score/n_batch:0.4f}")
-        dvclive.log('valid/loss', global_loss/n_valid)
-        dvclive.log('valid/accuracy', global_accuracy/n_valid)
-        dvclive.log('f1_score macro', global_f1_score/n_batch)
-        dvclive.next_step()
+        live.log('valid/loss', global_loss/n_valid)
+        live.log('valid/accuracy', global_accuracy/n_valid)
+        live.log('f1_score macro', global_f1_score/n_batch)
+        live.next_step()
 
         if global_loss < best_valid_loss:
             if device == 'cuda': model.cpu()
