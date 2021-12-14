@@ -29,7 +29,6 @@ if __name__ == "__main__":
     parser.add_argument('--verbose', help="Print info level logs", action="store_true")
     parser.add_argument('--debug', help="Print debug level logs", action="store_true")
     args = parser.parse_args()
-
     # Logging
     logging_level = logging.WARNING
     if args.verbose:
@@ -71,7 +70,10 @@ if __name__ == "__main__":
             fmin=50,
             fmax=14000
             )
-        checkpoint = torch.load('Wavegram_Logmel_Cnn14_mAP=0.439.pth')
+        if args.cuda:
+            checkpoint = torch.load('Wavegram_Logmel_Cnn14_mAP=0.439.pth')
+        else:
+            checkpoint = torch.load('Wavegram_Logmel_Cnn14_mAP=0.439.pth', map_location=torch.device('cpu'))
         model.load_state_dict(checkpoint['model'])
         torch.save(model, args.model_path)
         main_logger.info("Main: Training")
