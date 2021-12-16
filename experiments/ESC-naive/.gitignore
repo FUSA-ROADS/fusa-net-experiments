@@ -1,3 +1,4 @@
 /model.pt
 /traced_model.pt
 /training_metrics
+*.out
