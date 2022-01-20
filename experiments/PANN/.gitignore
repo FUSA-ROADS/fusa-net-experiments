@@ -6,3 +6,4 @@
 /experiment_02
 /training_metrics
 *.out
+/Cnn14_DecisionLevelAtt_mAP=0.425.pth
