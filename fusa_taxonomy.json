@@ -165,7 +165,7 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Motorcycle"]
-        "FUSApolyphonic": ["motorcycle-idling"]
+        "FUSApolyphonic": ["motorcycle-idling", "motorcycle-moving"]
     },
     "vehicles/cars" :
     {
