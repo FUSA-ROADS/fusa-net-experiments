@@ -165,7 +165,7 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Motorcycle"]
-        "FUSApolyphonic": ["motorcycle-idling", "motorcycle-moving"]
+        "FUSApolyphonic": ["motorcycle_idling", "motorcycle_moving"]
     },
     "vehicles/cars" :
     {
@@ -173,7 +173,7 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Car", "Car passing by", "Race car, auto racing"]
-        "FUSApolyphonic": ["car-idling", "car-moving"]
+        "FUSApolyphonic": ["car_idling", "car_moving"]
     },
     "vehicles/bus" :
     {
@@ -181,7 +181,7 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Truck", "Bus"]
-        "FUSApolyphonic": [""]
+        "FUSApolyphonic": ["bus_idling", "bus_moving", "truck_idling", "truck_moving"]
     },
     "vehicles/airborne" :
     {
