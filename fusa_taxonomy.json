@@ -110,7 +110,7 @@
     "environmental/waves" :
     {
         "description" : "sonido de olas de mar",
-        "ESC" : [""],
+        "ESC" : ["sea waves"],
         "UrbanSound": [""],
         "AudioSet": ["Waves, surf", "Ocean"],
         "FUSApolyphonic": ["waves"],
@@ -165,7 +165,7 @@
     {
         "description" : "aire acondicionado",
         "ESC" : [""],
-        "UrbanSound": [""],
+        "UrbanSound": ["air_conditioner"],
         "AudioSet": ["Air conditioning"],
         "FUSApolyphonic": ["air_conditioner"],
         "Vitglobal": [""]
