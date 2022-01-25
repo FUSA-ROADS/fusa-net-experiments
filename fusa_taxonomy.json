@@ -5,7 +5,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Speech", "Male speech, man speaking", "Female speech, woman speaking", "Child speech, kid speaking", "Conversation", "Narration, monologue"],
-        "FUSApolyphonic": ["talk"]
+        "FUSApolyphonic": ["talk"],
+        "Vitglobal": [""]
     },
     "humans/shouting" :
     {
@@ -13,7 +14,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Shout", "Screaming", "Yell"],
-        "FUSApolyphonic": ["shouting"]
+        "FUSApolyphonic": ["shouting"],
+        "Vitglobal": [""]
     },
     "humans/crowd" :
     {
@@ -21,7 +23,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Chatter", "Crowd"],
-        "FUSApolyphonic": ["crowd"]
+        "FUSApolyphonic": ["crowd"],
+        "Vitglobal": [""]
     },
     "humans/others" :
     {
@@ -29,7 +32,8 @@
         "ESC" : ["crying_baby", "sneezing", "clapping", "breathing", "coughing", "footsteps", "laughing", "brushing_teeth", "snoring", "drinking_sipping"],
         "UrbanSound": ["children_playing"],
         "AudioSet": ["Laughter", "Crying, sobbing", "Wail, moan", "Sigh", "Humming", "Groan", "Grunt", "Yawn", "Whistling", "Breathing", "Cough", "Sneeze", "Sniff", "Hubbub, speech noise, speech babble", "Clapping", "Cheering", "Applause", "Children playing", "Children shouting", "Babbling", "Baby laughter", "Baby cry, infant cry", "Snicker", "Walk, footsteps", "Belly laugh"],
-        "FUSApolyphonic": ["steps"]
+        "FUSApolyphonic": ["steps"],
+        "Vitglobal": [""]
     },
     "Music/music" :
     {
@@ -37,7 +41,8 @@
         "ESC" : [""],
         "UrbanSound": ["street_music"],
         "AudioSet": ["Music", "Singing", "Guitar", "Ukelele", "Piano", "Organ", "Synthesizer", "Drum", "Orchestra", "Trumpet", "String section", "Violin, fiddle", "Cello", "Flute", "Saxophone", "Clarinet", "Harp", "Choir", "Accordion", "Musical ensamble", "Bass", "Musical instrument"],
-        "FUSApolyphonic": ["music"]
+        "FUSApolyphonic": ["music"],
+        "Vitglobal": ["MUSICA"]
     },
     "animal/dog" :
     {
@@ -45,7 +50,8 @@
         "ESC" : ["dog"],
         "UrbanSound": ["dog_bark"],
         "AudioSet": ["Dog", "Bark", "Yip", "Howl", "Bow-wow", "Growling", "Whimper", "Bay"],
-        "FUSApolyphonic": ["dog"]
+        "FUSApolyphonic": ["dog"],
+        "Vitglobal": [""]
     },
     "animal/bird" :
     {
@@ -53,7 +59,8 @@
         "ESC" : ["crow", "hen", "rooster", "chirping_birds"],
         "UrbanSound": [""],
         "AudioSet": ["Bird", "Bird vocalization, bird call, bird song", "Pigeon, dove", "Crow", "Owl", "Gull, seagull", "Bird flight, flapping wings", "Chirp, tweet", "Fowl", "Caw"],
-        "FUSApolyphonic": ["bird"]
+        "FUSApolyphonic": ["bird"],
+        "Vitglobal": ["GAVIOTA"]
     },
     "animal/others" :
     {
@@ -61,7 +68,8 @@
         "ESC" : ["cat", "sheep", "crickets", "insects", "frog", "pig", "cow"],
         "UrbanSound": [""],
         "AudioSet": ["Meow", "Cat", "Cat communication", "Croak", "Cricket", "Mosquito", "Buzz", "Clip-clop", "Neigh, whinny", "Snort (horse)", "Moo", "Chicken, rooster", "Sheep", "Frog", "Insect", "Pig", "Animal", "Bee, wasp, etc.", "Fly, housefly", "Crowing, cock-a-doodle-doo", "Cattle, bovinae", "Livestock, farm animals, working animals", "Domestic animals, pets", "Oink", "Duck", "Cowbell", "Roar"],
-        "FUSApolyphonic": [""]
+        "FUSApolyphonic": [""],
+        "Vitglobal": [""]
     },
     "environmental/rain" :
     {
@@ -69,7 +77,8 @@
         "ESC" : ["rain"],
         "UrbanSound": [""],
         "AudioSet": ["Rain", "Rain on surface"],
-        "FUSApolyphonic": ["rain"]
+        "FUSApolyphonic": ["rain"],
+        "Vitglobal": [""]
     },
     "environmental/wind" :
     {
@@ -77,7 +86,8 @@
         "ESC" : ["wind"],
         "UrbanSound": [""],
         "AudioSet": ["Wind", "Wind noise (microphone)", "Rustling leaves", "Howl (wind)"],
-        "FUSApolyphonic": ["wind"]
+        "FUSApolyphonic": ["wind"],
+        "Vitglobal": [""]
     },
     "environmental/water" :
     {
@@ -85,7 +95,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Waterfall", "Water", "Splash, splatter", "Slosh"],
-        "FUSApolyphonic": ["water"]
+        "FUSApolyphonic": ["water"],
+        "Vitglobal": [""]
     },
     "environmental/river" :
     {
@@ -93,7 +104,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Stream"],
-        "FUSApolyphonic": ["river"]
+        "FUSApolyphonic": ["river"],
+        "Vitglobal": [""]
     },
     "environmental/waves" :
     {
@@ -101,7 +113,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": [""],
-        "FUSApolyphonic": ["waves"]
+        "FUSApolyphonic": ["waves"],
+        "Vitglobal": [""]
     },
     "environmental/others" :
     {
@@ -109,7 +122,8 @@
         "ESC" : ["crackling_fire", "sea_waves", "thunderstorm"],
         "UrbanSound": [""],
         "AudioSet": ["Ocean", "Thunderstorm", "Thunder", "Fire", "Crackle", "Wildfire", "Patter", "Environmental noise", "Waves, surf"],
-        "FUSApolyphonic": [""]
+        "FUSApolyphonic": [""],
+        "Vitglobal": ["PAISAJE", "PUERTO"]
     },
     "mechanical/impact" :
     {
@@ -117,7 +131,8 @@
         "ESC" : [""],
         "UrbanSound": ["jackhammer"],
         "AudioSet": ["Jackhammer", "Hammer"],
-        "FUSApolyphonic": ["impact"]
+        "FUSApolyphonic": ["impact"],
+        "Vitglobal": ["APILAR", "APILAR CHIRRIDO", "APILAR FRENOS", "APILAR LOCK", "APILAR MOTOR", "APILAR RETROCESO"]
     },
     "mechanical/cutting" :
     {
@@ -125,7 +140,8 @@
         "ESC" : ["chainsaw", "hand_saw"],
         "UrbanSound": [""],
         "AudioSet": ["Chainsaw", "Sawing", "Chop", "Splinter"],
-        "FUSApolyphonic": ["cutting"]
+        "FUSApolyphonic": ["cutting"],
+        "Vitglobal": [""]
     },
     "mechanical/explosives" :
     {
@@ -133,7 +149,8 @@
         "ESC" : ["fireworks"],
         "UrbanSound": ["gun_shot"],
         "AudioSet": ["Gunshot, gunfire", "Fireworks", "Firecracker", "Burst, pop", "Eruption", "Boom", "Machine gun", "Artillery fire", "Fusillade"],
-        "FUSApolyphonic": ["explosives", "fireworks"]
+        "FUSApolyphonic": ["explosives", "fireworks"],
+        "Vitglobal": ["CAÑONAZO"]
     },
     "mechanical/digging" :
     {
@@ -141,7 +158,8 @@
         "ESC" : [""],
         "UrbanSound": ["drilling"],
         "AudioSet": ["Drill"],
-        "FUSApolyphonic": ["drilling"]
+        "FUSApolyphonic": ["drilling"],
+        "Vitglobal": [""]
     },
     "mechanical/air_conditioner" :
     {
@@ -149,7 +167,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": [""],
-        "FUSApolyphonic": ["air_conditioner"]
+        "FUSApolyphonic": ["air_conditioner"],
+        "Vitglobal": [""]
     },
     "mechanical/others" :
     {
@@ -157,7 +176,8 @@
         "ESC" : ["engine"],
         "UrbanSound": ["engine_idling"],
         "AudioSet": ["Sanding", "Light engine (high frequency)", "Medium engine (mid frequency)", "Heavy engine (low frequency)", "Engine knocking", "Idling", "Engine starting", "Lawn mower"],
-        "FUSApolyphonic": [""]
+        "FUSApolyphonic": [""],
+        "Vitglobal": ["MOTOR"]
     },
     "vehicles/motorcycles" :
     {
@@ -165,7 +185,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Motorcycle"],
-        "FUSApolyphonic": ["motorcycle_idling", "motorcycle_moving"]
+        "FUSApolyphonic": ["motorcycle_idling", "motorcycle_moving"],
+        "Vitglobal": ["MOTO"]
     },
     "vehicles/cars" :
     {
@@ -173,7 +194,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Car", "Car passing by", "Race car, auto racing"],
-        "FUSApolyphonic": ["car_idling", "car_moving"]
+        "FUSApolyphonic": ["car_idling", "car_moving"],
+        "Vitglobal": [""]
     },
     "vehicles/bus" :
     {
@@ -181,7 +203,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Truck", "Bus"],
-        "FUSApolyphonic": ["bus_idling", "bus_moving", "truck_idling", "truck_moving"]
+        "FUSApolyphonic": ["bus_idling", "bus_moving", "truck_idling", "truck_moving"],
+        "Vitglobal": ["CAMION"]
     },
     "vehicles/airborne" :
     {
@@ -189,7 +212,8 @@
         "ESC" : ["helicopter", "airplane"],
         "UrbanSound": [""],
         "AudioSet": ["Aircraft", "Aircraft engine", "Helicopter", "Fixed-wing aircraft, airplane", "Jet engine", "Propeller, airscrew"],
-        "FUSApolyphonic": ["airborne"]
+        "FUSApolyphonic": ["airborne"],
+        "Vitglobal": [""]
     },
     "vehicles/water" :
     {
@@ -197,7 +221,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": [""],
-        "FUSApolyphonic": ["Vwater"]
+        "FUSApolyphonic": ["Vwater"],
+        "Vitglobal": [""]
     },
     "vehicles/others" :
     {
@@ -205,7 +230,8 @@
         "ESC" : ["train"],
         "UrbanSound": [""],
         "AudioSet": ["Boat, Water vehicle", "Rail transport", "Bicycle", "Skateboard", "Train", "Railroad car, train wagon", "Train wheels squealing", "Ship", "Motorboat, speedboat"],
-        "FUSApolyphonic": [""]
+        "FUSApolyphonic": [""],
+        "Vitglobal": [""]
     },
     "alerts/siren" :
     {
@@ -213,7 +239,8 @@
         "ESC" : ["siren"],
         "UrbanSound": ["siren"],
         "AudioSet": ["Siren", "Police car (siren)", "Ambulance (siren)", "Fire engine, fire truck (siren)", "Civil defense siren"],
-        "FUSApolyphonic": ["siren"]
+        "FUSApolyphonic": ["siren"],
+        "Vitglobal": ["SIRENA"]
     },
     "alerts/alarms" :
     {
@@ -221,7 +248,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Alarm", "Car alarm", "Fire alarm"],
-        "FUSApolyphonic": ["alarm"]
+        "FUSApolyphonic": ["alarm"],
+        "Vitglobal": ["ALARMA RETROCESO", "ALARMA TONAL"]
     },
     "alerts/horns" :
     {
@@ -229,7 +257,8 @@
         "ESC" : ["car_horn"],
         "UrbanSound": ["car_horn"],
         "AudioSet": ["Vehicle horn, car horn, honking", "Air horn, truck horn", "Toot"],
-        "FUSApolyphonic": ["horn"]
+        "FUSApolyphonic": ["horn"],
+        "Vitglobal": ["BOCINA"]
     },
     "alerts/bells" :
     {
@@ -237,7 +266,8 @@
         "ESC" : ["church_bells"],
         "UrbanSound": [""],
         "AudioSet": ["Bell", "Church bell", "Bicycle bell", "Change ringing (campanology)"],
-        "FUSApolyphonic": ["bells"]
+        "FUSApolyphonic": ["bells"],
+        "Vitglobal": [""]
     },
     "alerts/braking and skidding" :
     {
@@ -245,7 +275,8 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Skidding", "Tire squeal", "Air breack"],
-        "FUSApolyphonic": ["braking"]
+        "FUSApolyphonic": ["braking"],
+        "Vitglobal": ["FRENOS"]
     },
     "alerts/others" :
     {
@@ -253,6 +284,7 @@
         "ESC" : [""],
         "UrbanSound": [""],
         "AudioSet": ["Emergency vehicle", "Reversing beeps", "Accelerating, revving, vroom", "Glass", "Shatter", "Honk"],
-        "FUSApolyphonic": [""]
+        "FUSApolyphonic": [""],
+        "Vitglobal": ["CHIRRIDO", "DESPICHE"]
     }
 }
