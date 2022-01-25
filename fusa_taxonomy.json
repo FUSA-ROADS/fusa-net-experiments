@@ -112,7 +112,7 @@
         "description" : "sonido de olas de mar",
         "ESC" : [""],
         "UrbanSound": [""],
-        "AudioSet": [""],
+        "AudioSet": ["Waves, surf", "Ocean"],
         "FUSApolyphonic": ["waves"],
         "Vitglobal": [""]
     },
@@ -166,7 +166,7 @@
         "description" : "aire acondicionado",
         "ESC" : [""],
         "UrbanSound": [""],
-        "AudioSet": [""],
+        "AudioSet": ["Air conditioning"],
         "FUSApolyphonic": ["air_conditioner"],
         "Vitglobal": [""]
     },
@@ -220,7 +220,7 @@
         "description" : "lanchas, botes, etc",
         "ESC" : [""],
         "UrbanSound": [""],
-        "AudioSet": [""],
+        "AudioSet": ["Boat, Water vehicle","Motorboat, speedboat", "Ship", "Sailboat, sailing ship", "Rowboat, canoe, kayak"],
         "FUSApolyphonic": ["Vwater"],
         "Vitglobal": [""]
     },
@@ -229,7 +229,7 @@
         "description" : "Otros sonidos mecánicos dinámicos o móviles",
         "ESC" : ["train"],
         "UrbanSound": [""],
-        "AudioSet": ["Boat, Water vehicle", "Rail transport", "Bicycle", "Skateboard", "Train", "Railroad car, train wagon", "Train wheels squealing", "Ship", "Motorboat, speedboat"],
+        "AudioSet": ["Rail transport", "Bicycle", "Skateboard", "Train", "Railroad car, train wagon", "Train wheels squealing"],
         "FUSApolyphonic": [""],
         "Vitglobal": [""]
     },
