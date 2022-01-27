@@ -43,12 +43,11 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
         device = 'cpu'
     logger.info(f'Using {device}') 
 
-    model.to(device)
-
     best_valid_loss = np.inf
     for epoch in range(params["train"]["nepochs"]):
         global_loss = 0.0
         global_accuracy = 0.0  
+        model.to(device) 
         model.train()
         start_time = time.time()
         for batch in train_loader:
