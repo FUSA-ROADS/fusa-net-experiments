@@ -110,7 +110,7 @@
     "environmental/waves" :
     {
         "description" : "sonido de olas de mar",
-        "ESC" : ["sea waves"],
+        "ESC" : ["sea_waves"],
         "UrbanSound": [""],
         "AudioSet": ["Waves, surf", "Ocean"],
         "FUSApolyphonic": ["waves"],
