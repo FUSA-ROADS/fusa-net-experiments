@@ -119,7 +119,7 @@
     "environmental/others" :
     {
         "description" : "Otros sonidos naturales",
-        "ESC" : ["crackling_fire", "sea_waves", "thunderstorm"],
+        "ESC" : ["crackling_fire", "thunderstorm"],
         "UrbanSound": [""],
         "AudioSet": ["Ocean", "Thunderstorm", "Thunder", "Fire", "Crackle", "Wildfire", "Patter", "Environmental noise", "Waves, surf"],
         "FUSApolyphonic": [""],
