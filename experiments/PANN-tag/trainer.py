@@ -98,9 +98,11 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
         live.next_step()
 
         if global_loss < best_valid_loss:
+            logger.info(f"new best valid loss in epoch {epoch}!")
             if device == 'cuda': model.cpu()
             torch.save(model, model_path)
             model.create_trace()
+            best_valid_loss = global_loss
 
 def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
     train_loader, valid_loader = loaders
