@@ -5,13 +5,13 @@ features:
   combine_channels: 'mean' # 'left', 'right', 'mean'
   collate_resize: 'pad' # 'pad', 'crop', 'none'
   waveform_normalization:
-    scope: 'global'
-    type: 'zscore'
+    scope: none
+    type: none
 
 train:
   random_seed: 1234
   train_percent: 0.8
-  nepochs: 2
+  nepochs: 130
   learning_rate: 0.001
   batch_size: 4
-  dataset: 'ESC' # 'ESC' / 'US' / 'both' 
+  dataset: 'both' # 'ESC' / 'US' / 'both' 
