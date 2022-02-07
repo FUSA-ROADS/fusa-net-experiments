@@ -110,7 +110,6 @@ def evaluate_model(dataset, params: Dict, model_path: str, label_dictionary: Dic
     names, predictions, labels = [], [], []
     preds_str, label_str = [], []
     
-    #import ipdb; ipdb.set_trace()
     my_collate = Collate_and_transform(params['features'])
     loader = DataLoader(dataset, batch_size=8, collate_fn=my_collate, num_workers=4, pin_memory=True)
     with torch.no_grad():
@@ -118,10 +117,8 @@ def evaluate_model(dataset, params: Dict, model_path: str, label_dictionary: Dic
             names.append(batch['filename'])
             predictions.append(model.forward(batch['waveform'])['clipwise_output'].argmax(dim=1).numpy())
             labels.append(batch['label'].numpy())
-            #import ipdb; ipdb.set_trace()
             preds_str += [label_dictionary[str(prediction)] for prediction in predictions[-1]]
-            label_str += [label_dictionary[str(label)] for label in labels[-1]]
-            break
+            label_str += [label_dictionary[str(label)] for label in labels[-1]]            
     names = np.concatenate(names)
     predictions = np.concatenate(predictions)
     labels = np.concatenate(labels)
