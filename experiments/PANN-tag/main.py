@@ -4,8 +4,8 @@ import logging
 import json
 import argparse
 import torch
-from torch.utils.data import ConcatDataset
-from fusanet_utils.datasets.external import ESC, UrbanSound8K
+from torch.utils.data import ConcatDataset, DataLoader
+from fusanet_utils.datasets.external import ESC, UrbanSound8K, FolderDataset
 from fusanet_utils.datasets.fusa import FUSA_dataset
 
 import trainer
@@ -45,21 +45,21 @@ if __name__ == "__main__":
 
     main_logger.info("Loading parameters, dataset and model")
     params = yaml.safe_load(open("params.yaml"))    
-    
-    dataset_param = params['train']['dataset']
-    if dataset_param == 'ESC':
-        train_dataset = [ESC(args.root_path)]
-    elif dataset_param == 'US':
-        train_dataset = [UrbanSound8K(args.root_path)]
-    else:
-        train_dataset = [ESC(args.root_path), UrbanSound8K(args.root_path)]
-    # Create dataset for the experiment and save dictionary of classes index to names
-    dataset = FUSA_dataset(ConcatDataset(train_dataset), feature_params=params["features"])
-    with open('index_to_name.json', 'w') as f:
-        json.dump(dataset.label_dictionary(), f)
-    main_logger.info("Creating dataloaders")
-    loaders = trainer.create_dataloaders(dataset, params)
     if args.train:
+        dataset_param = params['train']['dataset']
+        if dataset_param == 'ESC':
+            train_dataset = [ESC(args.root_path)]
+        elif dataset_param == 'US':
+            train_dataset = [UrbanSound8K(args.root_path)]
+        else:
+            train_dataset = [ESC(args.root_path), UrbanSound8K(args.root_path)]
+        # Create dataset for the experiment and save dictionary of classes index to names
+        dataset = FUSA_dataset(ConcatDataset(train_dataset), feature_params=params["features"])
+        with open('index_to_name.json', 'w') as f:
+            json.dump(dataset.label_dictionary(), f)
+        main_logger.info("Creating dataloaders")
+        loaders = trainer.create_dataloaders(dataset, params)
+    
         # Save initial model
         model = Wavegram_Logmel_Cnn14(
             n_classes=527,
@@ -78,7 +78,14 @@ if __name__ == "__main__":
         torch.save(model, args.model_path)
         main_logger.info("Main: Training")
         trainer.train(loaders, params, args.model_path, args.cuda)
+
     if args.evaluate:
-        main_logger.info("Main: Evaluating")
-        trainer.evaluate_model(loaders, params, args.model_path)
+        dataset_param = params['evaluate']['dataset']
+        main_logger.info(f"Main: Evaluating on {dataset_param}")
+        if dataset_param == 'VitGlobal':
+            evaluate_dataset = [FolderDataset(os.path.join(args.root_path, 'datasets', 'VitGlobal', 'audio', 'dataset'))]
+        with open('index_to_name.json', 'r') as f:
+            label_dictionary = json.load(f)
+        dataset = FUSA_dataset(ConcatDataset(evaluate_dataset), feature_params=params["features"])
+        trainer.evaluate_model(dataset, params, args.model_path, label_dictionary)
     

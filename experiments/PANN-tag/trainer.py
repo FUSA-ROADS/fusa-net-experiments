@@ -104,23 +104,31 @@ def train(loaders: Tuple, params: Dict, model_path: str, cuda: bool) -> None:
             model.create_trace()
             best_valid_loss = global_loss
 
-def evaluate_model(loaders: Tuple, params: Dict, model_path: str) -> None:
-    train_loader, valid_loader = loaders
+def evaluate_model(dataset, params: Dict, model_path: str, label_dictionary: Dict) -> None:
     model = torch.load(model_path)
     model.eval()
+    names, predictions, labels = [], [], []
+    preds_str, label_str = [], []
     
-    preds = []
-    labels = []
-
+    #import ipdb; ipdb.set_trace()
+    my_collate = Collate_and_transform(params['features'])
+    loader = DataLoader(dataset, batch_size=8, collate_fn=my_collate, num_workers=4, pin_memory=True)
     with torch.no_grad():
-        for batch in valid_loader:
-            preds.append(model.forward(batch['waveform'])['clipwise_output'].argmax(dim=1).numpy())
+        for batch in loader:
+            names.append(batch['filename'])
+            predictions.append(model.forward(batch['waveform'])['clipwise_output'].argmax(dim=1).numpy())
             labels.append(batch['label'].numpy())
-
-    preds = np.concatenate(preds)
+            #import ipdb; ipdb.set_trace()
+            preds_str += [label_dictionary[str(prediction)] for prediction in predictions[-1]]
+            label_str += [label_dictionary[str(label)] for label in labels[-1]]
+            break
+    names = np.concatenate(names)
+    predictions = np.concatenate(predictions)
     labels = np.concatenate(labels)
-    label_list = list(train_loader.dataset.dataset.label_dictionary().values())
-    report = classification_report(labels, preds, target_names=label_list, output_dict=True)
+    df = pd.DataFrame(list(zip(names, predictions, preds_str, labels, label_str)), columns=['filename', 'prediction_num', 'prediction_str', 'label_num', 'label_str'])
+    df.to_csv('classification_table.csv')
+    
+    report = classification_report(y_true=labels, y_pred=predictions, labels=[int(label) for label in label_dictionary.keys()], target_names=label_dictionary.values(), output_dict=True)
     df_classification_report = pd.DataFrame(report).transpose()
-    df_classification_report.to_csv('report.csv')
+    df_classification_report.to_csv('classification_report.csv')
     logger.info('Reporte exportado con éxito')
