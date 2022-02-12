@@ -19,5 +19,6 @@ train:
   nepochs: 50
   learning_rate: 0.001
   batch_size: 32
-  dataset: 'US' # 'ESC' / 'US' / 'both'
+  model: 'naive'
+  dataset: 'ESC' # 'ESC' / 'US' / 'both'
 
