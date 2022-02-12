@@ -1,6 +1,6 @@
 features:
   sampling_rate: 32000
-  overwrite: true
+  overwrite: false
   number_of_channels: 1 # 1: mono, 2: stereo
   combine_channels: 'mean' # 'left', 'right', 'mean'
   collate_resize: 'pad' # 'pad', 'crop', 'none'
@@ -14,7 +14,8 @@ train:
   nepochs: 130
   learning_rate: 0.001
   batch_size: 4
-  dataset: 'both' # 'ESC' / 'US' / 'both' 
-
+  model: 'PANN'
+  dataset: 'VitGlobal' # 'ESC' / 'US' / 'both' 
+  
 evaluate:
   dataset: 'VitGlobal'

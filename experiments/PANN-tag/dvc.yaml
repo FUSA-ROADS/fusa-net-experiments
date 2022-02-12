@@ -1,10 +1,8 @@
 stages:
   train:
-    cmd: python main.py --verbose --train --cuda --root_path ../../ --model_path model.pt
+    cmd: python ../run_experiment.py --verbose --train --cuda --root_path ../../ --model_path model.pt
     deps:
-    - main.py
-    - model.py
-    - trainer.py
+    - ../run_experiment.py
     params:
     - features.collate_resize
     - features.number_of_channels
