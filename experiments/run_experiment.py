@@ -3,7 +3,6 @@ import yaml
 import logging
 import json
 import argparse
-import torch
 import fusanet_utils.experiment_manager as manager
 
 def dir_path(path):
@@ -41,18 +40,20 @@ if __name__ == "__main__":
 
     main_logger.info("Loading parameters, dataset and model")
     params = yaml.safe_load(open("params.yaml"))
-    
-    dataset = manager.create_dataset(args.root_path, params)
-    with open('index_to_name.json', 'w') as f:
-        json.dump(dataset.label_dictionary(), f)
-    main_logger.info("Creating dataloaders")
-    loaders = manager.create_dataloaders(dataset, params)
     if args.train:
+        dataset = manager.create_dataset(args.root_path, params, stage='train')
+        with open('index_to_name.json', 'w') as f:
+            json.dump(dataset.label_dictionary(), f)
+        main_logger.info("Creating dataloaders")
+        loaders = manager.create_dataloaders(dataset, params)    
         # Save initial model
         manager.initialize_model(args.model_path, params['train'], len(dataset.categories), args.cuda)
         main_logger.info("Main: Training")
         manager.train(loaders, params, args.model_path, args.cuda)
     if args.evaluate:
-        main_logger.info("Main: Evaluating")
-        manager.evaluate_model(loaders, params, args.model_path)
+        main_logger.info(f"Main: Evaluating on {params['evaluate']['dataset']}")
+        dataset = manager.create_dataset(args.root_path, params, stage='evaluate')
+        with open('index_to_name.json', 'r') as f:
+            label_dictionary = json.load(f)
+        manager.evaluate_model(dataset, params, args.model_path, label_dictionary)
     
