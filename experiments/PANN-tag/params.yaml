@@ -14,7 +14,7 @@ train:
   nepochs: 130
   learning_rate: 0.001
   batch_size: 4
-  model: 'PANN'
+  model: 'PANN-tag'
   dataset: 'VitGlobal' # 'ESC' / 'US' / 'both' 
   
 evaluate:
