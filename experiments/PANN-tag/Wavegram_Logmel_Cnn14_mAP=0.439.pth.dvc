@@ -1,4 +1,0 @@
-outs:
-- md5: 17fa9ab65af3c0eb5ffbc5f65552c4e1
-  size: 328692198
-  path: Wavegram_Logmel_Cnn14_mAP=0.439.pth

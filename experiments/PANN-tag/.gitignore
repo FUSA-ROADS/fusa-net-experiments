@@ -1,5 +1,4 @@
 /model.pt
 /traced_model.pt
-/Wavegram_Logmel_Cnn14_mAP=0.439.pth
 /training_metrics
 *.out
