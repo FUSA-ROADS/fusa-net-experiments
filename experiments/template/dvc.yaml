@@ -10,7 +10,7 @@ stages:
     - features.waveform_normalization.scope
     - features.waveform_normalization.type
     - train.batch_size
-    - train.dataset
+    - train.train_percent
     - train.learning_rate
     - train.nepochs
     - train.random_seed
