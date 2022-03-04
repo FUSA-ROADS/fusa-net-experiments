@@ -5,8 +5,8 @@ stages:
       model.pt
     deps:
     - path: ../run_experiment.py
-      md5: 1fd71e10297c35d8aa541605cc895546
-      size: 2288
+      md5: 818bc4ac77a277403a221a230a838035
+      size: 2541
     params:
       params.yaml:
         features.collate_resize: pad
