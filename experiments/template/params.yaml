@@ -1,20 +1,20 @@
 features:
   sampling_rate: 32000
   overwrite: false
-  number_of_channels: 1 # 1: mono, 2: stereo
-  combine_channels: 'mean' # 'left', 'right', 'mean'
-  collate_resize: 'pad' # 'pad', 'crop', 'none'
+  number_of_channels: 1 # 1 / 2 ,  (mono / stereo)
+  combine_channels: 'mean' # 'left' / 'right' / 'mean'
+  collate_resize: 'pad' # 'pad' / 'crop' / 'none'
   waveform_normalization:
     scope: none
     type: none
 
 train:
-  random_seed: 1234
-  train_percent: 0.8
-  nepochs: 130
-  learning_rate: 0.001
-  batch_size: 4
-  model: 'PANN'
+  random_seed: 1234 # int
+  train_percent: 0.8 # float [0,1]
+  nepochs: 130 # int
+  learning_rate: 0.001 # float
+  batch_size: 4 # int
+  model: 'PANN-tag' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
   dataset: 'ESC' # 'ESC' / 'US' / 'VitGlobal'  
   
 evaluate:
