@@ -132,7 +132,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-/datasets
 
 .dvc/config
 /pretrained_models

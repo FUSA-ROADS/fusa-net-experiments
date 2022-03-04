@@ -1,0 +1,5 @@
+outs:
+- md5: a0e6eff5f929631f8d155d13f74848a4.dir
+  size: 7089558945
+  nfiles: 8748
+  path: UrbanSound8K
