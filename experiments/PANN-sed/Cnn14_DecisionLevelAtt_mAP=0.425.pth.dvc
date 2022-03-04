@@ -1,4 +1,0 @@
-outs:
-- md5: c8281ca2b9967244b91d557aa941e8ca
-  size: 331757477
-  path: Cnn14_DecisionLevelAtt_mAP=0.425.pth
