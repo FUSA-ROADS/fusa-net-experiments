@@ -5,15 +5,15 @@ features:
   combine_channels: 'mean' # 'left', 'right', 'mean'
   collate_resize: 'pad' # 'pad', 'crop', 'none'
   waveform_normalization:
-    scope: none
-    type: none
+    scope: 'local'
+    type: 'minmax'
 
 train:
   random_seed: 1234
   train_percent: 0.8
   nepochs: 50
   learning_rate: 0.001
-  batch_size: 4
+  batch_size: 8
   model: 'PANN-tag'
   dataset: 'both' # 'ESC' / 'US' / 'both' 
   
