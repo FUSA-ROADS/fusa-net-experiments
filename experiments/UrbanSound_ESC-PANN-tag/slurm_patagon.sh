@@ -1,5 +1,7 @@
 #!/bin/bash
 
+STAGE_NAME=$1
+
 # Partition and GPU
 #SBATCH -p gpu
 #SBATCH --gres=gpu:A100:1 
@@ -12,4 +14,4 @@ FUSA_folder="/home/shared/FUSA"
 
 pwd
 date
-srun --container-name=fusa-torch dvc repro
+srun --container-name=fusa-torch dvc repro $STAGE_NAME
