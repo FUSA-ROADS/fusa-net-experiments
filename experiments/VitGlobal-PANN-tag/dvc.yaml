@@ -36,3 +36,6 @@ stages:
     - train.learning_rate
     - train.nepochs
     - train.random_seed
+    outs:
+    - classification_table.csv
+    - classification_report.csv
