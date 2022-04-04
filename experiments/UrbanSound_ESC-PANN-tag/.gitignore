@@ -2,3 +2,5 @@
 /traced_model.pt
 /training_metrics
 *.out
+/classification_table.csv
+/classification_report.csv

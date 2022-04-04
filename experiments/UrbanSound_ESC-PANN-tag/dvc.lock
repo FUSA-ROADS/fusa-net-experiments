@@ -30,3 +30,29 @@ stages:
       md5: de5589bcecbbb5c6a3c4b11022083fe3.dir
       size: 18867
       nfiles: 5
+  evaluate:
+    cmd: python ../run_experiment.py --verbose --evaluate --cuda --root_path ../../
+      --model_path model.pt
+    deps:
+    - path: ../run_experiment.py
+      md5: 818bc4ac77a277403a221a230a838035
+      size: 2541
+    params:
+      params.yaml:
+        features.collate_resize: pad
+        features.number_of_channels: 1
+        features.sampling_rate: 32000
+        features.waveform_normalization.scope: local
+        features.waveform_normalization.type: minmax
+        train.batch_size: 64
+        train.dataset: both
+        train.learning_rate: 0.001
+        train.nepochs: 100
+        train.random_seed: 1234
+    outs:
+    - path: classification_report.csv
+      md5: d611bb12da3dde8976929a97a20cb8c4
+      size: 1652
+    - path: classification_table.csv
+      md5: 72046e74267f9cb7f5715fc2c8a7572a
+      size: 596281
