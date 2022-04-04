@@ -1,0 +1,8 @@
+[cache]
+    type = "hardlink,symlink"
+[core]
+    checksum_jobs = 1
+    remote = patagon
+['remote "patagon"']
+    url = /remote-storage
+    jobs = 1
