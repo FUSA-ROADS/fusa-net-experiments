@@ -57,11 +57,11 @@ Para entrenar sin dvc (debug) puede utilizar (desde la subcarpeta)
 
 Para entrenar con dvc puede utilizar (desde la subcarpeta)
  
-    dvc repro
+    dvc repro train
     
 Para entrenar con dvc en patagon (desde la subcarpeta)
 
-    sbatch slurm_patagon.sh
+    sbatch slurm_patagon.sh train
     
 Esto último asume que existe un contenedor llamado `fusa-torch`
 
@@ -79,6 +79,14 @@ El entrenamiento producirá en la subcarpeta
 Para obtener un reporte de clasificación sobre un dataset con un modelo ya entrenado vaya a la subcarpeta correspondiente, indique el dataset que desea evaluar en `params.yaml` y ejecute
 
     python ../run_experiment.py --verbose --evaluate  --root_path ../../ --model_path model.pt
+    
+Para evaluar con dvc puede utilizar (desde la subcarpeta)
+ 
+    dvc repro evaluate
+    
+Para evaluar con dvc en patagon (desde la subcarpeta)
+
+    sbatch slurm_patagon.sh evaluate
     
 Se generará en la carpeta
 
