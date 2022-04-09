@@ -27,10 +27,10 @@ https://dvc.org/doc/install/linux
 
 Primero debemos configurar el usuario del almacenamiento remoto, en este caso se creará un entrada global y por defecto 
 ```
-dvc remote add --default --global patagon ssh://patagon.uach.cl/home/shared/FUSA/remote-storage
-dvc remote modify patagon --global port 2237
-dvc remote modify patagon --global user SSH_USER
-dvc remote modify patagon --global keyfile SSH_KEY
+dvc remote add --default patagon ssh://patagon.uach.cl/home/shared/FUSA/remote-storage
+dvc remote modify patagon port 2237
+dvc remote modify patagon user SSH_USER
+dvc remote modify patagon keyfile SSH_KEY
 ```
 donde `SSH_USER` es el usuario con el cual ingresamos al servidor Patagon y `SSH_KEY` es la ruta donde esta alojada la llave privada.
 
