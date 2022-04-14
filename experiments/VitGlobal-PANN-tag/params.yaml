@@ -15,7 +15,7 @@ train:
   learning_rate: 0.001
   batch_size: 4
   model: 'PANN-tag'
-  dataset: 'VitGlobal' # 'ESC' / 'US' / 'both' 
+  dataset: ['VitGlobal'] # 'ESC' / 'US' / 'both' 
   
 evaluate:
-  dataset: 'VitGlobal'
+  dataset: ['VitGlobal']
