@@ -1,6 +1,6 @@
 stages:
   train:
-    cmd: python ../run_experiment.py --verbose --train --cuda --root_path ../../ --model_path model.pt
+    cmd: python ../run_experiment.py --verbose --train --cuda --pretrained --root_path ../../ --model_path model.pt
     deps:
     - ../run_experiment.py
     params:

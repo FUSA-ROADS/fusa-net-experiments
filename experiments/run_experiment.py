@@ -16,9 +16,10 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Process some integers.')
     parser.add_argument('--root_path', dest='root_path', help='path to the root of this repo', type=dir_path, default='../')
-    parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=str, default='model.pt')  
-    parser.add_argument('--train', action='store_true')  
-    parser.add_argument('--evaluate', action='store_true')  
+    parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=str, default='model.pt')
+    parser.add_argument('--train', action='store_true')
+    parser.add_argument('--evaluate', action='store_true')
+    parser.add_argument('--pretrained', action='store_true')
     parser.add_argument('--cuda', action='store_true')
     parser.add_argument('--verbose', help="Print info level logs", action="store_true")
     parser.add_argument('--debug', help="Print debug level logs", action="store_true")
@@ -45,9 +46,9 @@ if __name__ == "__main__":
         with open('index_to_name.json', 'w') as f:
             json.dump(dataset.label_dictionary(), f)
         main_logger.info("Creating dataloaders")
-        loaders = manager.create_dataloaders(dataset, params)    
+        loaders = manager.create_dataloaders(dataset, params)
         # Save initial model
-        manager.initialize_model(args.model_path, params['train'], len(dataset.categories), args.cuda)
+        manager.initialize_model(args.model_path, params['train'], len(dataset.categories), args.cuda, args.pretrained)
         main_logger.info("Main: Training")
         manager.train(loaders, params, args.model_path, args.cuda)
     if args.evaluate:
@@ -56,4 +57,3 @@ if __name__ == "__main__":
         with open('index_to_name.json', 'r') as f:
             label_dictionary = json.load(f)
         manager.evaluate_model(dataset, params, args.model_path, label_dictionary)
-    
