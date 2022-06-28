@@ -1,0 +1,26 @@
+features:
+  sampling_rate: 44100
+  overwrite: false
+  number_of_channels: 1 # 1 / 2 ,  (mono / stereo)
+  combine_channels: 'mean' # 'left' / 'right' / 'mean'
+  collate_resize: 'pad' # 'pad' / 'crop' / 'none'
+  mel_transform:
+    n_mels: 40 # Number of mel coefficients
+    n_fft: 2048 # window size
+    hop_length: 1024 # samples between windows
+    normalized:  false # normalize by STFT magnitude
+  waveform_normalization:
+    scope: none
+    type: none
+
+train:
+  random_seed: 1234 # int
+  train_percent: 0.8 # float [0,1]
+  nepochs: 5 # int
+  learning_rate: 0.001 # float
+  batch_size: 4 # int
+  model: 'ADAVANNE-sed' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
+  dataset: ['Poliphonic'] # 'ESC' / 'US' / 'VitGlobal'  
+  
+evaluate:
+  dataset: ['Poliphonic']
