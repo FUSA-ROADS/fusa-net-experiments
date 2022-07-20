@@ -2,23 +2,23 @@ features:
   sampling_rate: 8000
   overwrite: false
   number_of_channels: 1 # 1: mono, 2: stereo
-  combine_channels: 'mean' # 'left', 'right', 'mean'
-  collate_resize: 'pad' # 'pad', 'crop', 'none'
+  combine_channels: mean   # 'left', 'right', 'mean'
+  collate_resize: pad   # 'pad', 'crop', 'none'
   mel_transform:
     n_mels: 64 # Number of mel coefficients
     n_fft: 1024 # window size
     hop_length: 512 # samples between windows
-    normalized:  false # normalize by STFT magnitude
+    normalized: false  # normalize by STFT magnitude
   waveform_normalization:
-    scope: 'local'
-    type: 'zscore'
+    scope: local
+    type: zscore
 
 train:
   random_seed: 1234
   train_percent: 0.8
-  nepochs: 50
+  nepochs: 1
   learning_rate: 0.001
   batch_size: 32
-  model: 'naive'
-  dataset: ['ESC'] # 'ESC' / 'US' / 'both'
+  model: naive
+  dataset: [ESC]   # 'ESC' / 'US' / 'both'
 

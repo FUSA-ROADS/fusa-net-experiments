@@ -37,35 +37,35 @@ stages:
       size: 3746
       nfiles: 2
   train:
-    cmd: python main.py --train --cuda --root_path ../../ --model_path model.pt
+    cmd: python ../run_experiment.py --verbose --train --cuda --root_path ../../ --model_path
+      model.pt
     deps:
-    - path: main.py
-      md5: 90c17d943b879f365b4715d4d29c1466
-      size: 1841
-    - path: model.py
-      md5: 3c9ecc4854c7eeaf9abc5e4dfe99624a
-      size: 1075
-    - path: trainer.py
-      md5: 056a65b36d74559b27789f6dfa9e2341
-      size: 3541
+    - path: ../run_experiment.py
+      md5: 01a8584af696f0d4dcce40c4000aef69
+      size: 2604
     params:
       params.yaml:
-        features.global_normalization: false
+        features.collate_resize: pad
         features.mel_transform.n_mels: 64
         features.mel_transform.normalized: false
+        features.number_of_channels: 1
         features.sampling_rate: 8000
-        train.batch_size: 512
+        features.waveform_normalization.scope: local
+        features.waveform_normalization.type: zscore
+        train.batch_size: 32
+        train.dataset:
+        - ESC
         train.learning_rate: 0.001
-        train.nepochs: 100
+        train.nepochs: 1
         train.random_seed: 1234
     outs:
     - path: model.pt
-      md5: fa5b42fa8cbaced61c98c9d96d2bdd52
-      size: 289423
+      md5: d346f09d2a09cd6bfbe4c5e6334b7c2d
+      size: 281167
     - path: traced_model.pt
-      md5: 9ede9d285784a0c88cb5ae794429c622
-      size: 297995
+      md5: 33b2403e81a74fb88f22c470cdecd262
+      size: 288855
     - path: training_metrics
-      md5: 8afc710984cf60363de7e61b9d1d7ca3.dir
-      size: 7386
-      nfiles: 2
+      md5: 96c573a1ea72786dee6f5e7edb50dd5f.dir
+      size: 396
+      nfiles: 6
