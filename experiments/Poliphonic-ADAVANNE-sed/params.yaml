@@ -14,11 +14,11 @@ features:
     type: none
 
 train:
-  random_seed: 1234 # int
+  random_seed: 12345 # int
   train_percent: 0.8 # float [0,1]
-  nepochs: 5 # int
+  nepochs: 150 # int
   learning_rate: 0.001 # float
-  batch_size: 4 # int
+  batch_size: 128 # int
   model: 'ADAVANNE-sed' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
   dataset: ['Poliphonic'] # 'ESC' / 'US' / 'VitGlobal'  
   
