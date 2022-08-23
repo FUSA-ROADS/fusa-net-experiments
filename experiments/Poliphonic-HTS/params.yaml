@@ -1,0 +1,21 @@
+features:
+  sampling_rate: 32000
+  overwrite: false
+  number_of_channels: 1 # 1 / 2 ,  (mono / stereo)
+  combine_channels: 'mean' # 'left' / 'right' / 'mean'
+  collate_resize: 'crop' # 'pad' / 'crop' / 'none'
+  waveform_normalization:
+    scope: none
+    type: none
+
+train:
+  random_seed: 12345 # int
+  train_percent: 0.8 # float [0,1]
+  nepochs: 5 # int
+  learning_rate: 0.001 # float
+  batch_size: 4 # int
+  model: 'HTS' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
+  dataset: ['Poliphonic-mini'] # 'ESC' / 'US' / 'VitGlobal'  
+  
+evaluate:
+  dataset: ['Poliphonic']
