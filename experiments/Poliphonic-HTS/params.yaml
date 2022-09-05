@@ -11,12 +11,13 @@ features:
 train:
   random_seed: 12345 # int
   train_percent: 0.8 # float [0,1]
-  nepochs: 5 # int
+  nepochs: 50 # int
   learning_rate: 0.001 # float
   batch_size: 4 # int
   model: 'HTS' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
   dataset: ['Poliphonic-mini'] # 'ESC' / 'US' / 'VitGlobal'
-  stopping_criteria: 'valid_loss' #f1_score
+  stopping_criteria: 'f1_score' #f1_score, valid_loss
+  patience: 10
   
 evaluate:
   dataset: ['Poliphonic']

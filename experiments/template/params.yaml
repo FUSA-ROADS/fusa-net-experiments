@@ -16,7 +16,8 @@ train:
   batch_size: 4 # int
   model: 'PANN-tag' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
   dataset: ['ESC'] # 'ESC' / 'US' / 'VitGlobal'
-  stopping_criteria: 'valid_loss' #f1_score
+  stopping_criteria: 'f1_score' #f1_score, valid_loss
+  patience: 10
   
 evaluate:
   dataset: ['US']
