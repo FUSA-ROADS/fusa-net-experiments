@@ -15,7 +15,8 @@ train:
   learning_rate: 0.001 # float
   batch_size: 4 # int
   model: 'HTS' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
-  dataset: ['Poliphonic-mini'] # 'ESC' / 'US' / 'VitGlobal'  
+  dataset: ['Poliphonic-mini'] # 'ESC' / 'US' / 'VitGlobal'
+  stopping_criteria: 'valid_loss' #f1_score
   
 evaluate:
   dataset: ['Poliphonic']
