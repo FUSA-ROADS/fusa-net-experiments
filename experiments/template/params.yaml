@@ -15,7 +15,9 @@ train:
   learning_rate: 0.001 # float
   batch_size: 4 # int
   model: 'PANN-tag' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
-  dataset: ['ESC'] # 'ESC' / 'US' / 'VitGlobal'  
+  dataset: ['ESC'] # 'ESC' / 'US' / 'VitGlobal'
+  stopping_criteria: 'f1_score' #f1_score, valid_loss
+  patience: 10
   
 evaluate:
   dataset: ['US']
