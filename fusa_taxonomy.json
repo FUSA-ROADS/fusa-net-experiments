@@ -7,7 +7,7 @@
         "AudioSet": ["Speech", "Male speech, man speaking", "Female speech, woman speaking", "Child speech, kid speaking", "Conversation", "Narration, monologue"],
         "FUSApolyphonic": ["talk"],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Talking"]
     },
     "humans/shouting" :
     {
@@ -17,7 +17,7 @@
         "AudioSet": ["Shout", "Screaming", "Yell"],
         "FUSApolyphonic": ["shouting"],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Shouting"]
     },
     "humans/crowd" :
     {
@@ -27,7 +27,7 @@
         "AudioSet": ["Chatter", "Crowd"],
         "FUSApolyphonic": ["crowd"],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Large crowd"]
     },
     "humans/others" :
     {
@@ -37,7 +37,7 @@
         "AudioSet": ["Laughter", "Crying, sobbing", "Wail, moan", "Sigh", "Humming", "Groan", "Grunt", "Yawn", "Whistling", "Breathing", "Cough", "Sneeze", "Sniff", "Hubbub, speech noise, speech babble", "Clapping", "Cheering", "Applause", "Children playing", "Children shouting", "Babbling", "Baby laughter", "Baby cry, infant cry", "Snicker", "Walk, footsteps", "Belly laugh"],
         "FUSApolyphonic": ["steps"],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Amplified speech", "Clapping", "Footsteps"]
     },
     "Music/music" :
     {
@@ -47,7 +47,7 @@
         "AudioSet": ["Music", "Singing", "Guitar", "Ukelele", "Piano", "Organ", "Synthesizer", "Drum", "Orchestra", "Trumpet", "String section", "Violin, fiddle", "Cello", "Flute", "Saxophone", "Clarinet", "Harp", "Choir", "Accordion", "Musical ensamble", "Bass", "Musical instrument"],
         "FUSApolyphonic": ["music"],
         "Vitglobal": ["MUSICA"]
-        "Singapura": [""]
+        "Singapura": ["Singing", "Stationary music", "Mobile music", "Ice cream truck"]
     },
     "animal/dog" :
     {
@@ -57,7 +57,7 @@
         "AudioSet": ["Dog", "Bark", "Yip", "Howl", "Bow-wow", "Growling", "Whimper", "Bay"],
         "FUSApolyphonic": ["dog"],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Dog barking"]
     },
     "animal/bird" :
     {
@@ -67,7 +67,7 @@
         "AudioSet": ["Bird", "Bird vocalization, bird call, bird song", "Pigeon, dove", "Crow", "Owl", "Gull, seagull", "Bird flight, flapping wings", "Chirp, tweet", "Fowl", "Caw"],
         "FUSApolyphonic": ["bird"],
         "Vitglobal": ["GAVIOTA"]
-        "Singapura": [""]
+        "Singapura": ["Bird chirping"]
     },
     "animal/others" :
     {
@@ -77,7 +77,7 @@
         "AudioSet": ["Meow", "Cat", "Cat communication", "Croak", "Cricket", "Mosquito", "Buzz", "Clip-clop", "Neigh, whinny", "Snort (horse)", "Moo", "Chicken, rooster", "Sheep", "Frog", "Insect", "Pig", "Animal", "Bee, wasp, etc.", "Fly, housefly", "Crowing, cock-a-doodle-doo", "Cattle, bovinae", "Livestock, farm animals, working animals", "Domestic animals, pets", "Oink", "Duck", "Cowbell", "Roar"],
         "FUSApolyphonic": [""],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Insect chirping"]
     },
     "environmental/rain" :
     {
@@ -87,7 +87,7 @@
         "AudioSet": ["Rain", "Rain on surface"],
         "FUSApolyphonic": ["rain"],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Rain"]
     },
     "environmental/wind" :
     {
@@ -97,7 +97,7 @@
         "AudioSet": ["Wind", "Wind noise (microphone)", "Rustling leaves", "Howl (wind)"],
         "FUSApolyphonic": ["wind"],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Wind"]
     },
     "environmental/water" :
     {
@@ -137,7 +137,7 @@
         "AudioSet": ["Ocean", "Thunderstorm", "Thunder", "Fire", "Crackle", "Wildfire", "Patter", "Environmental noise", "Waves, surf"],
         "FUSApolyphonic": [""],
         "Vitglobal": ["PAISAJE", "PUERTO"]
-        "Singapura": [""]
+        "Singapura": ["Thunder", "Hose pump"]
     },
     "mechanical/impact" :
     {
@@ -147,7 +147,7 @@
         "AudioSet": ["Jackhammer", "Hammer"],
         "FUSApolyphonic": ["impact"],
         "Vitglobal": ["APILAR", "APILAR CHIRRIDO", "APILAR FRENOS", "APILAR LOCK", "APILAR MOTOR", "APILAR RETROCESO"]
-        "Singapura": [""]
+        "Singapura": ["Jackhammer", "Rock drill", "Hoe ram", "Pile driver"]
     },
     "mechanical/cutting" :
     {
@@ -157,7 +157,7 @@
         "AudioSet": ["Chainsaw", "Sawing", "Chop", "Splinter"],
         "FUSApolyphonic": ["cutting"],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Chainsaw", "Small/medium rotation saw", "Large rotation saw"]
     },
     "mechanical/explosives" :
     {
@@ -167,7 +167,7 @@
         "AudioSet": ["Gunshot, gunfire", "Fireworks", "Firecracker", "Burst, pop", "Eruption", "Boom", "Machine gun", "Artillery fire", "Fusillade"],
         "FUSApolyphonic": ["explosives", "fireworks"],
         "Vitglobal": ["CAÑONAZO"]
-        "Singapura": [""]
+        "Singapura": ["Explosion"]
     },
     "mechanical/digging" :
     {
@@ -197,7 +197,7 @@
         "AudioSet": ["Sanding", "Light engine (high frequency)", "Medium engine (mid frequency)", "Heavy engine (low frequency)", "Engine knocking", "Idling", "Engine starting", "Lawn mower"],
         "FUSApolyphonic": [""],
         "Vitglobal": ["MOTOR"]
-        "Singapura": [""]
+        "Singapura": ["Glass breaking", "Car crash", "Screeching", "Plastic crinkling", "Cleaning", "Gear"]
     },
     "vehicles/motorcycles" :
     {
@@ -207,7 +207,7 @@
         "AudioSet": ["Motorcycle"],
         "FUSApolyphonic": ["motorcycle_idling", "motorcycle_moving"],
         "Vitglobal": ["MOTO"]
-        "Singapura": [""]
+        "Singapura": ["Small engine"]
     },
     "vehicles/cars" :
     {
@@ -217,7 +217,7 @@
         "AudioSet": ["Car", "Car passing by", "Race car, auto racing"],
         "FUSApolyphonic": ["car_idling", "car_moving"],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Medium engine"]
     },
     "vehicles/bus" :
     {
@@ -227,7 +227,7 @@
         "AudioSet": ["Truck", "Bus"],
         "FUSApolyphonic": ["bus_idling", "bus_moving", "truck_idling", "truck_moving"],
         "Vitglobal": ["CAMION"]
-        "Singapura": [""]
+        "Singapura": ["Large engine"]
     },
     "vehicles/airborne" :
     {
@@ -257,7 +257,7 @@
         "AudioSet": ["Rail transport", "Bicycle", "Skateboard", "Train", "Railroad car, train wagon", "Train wheels squealing"],
         "FUSApolyphonic": [""],
         "Vitglobal": [""]
-        "Singapura": [""]
+        "Singapura": ["Electric train"]
     },
     "alerts/siren" :
     {
@@ -267,7 +267,7 @@
         "AudioSet": ["Siren", "Police car (siren)", "Ambulance (siren)", "Fire engine, fire truck (siren)", "Civil defense siren"],
         "FUSApolyphonic": ["siren"],
         "Vitglobal": ["SIRENA"]
-        "Singapura": [""]
+        "Singapura": ["Siren"]
     },
     "alerts/alarms" :
     {
@@ -277,7 +277,7 @@
         "AudioSet": ["Alarm", "Car alarm", "Fire alarm"],
         "FUSApolyphonic": ["alarm"],
         "Vitglobal": ["ALARMA RETROCESO", "ALARMA TONAL"]
-        "Singapura": [""]
+        "Singapura": ["Car alarm"]
     },
     "alerts/horns" :
     {
@@ -287,7 +287,7 @@
         "AudioSet": ["Vehicle horn, car horn, honking", "Air horn, truck horn", "Toot"],
         "FUSApolyphonic": ["horn"],
         "Vitglobal": ["BOCINA"]
-        "Singapura": [""]
+        "Singapura": ["Car horn"]
     },
     "alerts/bells" :
     {
@@ -307,7 +307,7 @@
         "AudioSet": ["Skidding", "Tire squeal", "Air breack"],
         "FUSApolyphonic": ["braking"],
         "Vitglobal": ["FRENOS"]
-        "Singapura": [""]
+        "Singapura": ["Friction brake", "Exhaust brake"]
     },
     "alerts/others" :
     {
@@ -317,6 +317,6 @@
         "AudioSet": ["Emergency vehicle", "Reversing beeps", "Accelerating, revving, vroom", "Glass", "Shatter", "Honk"],
         "FUSApolyphonic": [""],
         "Vitglobal": ["CHIRRIDO", "DESPICHE"]
-        "Singapura": [""]
+        "Singapura": ["Reverse beeper"]
     }
 }
