@@ -39,7 +39,7 @@
         "Vitglobal": [""],
         "Singapura": ["Amplified speech", "Clapping", "Footsteps", "Human voice (other)", "Human movement (other)"]
     },
-    "Music/music" :
+    "music/music" :
     {
         "description" : "Canto e instrumentos musicales acústicos o amplificados, bandas, conciertos, etc",
         "ESC" : [""],
@@ -157,7 +157,7 @@
         "AudioSet": ["Chainsaw", "Sawing", "Chop", "Splinter"],
         "SPASS": ["cutting"],
         "Vitglobal": [""],
-        "Singapura": ["Chainsaw", "Small/medium rotation saw", "Large rotation saw"]
+        "Singapura": ["Chainsaw", "Small/medium rotating saw", "Large rotating saw"]
     },
     "mechanical/explosives" :
     {
