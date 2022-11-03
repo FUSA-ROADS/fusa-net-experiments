@@ -1,0 +1,33 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python ../run_experiment.py --verbose --train --cuda --root_path ../../ --model_path
+      model.pt
+    deps:
+    - path: ../run_experiment.py
+      md5: 01a8584af696f0d4dcce40c4000aef69
+      size: 2604
+    params:
+      params.yaml:
+        features.collate_resize: crop
+        features.number_of_channels: 1
+        features.sampling_rate: 32000
+        features.waveform_normalization.scope: none
+        features.waveform_normalization.type: none
+        train.augmentation: pink
+        train.batch_size: 32
+        train.learning_rate: 0.001
+        train.nepochs: 150
+        train.random_seed: 34567
+        train.train_percent: 0.8
+    outs:
+    - path: model.pt
+      md5: 13c47e72a0b7b09e17439de9db4a9ab1
+      size: 344218248
+    - path: traced_model.pt
+      md5: 9cf88f839d83dd3940008ab5c2d8ed12
+      size: 318081577
+    - path: training_metrics
+      md5: 113c44c56a675a230144239d4a3b1a4c.dir
+      size: 16017
+      nfiles: 6
