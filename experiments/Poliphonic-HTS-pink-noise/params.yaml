@@ -13,8 +13,8 @@ train:
   train_percent: 0.8 # float [0,1]
   nepochs: 150 # int
   learning_rate: 0.001 # float
-  batch_size: 32 # int
-  model: 'PANN-sed'
+  batch_size: 64 # int
+  model: 'HTS'
   dataset: ['Poliphonic']
   stopping_criteria: 'valid_loss'
   patience: 15
