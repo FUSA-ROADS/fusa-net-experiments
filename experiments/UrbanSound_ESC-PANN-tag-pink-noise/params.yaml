@@ -1,0 +1,24 @@
+features:
+  sampling_rate: 32000
+  overwrite: false
+  number_of_channels: 1 # 1: mono, 2: stereo
+  combine_channels: 'mean' # 'left', 'right', 'mean'
+  collate_resize: 'pad' # 'pad', 'crop', 'none'
+  waveform_normalization:
+    scope: none
+    type: none
+
+train:
+  random_seed: 12345
+  train_percent: 0.8
+  nepochs: 150
+  learning_rate: 0.001
+  batch_size: 64
+  model: 'PANN-tag'
+  dataset: ['ESC', 'US']
+  stopping_criteria: 'valid_loss'
+  patience: 15
+  augmentation: 'pink'
+  
+evaluate:
+  dataset: ['ESC', 'US']
