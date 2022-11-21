@@ -11,14 +11,13 @@ features:
 train:
   random_seed: 12345 # int
   train_percent: 0.8 # float [0,1]
-  nepochs: 1 # int
+  nepochs: 200 # int
   learning_rate: 0.001 # float
   batch_size: 32 # int
   model: 'PANN-sed'
-  dataset: ['Aumilab']
+  dataset: ['AUMILAB']
   stopping_criteria: 'valid_loss'
   patience: 25
-  augmentation: 'pink'
   
 evaluate:
-  dataset: ['Aumilab']
+  dataset: ['AUMILAB']
