@@ -12,12 +12,12 @@ train:
   random_seed: 123456 # int
   train_percent: 0.8 # float [0,1]
   nepochs: 150 # int
-  learning_rate: 0.0001 # float
+  learning_rate: 0.0005 # float
   batch_size: 64 # int
   model: 'HTS'
   dataset: ['Poliphonic']
   stopping_criteria: 'valid_loss'
-  patience: 15
+  patience: 30
   augmentation: 'pink'
   
 evaluate:
