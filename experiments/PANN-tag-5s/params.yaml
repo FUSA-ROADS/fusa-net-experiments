@@ -21,8 +21,8 @@ train:
   patience: 15
   augmentation: 'pink'
   pretrained: true
-  cuda: false
+  cuda: true
 
 evaluate:
   dataset: ['US']
-  cuda: false
+  cuda: true
