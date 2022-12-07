@@ -1,0 +1,42 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python ../run_experiment.py --verbose --train --root_path ../../ --model_path
+      model.pt
+    deps:
+    - path: ../run_experiment.py
+      md5: 1455068863d9c7ba74cfc7d2a101537d
+      size: 2721
+    params:
+      params.yaml:
+        features.collate_resize: random-crop
+        features.number_of_channels: 1
+        features.sampling_rate: 32000
+        features.waveform_normalization.scope: local
+        features.waveform_normalization.type: minmax
+        train.augmentation: pink
+        train.balanced: false
+        train.batch_size: 64
+        train.dataset:
+        - US
+        train.learning_rate: 0.001
+        train.nepochs: 1
+        train.patience: 15
+        train.pretrained: true
+        train.random_seed: 1234
+        train.stopping_criteria: valid_loss
+        train.train_percent: 0.8
+    outs:
+    - path: dvclive/metrics.json
+      md5: b78c2cb942749ac0995e6bb95157e5fe
+      size: 298
+    - path: dvclive/plots
+      md5: 18238770b919327112331414f5511a12.dir
+      size: 241
+      nfiles: 6
+    - path: index_to_name.json
+      md5: 300f523d7c7b3f51459d782222972987
+      size: 247
+    - path: model.pt
+      md5: e0c07f7f687c1d846834bad533964cf1
+      size: 361101125
