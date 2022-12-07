@@ -2,27 +2,29 @@ features:
   sampling_rate: 32000
   overwrite: false
   number_of_channels: 1 # 1: mono, 2: stereo
-  combine_channels: 'mean' # 'left', 'right', 'mean'
-  collate_resize: 'random-crop' #'random-crop' , 'pad', 'crop', 'none'
+  combine_channels: mean   # 'left', 'right', 'mean'
+  collate_resize: random-crop   #'random-crop' , 'pad', 'crop', 'none'
   waveform_normalization:
-    scope: 'local'
-    type: 'minmax'
+    scope: local
+    type: minmax
 
 train:
   random_seed: 1234
   train_percent: 0.8
-  nepochs: 1
+  nepochs: 100
   balanced: false
   learning_rate: 0.001
   batch_size: 64
-  model: 'PANN-tag'
-  dataset: ['US']
-  stopping_criteria: 'valid_loss'
+  model: PANN-tag
+  dataset:
+  - US
+  stopping_criteria: valid_loss
   patience: 15
-  augmentation: 'pink'
+  augmentation: pink
   pretrained: true
   cuda: true
 
 evaluate:
-  dataset: ['US']
+  dataset:
+  - US
   cuda: true
