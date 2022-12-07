@@ -3,7 +3,7 @@ features:
   overwrite: false
   number_of_channels: 1 # 1: mono, 2: stereo
   combine_channels: 'mean' # 'left', 'right', 'mean'
-  collate_resize: '5s' #'random-crop' , 'pad', 'crop', 'none'
+  collate_resize: 'random-crop' #'random-crop' , 'pad', 'crop', 'none'
   waveform_normalization:
     scope: 'local'
     type: 'minmax'
@@ -16,7 +16,7 @@ train:
   learning_rate: 0.001
   batch_size: 64
   model: 'PANN-tag'
-  dataset: ['ESC']
+  dataset: ['US']
   stopping_criteria: 'valid_loss'
   patience: 15
   augmentation: 'pink'
@@ -24,5 +24,5 @@ train:
   cuda: false
 
 evaluate:
-  dataset: ['ESC']
+  dataset: ['US']
   cuda: false
