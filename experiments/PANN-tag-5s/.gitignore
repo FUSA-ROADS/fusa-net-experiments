@@ -1,2 +1,4 @@
 /model.pt
 /index_to_name.json
+/classification_table.csv
+/classification_report.csv
