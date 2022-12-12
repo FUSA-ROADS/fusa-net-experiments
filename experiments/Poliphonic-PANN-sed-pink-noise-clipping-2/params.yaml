@@ -12,12 +12,12 @@ train:
   random_seed: 54321 # int
   train_percent: 0.8 # float [0,1]
   nepochs: 200 # int
-  learning_rate: 0.0001 # float
+  learning_rate: 0.00001 # float
   batch_size: 32 # int
   model: 'PANN-sed'
   dataset: ['Poliphonic']
   stopping_criteria: 'valid_loss'
-  patience: 25
+  patience: 50
   augmentation: 'pink'
   
 evaluate:
