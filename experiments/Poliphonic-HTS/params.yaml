@@ -9,13 +9,15 @@ features:
     type: none
 
 train:
-  random_seed: 12345 # int
+  random_seed: 654321 # int
   train_percent: 0.8 # float [0,1]
   nepochs: 150 # int
   learning_rate: 0.0005 # float
-  batch_size: 32 # int
-  model: 'HTS' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
-  dataset: ['Poliphonic'] # 'ESC' / 'US' / 'VitGlobal'  
+  batch_size: 64 # int
+  model: 'HTS'
+  dataset: ['Poliphonic']
+  stopping_criteria: 'valid_loss'
+  patience: 30
   
 evaluate:
   dataset: ['Poliphonic']
