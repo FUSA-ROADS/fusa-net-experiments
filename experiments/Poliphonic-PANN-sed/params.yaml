@@ -3,19 +3,21 @@ features:
   overwrite: false
   number_of_channels: 1 # 1 / 2 ,  (mono / stereo)
   combine_channels: 'mean' # 'left' / 'right' / 'mean'
-  collate_resize: 'pad' # 'pad' / 'crop' / 'none'
+  collate_resize: 'crop' # 'pad' / 'crop' / 'none'
   waveform_normalization:
     scope: none
     type: none
 
 train:
-  random_seed: 1234 # int
+  random_seed: 12345 # int
   train_percent: 0.8 # float [0,1]
-  nepochs: 100 # int
-  learning_rate: 0.001 # float
+  nepochs: 200 # int
+  learning_rate: 0.00001 # float
   batch_size: 64 # int
-  model: 'PANN-sed' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
-  dataset: ['Poliphonic'] # 'ESC' / 'US' / 'VitGlobal'  
-  
+  model: 'PANN-sed'
+  dataset: ['Poliphonic']
+  stopping_criteria: 'valid_loss'
+  patience: 50
+ 
 evaluate:
   dataset: ['Poliphonic']
