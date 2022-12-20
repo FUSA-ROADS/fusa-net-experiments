@@ -16,18 +16,18 @@ stages:
         features.waveform_normalization.type: none
         train.augmentation: pink
         train.batch_size: 32
-        train.learning_rate: 0.001
+        train.learning_rate: 1e-05
         train.nepochs: 200
         train.random_seed: 12345
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: 2eda1fd27788423c8d12acc2a8c2cf12
+      md5: a1c6ccc0de1c7c69443e073dd263bb95
       size: 344218248
     - path: traced_model.pt
-      md5: 3e2710ec44affc6517a92a73cc2f904a
-      size: 318081641
+      md5: 22020a57a9e7e375acd27ee51e62d454
+      size: 318081865
     - path: training_metrics
-      md5: d40615679c76a44fdc465583f2d2ec26.dir
-      size: 20648
+      md5: 476b3532ba29099d47616672752aaa10.dir
+      size: 34717
       nfiles: 6
