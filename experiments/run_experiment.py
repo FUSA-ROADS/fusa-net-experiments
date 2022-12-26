@@ -19,7 +19,7 @@ if __name__ == "__main__":
     parser.add_argument('--model_path', dest='model_path', help='path to save/load model', type=str, default='model.pt')
     parser.add_argument('--train', action='store_true')
     parser.add_argument('--evaluate', action='store_true')
-    parser.add_argument('--pretrained', action='store_true')
+    parser.add_argument('--finetuning', action='store_true')
     parser.add_argument('--cuda', action='store_true')
     parser.add_argument('--verbose', help="Print info level logs", action="store_true")
     parser.add_argument('--debug', help="Print debug level logs", action="store_true")
@@ -48,7 +48,7 @@ if __name__ == "__main__":
         main_logger.info("Creating dataloaders")
         loaders = manager.create_dataloaders(dataset, params)
         # Save initial model
-        manager.initialize_model(args.model_path, params['train'], len(dataset.categories), args.cuda, args.pretrained)
+        manager.initialize_model(args.model_path, params['train'], len(dataset.categories), args.cuda, args.finetuning)
         main_logger.info("Main: Training")
         manager.train(loaders, params, args.model_path, args.cuda)
     if args.evaluate:
