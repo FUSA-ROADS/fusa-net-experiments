@@ -63,4 +63,5 @@ if __name__ == "__main__":
         dataset = create_dataset(args.root_path, params, stage='evaluate')
         with open('index_to_name.json', 'r') as f:
             label_dictionary = json.load(f)
-        evaluate_model(dataset, params, args.model_path, label_dictionary)
+        loaders = create_dataloaders(dataset, params)
+        evaluate_model(loaders, params, args.model_path, label_dictionary)
