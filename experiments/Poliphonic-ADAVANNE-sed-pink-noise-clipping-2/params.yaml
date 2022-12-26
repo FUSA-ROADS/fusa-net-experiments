@@ -20,9 +20,10 @@ train:
   learning_rate: 0.0001 # float
   batch_size: 128 # int
   model: 'ADAVANNE-sed' # 'naive' / 'FUSA-tag' / 'FUSA-sed'
-  dataset: ['Poliphonic'] # 'ESC' / 'US' / 'VitGlobal'  
+  dataset: ['Poliphonic'] # 'ESC' / 'US' / 'VitGlobal'
   stopping_criteria: 'valid_loss'
   patience: 15
+  augmentation: 'pink'
 
 evaluate:
   dataset: ['Poliphonic']
