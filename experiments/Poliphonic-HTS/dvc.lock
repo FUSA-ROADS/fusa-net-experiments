@@ -14,19 +14,19 @@ stages:
         features.sampling_rate: 32000
         features.waveform_normalization.scope: none
         features.waveform_normalization.type: none
-        train.batch_size: 32
+        train.batch_size: 64
         train.learning_rate: 0.0005
         train.nepochs: 150
-        train.random_seed: 12345
+        train.random_seed: 654321
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: 61ac5feb27aef6b8cd8aa2342a79af9e
+      md5: 562006dbce9511a35d475fc9db224d1f
       size: 143276401
     - path: traced_model.pt
-      md5: 83fa71284b73bb8e085433fa2f5e7a64
+      md5: 95a0392081eaf8d03b8ada46f72399ab
       size: 117361283
     - path: training_metrics
-      md5: d20ca59ad1b7b7ec3feb792c22366e2a.dir
-      size: 34177
+      md5: 843df91c43bad29c53573fcabeceee21.dir
+      size: 12233
       nfiles: 6
