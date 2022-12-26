@@ -3,7 +3,7 @@ features:
   overwrite: false
   number_of_channels: 1 # 1: mono, 2: stereo
   combine_channels: mean   # 'left', 'right', 'mean'
-  collate_resize: random-crop   #'random-crop' , 'pad', 'crop', 'none'
+  collate_resize: adaptive-5s  #'random-crop' , 'pad', 'crop', 'none'
   waveform_normalization:
     scope: local
     type: minmax
