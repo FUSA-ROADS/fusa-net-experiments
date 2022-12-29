@@ -12,13 +12,16 @@ train:
   random_seed: 54321 # int
   train_percent: 0.7 # float [0,1]
   nepochs: 100 # int
-  learning_rate: 0.000003 # float
-  batch_size: 64 # int
+  learning_rate: 0.00001 # float
+  batch_size: 32 # int
   model: 'PANN-sed'
   dataset: ['SINGAPURA'] #SINGAPURA AUMILAB
-  ft_percent: 0.75
+  ft_percent: 0.9
   stopping_criteria: 'valid_loss'
-  patience: 10
+  patience: 15
+  finetuning: 'SPASS' #None, 'SPASS', 'PANN-pretrained'
+  freeze: False # True, False
+  clf_head: '1L' #None, '1L', '3L'
   
 evaluate:
   dataset: ['Poliphonic']
