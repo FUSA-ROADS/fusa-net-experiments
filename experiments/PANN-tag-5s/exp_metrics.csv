@@ -1,0 +1,16 @@
+Experiment,rev,typ,State,valid.best_loss,valid.best_accuracy,best_epoch,best_f1_score_macro,features.collate_resize,features.waveform_normalization.scope,features.waveform_normalization.type,train.random_seed,train.balanced,train.augmentation,experiments/PANN-tag-5s/index_to_name.json,experiments/PANN-tag-5s/model.pt,experiments/run_experiment.py
+,workspace,baseline,,0.7107875176334325,0.1521610420367081,0,0.08486212764598879,adaptive-5s,None,None,1234,False,pink,,,
+new_dvc,3cc409e,baseline,,,,,,adaptive-5s,None,None,1234,False,pink,,,
+exp-5aa1e,48e25af,branch_commit,,0.04363261933671384,0.8906801007556675,174,0.8309964726631384,adaptive-5s,local,zscore,1234,True,None,738c480,c11d86d,45a0e16
+exp-2480d,20ab9bb,branch_commit,,0.041052720303323485,0.8942065491183879,189,0.839533212213934,adaptive-5s,local,minmax,1234,True,None,738c480,b23a74c,45a0e16
+exp-88bbf,e826157,branch_commit,,0.03942681008512324,0.8987405541561713,182,0.8436836233824175,adaptive-5s,local,rms,1234,True,None,738c480,56c491e,45a0e16
+exp-7ba89,8978331,branch_commit,,0.03877078201387181,0.9113350125944585,228,0.8652757591211399,adaptive-5s,None,None,123,True,None,738c480,b4e5714,45a0e16
+exp-0c31f,d8a40e3,branch_commit,,0.03736355411996056,0.9128463476070529,203,0.8639411083487388,adaptive-5s,None,None,1,True,None,738c480,8669246,45a0e16
+exp-78c2d,f2171a9,branch_commit,,0.054315870365220696,0.8695214105793451,153,0.7984643942360516,pad,None,None,1234,True,None,738c480,144fd19,45a0e16
+exp-c8a7d,658caaf,branch_commit,,0.13996390734308914,0.6443324937027708,63,0.5130907909794882,crop,None,None,1234,True,None,738c480,b54c861,45a0e16
+exp-96b46,04d80ae,branch_commit,,0.1345649683080914,0.6619647355163728,111,0.5325272932587902,random-crop,None,None,1234,True,None,738c480,bc31ef8,45a0e16
+exp-3cf27,6eeb287,branch_commit,,0.445178583894929,0.2987405541561713,17,0.23133485946810692,adaptive-5s,None,None,1234,True,pink,738c480,40a7418,45a0e16
+exp-83c71,e917b22,branch_commit,,0.7292589983952136,0.18841309823677582,15,0.12262667346359257,adaptive-5s,None,None,1234,False,pink,738c480,716d4e2,45a0e16
+exp-b195b,c7e832a,branch_commit,,0.03875113025410234,0.9012594458438287,170,0.846713945730009,adaptive-5s,None,None,1234,True,None,738c480,5b8979b,45a0e16
+exp-5fce7,095f129,branch_commit,,0.04289359352023573,0.889168765743073,142,0.8310124625486062,adaptive-5s,None,None,1234,False,None,738c480,39c9022,45a0e16
+,256d81e,branch_base,Failed,,,,,adaptive-5s,None,None,12,True,None,,,
