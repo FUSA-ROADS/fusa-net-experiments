@@ -5,38 +5,69 @@ stages:
       model.pt
     deps:
     - path: ../run_experiment.py
-      md5: 1455068863d9c7ba74cfc7d2a101537d
-      size: 2721
+      md5: 45a0e1635dc456969c50e1cbd40f9c33
+      size: 2775
     params:
       params.yaml:
-        features.collate_resize: random-crop
+        features.collate_resize: adaptive-5s
         features.number_of_channels: 1
         features.sampling_rate: 32000
-        features.waveform_normalization.scope: local
-        features.waveform_normalization.type: minmax
-        train.augmentation: pink
-        train.balanced: false
+        features.waveform_normalization.scope: None
+        features.waveform_normalization.type: None
+        train.augmentation: None
+        train.balanced: true
         train.batch_size: 64
         train.dataset:
         - US
-        train.learning_rate: 0.001
-        train.nepochs: 1
+        - ESC
+        train.learning_rate: 1e-05
+        train.nepochs: 500
         train.patience: 15
         train.pretrained: true
-        train.random_seed: 1234
+        train.random_seed: 1
         train.stopping_criteria: valid_loss
         train.train_percent: 0.8
     outs:
     - path: dvclive/metrics.json
-      md5: b78c2cb942749ac0995e6bb95157e5fe
-      size: 298
+      md5: 516a26e82dd97cd71ac0e6250ec43547
+      size: 504
     - path: dvclive/plots
-      md5: 18238770b919327112331414f5511a12.dir
-      size: 241
-      nfiles: 6
+      md5: 3624fe4463599aad833607ac53153946.dir
+      size: 49912
+      nfiles: 11
     - path: index_to_name.json
-      md5: 300f523d7c7b3f51459d782222972987
-      size: 247
+      md5: 738c480f67131cc64f7e51cd3d4688b2
+      size: 508
     - path: model.pt
-      md5: e0c07f7f687c1d846834bad533964cf1
-      size: 361101125
+      md5: 866924607871076b4bdac985ae9b966c
+      size: 361121669
+  evaluate:
+    cmd: python ../run_experiment.py --verbose --evaluate --root_path ../../ --model_path
+      model.pt
+    deps:
+    - path: ../run_experiment.py
+      md5: 45a0e1635dc456969c50e1cbd40f9c33
+      size: 2775
+    - path: index_to_name.json
+      md5: 738c480f67131cc64f7e51cd3d4688b2
+      size: 508
+    - path: model.pt
+      md5: 866924607871076b4bdac985ae9b966c
+      size: 361121669
+    params:
+      params.yaml:
+        evaluate.dataset:
+        - US
+        - ESC
+        features.collate_resize: adaptive-5s
+        features.number_of_channels: 1
+        features.sampling_rate: 32000
+        features.waveform_normalization.scope: None
+        features.waveform_normalization.type: None
+    outs:
+    - path: classification_report.csv
+      md5: 1f36c5b29e1cdc54ac1996004caba014
+      size: 1610
+    - path: classification_table.csv
+      md5: 5c8b02cba56017dc222bd2bd7f46c0ba
+      size: 118243

@@ -1,6 +1,6 @@
 features:
   sampling_rate: 32000
-  overwrite: True
+  overwrite: true
   number_of_channels: 1 # 1: mono, 2: stereo
   combine_channels: mean   # 'left', 'right', 'mean'
   collate_resize: adaptive-5s  #'random-crop' , 'pad', 'crop', 'none'
@@ -9,20 +9,24 @@ features:
     type: None
 
 train:
-  random_seed: 1234
+  random_seed: 1
   train_percent: 0.8
-  nepochs: 100
-  balanced: false
-  learning_rate: 0.0001
+  nepochs: 500
+  balanced: true
+  learning_rate: 1e-05
   batch_size: 64
   model: PANN-tag
-  dataset: [US, ESC]
+  dataset:
+  - US
+  - ESC
   stopping_criteria: valid_loss
   patience: 15
-  augmentation: pink
+  augmentation: None
   pretrained: true
   cuda: true
 
 evaluate:
-  dataset: [US, ESC]
+  dataset:
+  - US
+  - ESC
   cuda: true
