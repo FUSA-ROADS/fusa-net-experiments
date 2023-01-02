@@ -14,6 +14,7 @@ stages:
         features.sampling_rate: 44100
         features.waveform_normalization.scope: none
         features.waveform_normalization.type: none
+        train.augmentation: pink
         train.batch_size: 128
         train.learning_rate: 0.0001
         train.nepochs: 150
@@ -21,12 +22,12 @@ stages:
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: 7f1145a6fdfea01f6c5b170c5a2700a8
+      md5: 804b7435e9437d15c0efd40e12be9d90
       size: 1521130
     - path: traced_model.pt
-      md5: 8b7e862866fad9b706391d45bbc6f630
+      md5: 0a23da8ea413cafb43bb1a3c74c156ca
       size: 1556593
     - path: training_metrics
-      md5: ebfda4143743a23a5d622a3ab86dbbd6.dir
-      size: 34021
+      md5: b63d89b137b1fc699aa8b85364f8aac2.dir
+      size: 33986
       nfiles: 6
