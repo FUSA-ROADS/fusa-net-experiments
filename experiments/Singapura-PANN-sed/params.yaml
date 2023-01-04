@@ -9,16 +9,17 @@ features:
     type: none
 
 train:
-  random_seed: 12345 # int
+  random_seed: 123456 # int
   train_percent: 0.8 # float [0,1]
-  nepochs: 200 # int
-  learning_rate: 0.00001 # float
+  nepochs: 250 # int
+  learning_rate: 0.000001 # float
   batch_size: 32 # int
   model: 'PANN-sed'
   dataset: ['SINGAPURA']
   stopping_criteria: 'valid_loss'
   patience: 50
   finetuning: False
+  ft_percent: 0.8
   
 evaluate:
   dataset: ['SINGAPURA']
