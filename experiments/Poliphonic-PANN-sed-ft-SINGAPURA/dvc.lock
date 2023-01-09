@@ -21,18 +21,18 @@ stages:
         train.finetuning: SPASS
         train.freeze: false
         train.ft_percent: 0.8
-        train.learning_rate: 1e-06
+        train.learning_rate: 1e-07
         train.nepochs: 150
-        train.random_seed: 123456
+        train.random_seed: 12345
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: f15f628aaa76755c15c111cd22d2dbb7
+      md5: ccfb4fc473b514906217a36667a85964
       size: 349717204
     - path: traced_model.pt
-      md5: 24492c7df9a0e114eab4b65ed6ed39ca
-      size: 323579815
+      md5: 4cab03e732406e4507796cf0fdcc135f
+      size: 323578113
     - path: training_metrics
-      md5: 1f957002e4c08759658bd3dbf8a3b47d.dir
-      size: 20157
+      md5: 7ad8427e91731df751c81829d0d935ff.dir
+      size: 34200
       nfiles: 6

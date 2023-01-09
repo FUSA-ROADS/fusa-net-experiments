@@ -9,7 +9,7 @@ features:
     type: none
 
 train:
-  random_seed: 123456 # int
+  random_seed: 12345 # int
   train_percent: 0.8 # float [0,1]
   nepochs: 150 # int
   learning_rate: 0.0000001 # float

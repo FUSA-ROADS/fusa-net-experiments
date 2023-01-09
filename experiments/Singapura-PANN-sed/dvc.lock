@@ -14,21 +14,21 @@ stages:
         features.sampling_rate: 32000
         features.waveform_normalization.scope: none
         features.waveform_normalization.type: none
-        train.batch_size: 32
+        train.batch_size: 64
         train.dataset:
         - SINGAPURA
-        train.learning_rate: 1e-06
+        train.learning_rate: 5e-07
         train.nepochs: 250
-        train.random_seed: 123456
+        train.random_seed: 12345
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: 3c5406570bc79efc10501ac2f6d9e252
+      md5: 991d81f74754674d24bc4afdad08437c
       size: 349717076
     - path: traced_model.pt
-      md5: 84a3eac8053551da67e57b741642baae
-      size: 323577985
+      md5: 9d69d426935958f685d2095918833de4
+      size: 323577921
     - path: training_metrics
-      md5: bdc3a8d662c4d764880905be7f15a0c8.dir
-      size: 31650
+      md5: fcccb0dcf3763f78a0bd18f0f01d4bde.dir
+      size: 57459
       nfiles: 6
