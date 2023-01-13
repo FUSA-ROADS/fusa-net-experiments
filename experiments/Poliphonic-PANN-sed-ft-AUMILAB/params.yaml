@@ -10,15 +10,15 @@ features:
 
 train:
   random_seed: 54321 # int
-  train_percent: 0.75 # float [0,1]
-  nepochs: 100 # int
+  train_percent: 0.8 # float [0,1]
+  nepochs: 500 # int
   learning_rate: 0.000001 # float
   batch_size: 32 # int
   model: 'PANN-sed'
   dataset: ['AUMILAB'] #SINGAPURA AUMILAB
-  ft_percent: 0.9
+  ft_percent: 0.8
   stopping_criteria: 'valid_loss'
-  patience: 15
+  patience: 50
   finetuning: 'SPASS' #None, 'SPASS', 'PANN-pretrained'
   freeze: False # True, False
   clf_head: '1L' #None, '1L', '3L'

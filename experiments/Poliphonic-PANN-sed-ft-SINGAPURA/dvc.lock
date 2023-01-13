@@ -22,17 +22,17 @@ stages:
         train.freeze: false
         train.ft_percent: 0.8
         train.learning_rate: 1e-07
-        train.nepochs: 150
+        train.nepochs: 500
         train.random_seed: 12345
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: ccfb4fc473b514906217a36667a85964
+      md5: 9a9bc4970d4129ac9a70f8dc69d0aa06
       size: 349717204
     - path: traced_model.pt
-      md5: 4cab03e732406e4507796cf0fdcc135f
+      md5: 6de99179512c4967998c0cbb29d4b238
       size: 323578113
     - path: training_metrics
-      md5: 7ad8427e91731df751c81829d0d935ff.dir
-      size: 34200
+      md5: 5e22e1d7acedd0376c91daa4e71fef09.dir
+      size: 100193
       nfiles: 6
