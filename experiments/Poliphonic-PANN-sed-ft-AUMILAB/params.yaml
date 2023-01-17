@@ -9,11 +9,11 @@ features:
     type: none
 
 train:
-  random_seed: 54321 # int
+  random_seed: 12345 # int
   train_percent: 0.8 # float [0,1]
   nepochs: 500 # int
   learning_rate: 0.000001 # float
-  batch_size: 32 # int
+  batch_size: 64 # int
   model: 'PANN-sed'
   dataset: ['AUMILAB'] #SINGAPURA AUMILAB
   ft_percent: 0.8

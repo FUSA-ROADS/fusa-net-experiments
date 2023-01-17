@@ -14,7 +14,7 @@ stages:
         features.sampling_rate: 32000
         features.waveform_normalization.scope: none
         features.waveform_normalization.type: none
-        train.batch_size: 32
+        train.batch_size: 64
         train.clf_head: 1L
         train.dataset:
         - AUMILAB
@@ -23,16 +23,16 @@ stages:
         train.ft_percent: 0.8
         train.learning_rate: 1e-06
         train.nepochs: 500
-        train.random_seed: 54321
+        train.random_seed: 12345
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: eb742777202e13a944ec096b2e952aad
+      md5: 5e0583a27b4abb06ef4fd5ccbab149f8
       size: 349815508
     - path: traced_model.pt
-      md5: 4b3f0ecd8af625c5e7603dcf92e44b27
+      md5: de90ea8fa3af4633daca41d9fd304557
       size: 323676289
     - path: training_metrics
-      md5: ebb095060b7cb8653f6d924411a4e64a.dir
-      size: 34301
+      md5: eca2c39b4d5add897b701fbf609a4897.dir
+      size: 34135
       nfiles: 6
