@@ -5,8 +5,8 @@ stages:
       model.pt
     deps:
     - path: ../run_experiment.py
-      md5: 01a8584af696f0d4dcce40c4000aef69
-      size: 2604
+      md5: b55d536790f95df04eb94d5ec772a60b
+      size: 2526
     params:
       params.yaml:
         features.collate_resize: random-crop
@@ -14,19 +14,21 @@ stages:
         features.sampling_rate: 32000
         features.waveform_normalization.scope: none
         features.waveform_normalization.type: none
-        train.batch_size: 32
-        train.learning_rate: 0.0001
-        train.nepochs: 200
+        train.batch_size: 64
+        train.dataset:
+        - AUMILAB
+        train.learning_rate: 1e-06
+        train.nepochs: 500
         train.random_seed: 12345
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: 225fc72072d344c87f787ffe365ab893
-      size: 344205576
+      md5: af74b1fa16ed90a31de867b9d33203e7
+      size: 349815380
     - path: traced_model.pt
-      md5: 3624f75f74544ae3e17019a1a33c3b87
-      size: 318069129
+      md5: 11220112a7c01335ee6b9206a7449260
+      size: 323676417
     - path: training_metrics
-      md5: b3b34685b7d505436461a92afa0f53a5.dir
-      size: 24342
+      md5: 3f3ee5a3374f3f585901d30dac240d85.dir
+      size: 103882
       nfiles: 6
