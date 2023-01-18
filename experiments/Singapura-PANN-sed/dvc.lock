@@ -9,7 +9,7 @@ stages:
       size: 2526
     params:
       params.yaml:
-        features.collate_resize: crop
+        features.collate_resize: random-crop
         features.number_of_channels: 1
         features.sampling_rate: 32000
         features.waveform_normalization.scope: none
@@ -17,18 +17,18 @@ stages:
         train.batch_size: 64
         train.dataset:
         - SINGAPURA
-        train.learning_rate: 5e-07
-        train.nepochs: 250
+        train.learning_rate: 1e-07
+        train.nepochs: 500
         train.random_seed: 12345
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: 991d81f74754674d24bc4afdad08437c
+      md5: 5411c7c1e331637b12cad334c7826b87
       size: 349717076
     - path: traced_model.pt
-      md5: 9d69d426935958f685d2095918833de4
-      size: 323577921
+      md5: aba3d29e0d440d16a82eed7c70bebc16
+      size: 323578049
     - path: training_metrics
-      md5: fcccb0dcf3763f78a0bd18f0f01d4bde.dir
-      size: 57459
+      md5: be76297d422ace795eb177dba007be8c.dir
+      size: 115437
       nfiles: 6
