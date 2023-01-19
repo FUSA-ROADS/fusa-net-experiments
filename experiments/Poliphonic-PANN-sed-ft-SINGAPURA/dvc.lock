@@ -9,12 +9,12 @@ stages:
       size: 2526
     params:
       params.yaml:
-        features.collate_resize: crop
+        features.collate_resize: random-crop
         features.number_of_channels: 1
         features.sampling_rate: 32000
         features.waveform_normalization.scope: none
         features.waveform_normalization.type: none
-        train.batch_size: 32
+        train.batch_size: 64
         train.clf_head: 1L
         train.dataset:
         - SINGAPURA
@@ -27,12 +27,12 @@ stages:
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: 9a9bc4970d4129ac9a70f8dc69d0aa06
+      md5: cdc4e48bf6213b3c88324de31d9a4d12
       size: 349717204
     - path: traced_model.pt
-      md5: 6de99179512c4967998c0cbb29d4b238
-      size: 323578113
+      md5: 7b21ca9bb6544fe954758f931f7d9f09
+      size: 323578049
     - path: training_metrics
-      md5: 5e22e1d7acedd0376c91daa4e71fef09.dir
-      size: 100193
+      md5: bd4d4d3be4eef5fcb0d49c3c3c227be6.dir
+      size: 115239
       nfiles: 6
