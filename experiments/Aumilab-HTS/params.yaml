@@ -9,15 +9,15 @@ features:
     type: none
 
 train:
-  random_seed: 54321 # int
+  random_seed: 12345 # int
   train_percent: 0.8 # float [0,1]
-  nepochs: 200 # int
-  learning_rate: 0.0001 # float
-  batch_size: 32 # int
+  nepochs: 500 # int
+  learning_rate: 0.00001 # float
+  batch_size: 64 # int
   model: 'HTS'
   dataset: ['AUMILAB']
   stopping_criteria: 'valid_loss'
-  patience: 30
+  patience: 50
   
 evaluate:
   dataset: ['AUMILAB']
