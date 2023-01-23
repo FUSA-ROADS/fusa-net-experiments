@@ -1,0 +1,32 @@
+features:
+  sampling_rate: 32000
+  overwrite: false
+  number_of_channels: 1 # 1 / 2 ,  (mono / stereo)
+  combine_channels: 'mean' # 'left' / 'right' / 'mean'
+  collate_resize: 'random-crop' # 'pad' / 'crop' / 'none'
+  mel_transform:
+    n_mels: 40 # Number of mel coefficients
+    n_fft: 2048 # window size
+    hop_length: 1024 # samples between windows
+    normalized:  false # normalize by STFT magnitude
+  waveform_normalization:
+    scope: none
+    type: none
+
+train:
+  random_seed: 12345 # int
+  train_percent: 0.8 # float [0,1]
+  nepochs: 500 # int
+  learning_rate: 0.00001 # float
+  batch_size: 64 # int
+  model: 'ADAVANNE-sed'
+  dataset: ['SINGAPURA'] #SINGAPURA AUMILAB
+  ft_percent: 0.5
+  stopping_criteria: 'valid_loss'
+  patience: 50
+  finetuning: 'SPASS' #None, 'SPASS', 'PANN-pretrained'
+  freeze: False # True, False
+  clf_head: '1L' #None, '1L', '3L'
+  
+evaluate:
+  dataset: ['Poliphonic']
