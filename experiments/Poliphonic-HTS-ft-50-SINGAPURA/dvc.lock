@@ -20,19 +20,19 @@ stages:
         - SINGAPURA
         train.finetuning: SPASS
         train.freeze: false
-        train.ft_percent: 0.8
-        train.learning_rate: 1e-07
+        train.ft_percent: 0.5
+        train.learning_rate: 1e-06
         train.nepochs: 500
         train.random_seed: 12345
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: cdc4e48bf6213b3c88324de31d9a4d12
-      size: 349717204
+      md5: 462b4bd1f00a1739e686284f48ceaf46
+      size: 143108337
     - path: traced_model.pt
-      md5: 7b21ca9bb6544fe954758f931f7d9f09
-      size: 323578049
+      md5: d73f6662b6fba09a22e9c5c1e6f6fae1
+      size: 117192757
     - path: training_metrics
-      md5: bd4d4d3be4eef5fcb0d49c3c3c227be6.dir
-      size: 115239
+      md5: 9ed81f3f40f1bde7a4ab07eddc401bed.dir
+      size: 114600
       nfiles: 6
