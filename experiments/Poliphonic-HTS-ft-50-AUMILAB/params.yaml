@@ -18,7 +18,7 @@ train:
   dataset: ['AUMILAB'] #SINGAPURA AUMILAB
   ft_percent: 0.5
   stopping_criteria: 'valid_loss'
-  patience: 50
+  patience: 80
   finetuning: 'SPASS' #None, 'SPASS', 'PANN-pretrained'
   freeze: False # True, False
   clf_head: '1L' #None, '1L', '3L'
