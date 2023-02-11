@@ -18,8 +18,6 @@ train:
   dataset: ['SINGAPURA']
   stopping_criteria: 'valid_loss'
   patience: 50
-  finetuning: False
-  ft_percent: 0.8
   
 evaluate:
   dataset: ['SINGAPURA']
