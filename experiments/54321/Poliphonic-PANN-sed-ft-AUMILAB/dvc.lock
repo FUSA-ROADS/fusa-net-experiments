@@ -1,0 +1,38 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python ../../run_experiment.py --verbose --train --cuda --root_path ../../../
+      --model_path model.pt
+    deps:
+    - path: ../../run_experiment.py
+      md5: b55d536790f95df04eb94d5ec772a60b
+      size: 2526
+    params:
+      params.yaml:
+        features.collate_resize: random-crop
+        features.number_of_channels: 1
+        features.sampling_rate: 32000
+        features.waveform_normalization.scope: none
+        features.waveform_normalization.type: none
+        train.batch_size: 64
+        train.clf_head: 1L
+        train.dataset:
+        - AUMILAB
+        train.finetuning: SPASS
+        train.freeze: false
+        train.ft_percent: 0.8
+        train.learning_rate: 1e-06
+        train.nepochs: 500
+        train.random_seed: 54321
+        train.train_percent: 0.8
+    outs:
+    - path: model.pt
+      md5: 4b94ddd83047fb8a844581b012c1a5dc
+      size: 349815508
+    - path: traced_model.pt
+      md5: 576942340c3fe5dbc6a987122fed39d4
+      size: 323675777
+    - path: training_metrics
+      md5: 51c11e070406c1d5a5c033bf8531a43d.dir
+      size: 35533
+      nfiles: 6
