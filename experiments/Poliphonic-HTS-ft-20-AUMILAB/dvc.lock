@@ -20,19 +20,19 @@ stages:
         - AUMILAB
         train.finetuning: SPASS
         train.freeze: false
-        train.ft_percent: 0.8
-        train.learning_rate: 1e-06
+        train.ft_percent: 0.2
+        train.learning_rate: 1e-05
         train.nepochs: 500
-        train.random_seed: 12345
+        train.random_seed: 654321
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: 5e0583a27b4abb06ef4fd5ccbab149f8
-      size: 349815508
+      md5: aa44d956fa04d651763624c514b6541d
+      size: 143220209
     - path: traced_model.pt
-      md5: de90ea8fa3af4633daca41d9fd304557
-      size: 323676289
+      md5: a31c0828fa0d69ec428cf2522e73366d
+      size: 117306037
     - path: training_metrics
-      md5: eca2c39b4d5add897b701fbf609a4897.dir
-      size: 34135
+      md5: 9e785ba488c9b15bfe8ba43626da478f.dir
+      size: 82573
       nfiles: 6
