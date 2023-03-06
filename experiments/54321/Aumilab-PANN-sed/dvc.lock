@@ -20,15 +20,15 @@ stages:
         train.learning_rate: 1e-06
         train.nepochs: 500
         train.random_seed: 54321
-        train.train_percent: 0.8
+        train.train_percent: 0.7
     outs:
     - path: model.pt
-      md5: c6ee1d176e62a8c824fd3068184229cb
+      md5: 0c63487b4983c7547bded797df679af4
       size: 349815380
     - path: traced_model.pt
-      md5: 7dc53ded7818faf00604dad832bc47e2
-      size: 323675777
+      md5: 832b7d9f236f7573355dc872638184dc
+      size: 323675713
     - path: training_metrics
-      md5: 1a8134d2199c1a8e6205bc8a1b26af68.dir
-      size: 59525
+      md5: 6de2bcb90c76e7cdba0f830451741fe6.dir
+      size: 54403
       nfiles: 6
