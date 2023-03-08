@@ -23,12 +23,12 @@ stages:
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: 8a958fd8938167ba2ad75d9a679c6c6f
+      md5: df68728b46f92fa447d288f262e0a9d8
       size: 143108337
     - path: traced_model.pt
-      md5: 26c77828b72f9d449dca243c6048ae04
-      size: 117192757
+      md5: 56bc200b613ec0b540fc544bf4504d9b
+      size: 117192821
     - path: training_metrics
-      md5: 9f2af7cfdb663a9ebde7e886b167b566.dir
-      size: 112834
+      md5: 545fe3f3eebb020405ac247b61113858.dir
+      size: 115344
       nfiles: 6
