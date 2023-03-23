@@ -1,0 +1,38 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python ../run_experiment.py --verbose --train --cuda --root_path ../../ --model_path
+      model.pt
+    deps:
+    - path: ../run_experiment.py
+      md5: b55d536790f95df04eb94d5ec772a60b
+      size: 2526
+    params:
+      params.yaml:
+        features.collate_resize: none
+        features.number_of_channels: 1
+        features.sampling_rate: 32000
+        features.waveform_normalization.scope: none
+        features.waveform_normalization.type: none
+        train.batch_size: 64
+        train.clf_head: 1L
+        train.dataset:
+        - SINGAPURA
+        train.finetuning: PANN-pretrained
+        train.freeze: false
+        train.ft_percent: 0.1
+        train.learning_rate: 1e-06
+        train.nepochs: 500
+        train.random_seed: 12345
+        train.train_percent: 0.8
+    outs:
+    - path: model.pt
+      md5: d4a1aa360e0b494111af9aede4bfa54b
+      size: 349717204
+    - path: traced_model.pt
+      md5: 173dd8dfcb5acaa01a32d8c6821b854d
+      size: 323578049
+    - path: training_metrics
+      md5: f11facddb1811234df147b3df54c3723.dir
+      size: 113130
+      nfiles: 6
