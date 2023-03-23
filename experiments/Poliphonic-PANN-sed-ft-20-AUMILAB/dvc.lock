@@ -9,12 +9,12 @@ stages:
       size: 2526
     params:
       params.yaml:
-        features.collate_resize: random-crop
+        features.collate_resize: none
         features.number_of_channels: 1
         features.sampling_rate: 32000
         features.waveform_normalization.scope: none
         features.waveform_normalization.type: none
-        train.batch_size: 32
+        train.batch_size: 64
         train.clf_head: 1L
         train.dataset:
         - AUMILAB
@@ -27,12 +27,12 @@ stages:
         train.train_percent: 0.8
     outs:
     - path: model.pt
-      md5: d84b465fc89deb972721f97d9aa71a92
+      md5: de1306c9f0bf147026d444d3c92696aa
       size: 349815508
     - path: traced_model.pt
-      md5: 7da0690adf1aa7d4f37126dbd684c414
-      size: 323676353
+      md5: 03b992af498cebecb0c8727a2a539acc
+      size: 323676289
     - path: training_metrics
-      md5: 9ae4c6c30cb18c5e3314ba0eee0ebe50.dir
-      size: 34990
+      md5: 84e56f2f77b5dd95859f9e0595b02b31.dir
+      size: 42615
       nfiles: 6
