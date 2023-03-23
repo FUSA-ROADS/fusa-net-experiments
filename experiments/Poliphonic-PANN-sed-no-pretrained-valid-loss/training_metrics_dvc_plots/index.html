@@ -1,0 +1,3210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="5">
+    <title>DVC Plot</title>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    
+</head>
+<body>
+    <table>
+<thead>
+<tr><th>training_metrics.json                                                                                                                                                                                                                           </th></tr>
+</thead>
+<tbody>
+<tr><td>{&#x27;data&#x27;: {&#x27;step&#x27;: 57, &#x27;train&#x27;: {&#x27;loss&#x27;: 0.002105030218884349, &#x27;accuracy&#x27;: 0.946478889292526}, &#x27;valid&#x27;: {&#x27;loss&#x27;: 0.021332881620526312, &#x27;accuracy&#x27;: 0.9337077891805168}, &#x27;f1_score_macro&#x27;: 0.8084832000000002, &#x27;error_rate&#x27;: 0.26870880000000025}}</td></tr>
+</tbody>
+</table>
+<br>
+
+    <div id = "plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_error_rate_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "error_rate": "0.7016064000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1662616842346"
+    },
+    {
+        "error_rate": "0.6852815999999995",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1662619741479"
+    },
+    {
+        "error_rate": "0.636856",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1662622694486"
+    },
+    {
+        "error_rate": "0.5915744000000007",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1662625605306"
+    },
+    {
+        "error_rate": "0.5615551999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1662628522460"
+    },
+    {
+        "error_rate": "0.5483680000000005",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1662631473896"
+    },
+    {
+        "error_rate": "0.5379600000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1662634433598"
+    },
+    {
+        "error_rate": "0.5431280000000004",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1662637408518"
+    },
+    {
+        "error_rate": "0.5041808",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1662640375988"
+    },
+    {
+        "error_rate": "0.5101807999999992",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1662643366540"
+    },
+    {
+        "error_rate": "0.4985871999999997",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1662646372499"
+    },
+    {
+        "error_rate": "0.4427983999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1662649381546"
+    },
+    {
+        "error_rate": "0.43078719999999965",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1662652427403"
+    },
+    {
+        "error_rate": "0.4183024",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1662655470164"
+    },
+    {
+        "error_rate": "0.4626944000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1662658512101"
+    },
+    {
+        "error_rate": "0.4180431999999997",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1662661502113"
+    },
+    {
+        "error_rate": "0.4183567999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1662664480193"
+    },
+    {
+        "error_rate": "0.3872735999999998",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1662667370645"
+    },
+    {
+        "error_rate": "0.6562304000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1662670229629"
+    },
+    {
+        "error_rate": "0.46606079999999966",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1662673080671"
+    },
+    {
+        "error_rate": "0.4065632000000003",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1662676085062"
+    },
+    {
+        "error_rate": "0.3847711999999997",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1662678997650"
+    },
+    {
+        "error_rate": "0.3850128000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1662682078043"
+    },
+    {
+        "error_rate": "0.36390399999999956",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1662685148506"
+    },
+    {
+        "error_rate": "0.379224",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1662688237391"
+    },
+    {
+        "error_rate": "0.3735744000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1662691287737"
+    },
+    {
+        "error_rate": "0.3619103999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1662694361239"
+    },
+    {
+        "error_rate": "0.37429759999999984",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1662697470727"
+    },
+    {
+        "error_rate": "0.3495887999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1662700563307"
+    },
+    {
+        "error_rate": "0.3643424000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1662703677220"
+    },
+    {
+        "error_rate": "0.34449120000000005",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1662706795641"
+    },
+    {
+        "error_rate": "0.35259199999999996",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1662709935937"
+    },
+    {
+        "error_rate": "0.3369392000000004",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1662713114842"
+    },
+    {
+        "error_rate": "0.34341120000000047",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1662716296067"
+    },
+    {
+        "error_rate": "0.31465600000000044",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1662719470067"
+    },
+    {
+        "error_rate": "0.3182480000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1662722642867"
+    },
+    {
+        "error_rate": "0.32634720000000006",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "36",
+        "timestamp": "1662725810375"
+    },
+    {
+        "error_rate": "0.3201616000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "37",
+        "timestamp": "1662729003285"
+    },
+    {
+        "error_rate": "0.32928480000000016",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "38",
+        "timestamp": "1662732193539"
+    },
+    {
+        "error_rate": "0.29857279999999986",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "39",
+        "timestamp": "1662735374476"
+    },
+    {
+        "error_rate": "0.31296000000000007",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "40",
+        "timestamp": "1662738587531"
+    },
+    {
+        "error_rate": "0.2995648000000003",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "41",
+        "timestamp": "1662741790292"
+    },
+    {
+        "error_rate": "0.30525599999999986",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "42",
+        "timestamp": "1662745042699"
+    },
+    {
+        "error_rate": "0.29805440000000005",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "43",
+        "timestamp": "1662748273735"
+    },
+    {
+        "error_rate": "0.29061439999999983",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "44",
+        "timestamp": "1662751556878"
+    },
+    {
+        "error_rate": "0.2939408000000004",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "45",
+        "timestamp": "1662754852205"
+    },
+    {
+        "error_rate": "0.2885072",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "46",
+        "timestamp": "1662758125414"
+    },
+    {
+        "error_rate": "0.28476800000000035",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "47",
+        "timestamp": "1662761393921"
+    },
+    {
+        "error_rate": "0.2974672000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "48",
+        "timestamp": "1662764696682"
+    },
+    {
+        "error_rate": "0.2889327999999998",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "49",
+        "timestamp": "1662767999393"
+    },
+    {
+        "error_rate": "0.30040160000000016",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "50",
+        "timestamp": "1662771323830"
+    },
+    {
+        "error_rate": "0.27873760000000053",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "51",
+        "timestamp": "1662774659641"
+    },
+    {
+        "error_rate": "0.28155519999999984",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "52",
+        "timestamp": "1662778010696"
+    },
+    {
+        "error_rate": "0.2810735999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "53",
+        "timestamp": "1662781388227"
+    },
+    {
+        "error_rate": "0.2809135999999998",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "54",
+        "timestamp": "1662784766058"
+    },
+    {
+        "error_rate": "0.2676416000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "55",
+        "timestamp": "1662788132157"
+    },
+    {
+        "error_rate": "0.27661280000000027",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "56",
+        "timestamp": "1662791476940"
+    },
+    {
+        "error_rate": "0.26870880000000025",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "57",
+        "timestamp": "1662794860471"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "error_rate",
+                    "type": "quantitative",
+                    "title": "error_rate",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "error_rate"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "error_rate",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_error_rate_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_f1_score_macro_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "f1_score_macro": "0.40637919999999966",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1662616842345"
+    },
+    {
+        "f1_score_macro": "0.4296815999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1662619741479"
+    },
+    {
+        "f1_score_macro": "0.48127680000000045",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1662622694486"
+    },
+    {
+        "f1_score_macro": "0.5223199999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1662625605306"
+    },
+    {
+        "f1_score_macro": "0.5499967999999998",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1662628522460"
+    },
+    {
+        "f1_score_macro": "0.5661295999999997",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1662631473895"
+    },
+    {
+        "f1_score_macro": "0.5793039999999996",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1662634433597"
+    },
+    {
+        "f1_score_macro": "0.5769328000000004",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1662637408517"
+    },
+    {
+        "f1_score_macro": "0.6121807999999997",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1662640375987"
+    },
+    {
+        "f1_score_macro": "0.6122528000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1662643366540"
+    },
+    {
+        "f1_score_macro": "0.6211199999999996",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1662646372499"
+    },
+    {
+        "f1_score_macro": "0.6605312000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1662649381545"
+    },
+    {
+        "f1_score_macro": "0.6739904000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1662652427403"
+    },
+    {
+        "f1_score_macro": "0.6827327999999998",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1662655470164"
+    },
+    {
+        "f1_score_macro": "0.6562863999999988",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1662658512101"
+    },
+    {
+        "f1_score_macro": "0.6888320000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1662661502113"
+    },
+    {
+        "f1_score_macro": "0.6930879999999996",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1662664480192"
+    },
+    {
+        "f1_score_macro": "0.7114320000000003",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1662667370645"
+    },
+    {
+        "f1_score_macro": "0.46595840000000055",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1662670229628"
+    },
+    {
+        "f1_score_macro": "0.6491968000000004",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1662673080671"
+    },
+    {
+        "f1_score_macro": "0.6973824000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1662676085062"
+    },
+    {
+        "f1_score_macro": "0.7142176000000007",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1662678997649"
+    },
+    {
+        "f1_score_macro": "0.7199152000000004",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1662682078042"
+    },
+    {
+        "f1_score_macro": "0.7321647999999998",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1662685148505"
+    },
+    {
+        "f1_score_macro": "0.725880000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1662688237391"
+    },
+    {
+        "f1_score_macro": "0.7291168000000006",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1662691287737"
+    },
+    {
+        "f1_score_macro": "0.7376768000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1662694361239"
+    },
+    {
+        "f1_score_macro": "0.7300800000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1662697470727"
+    },
+    {
+        "f1_score_macro": "0.7458815999999998",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1662700563306"
+    },
+    {
+        "f1_score_macro": "0.7412079999999995",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1662703677219"
+    },
+    {
+        "f1_score_macro": "0.7511088000000005",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1662706795641"
+    },
+    {
+        "f1_score_macro": "0.7478560000000006",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1662709935937"
+    },
+    {
+        "f1_score_macro": "0.7587056000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1662713114841"
+    },
+    {
+        "f1_score_macro": "0.7559568000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1662716296067"
+    },
+    {
+        "f1_score_macro": "0.7718815999999996",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1662719470067"
+    },
+    {
+        "f1_score_macro": "0.7698368",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1662722642867"
+    },
+    {
+        "f1_score_macro": "0.7688911999999996",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "36",
+        "timestamp": "1662725810375"
+    },
+    {
+        "f1_score_macro": "0.7685184000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "37",
+        "timestamp": "1662729003284"
+    },
+    {
+        "f1_score_macro": "0.7660783999999996",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "38",
+        "timestamp": "1662732193538"
+    },
+    {
+        "f1_score_macro": "0.7845887999999992",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "39",
+        "timestamp": "1662735374476"
+    },
+    {
+        "f1_score_macro": "0.7763808000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "40",
+        "timestamp": "1662738587530"
+    },
+    {
+        "f1_score_macro": "0.7841503999999998",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "41",
+        "timestamp": "1662741790292"
+    },
+    {
+        "f1_score_macro": "0.7808303999999997",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "42",
+        "timestamp": "1662745042699"
+    },
+    {
+        "f1_score_macro": "0.7865071999999993",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "43",
+        "timestamp": "1662748273735"
+    },
+    {
+        "f1_score_macro": "0.7930687999999997",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "44",
+        "timestamp": "1662751556877"
+    },
+    {
+        "f1_score_macro": "0.7921007999999997",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "45",
+        "timestamp": "1662754852205"
+    },
+    {
+        "f1_score_macro": "0.7940208000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "46",
+        "timestamp": "1662758125413"
+    },
+    {
+        "f1_score_macro": "0.7974784000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "47",
+        "timestamp": "1662761393920"
+    },
+    {
+        "f1_score_macro": "0.7916239999999993",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "48",
+        "timestamp": "1662764696682"
+    },
+    {
+        "f1_score_macro": "0.7943664",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "49",
+        "timestamp": "1662767999392"
+    },
+    {
+        "f1_score_macro": "0.7861904000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "50",
+        "timestamp": "1662771323830"
+    },
+    {
+        "f1_score_macro": "0.8003984000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "51",
+        "timestamp": "1662774659641"
+    },
+    {
+        "f1_score_macro": "0.799192",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "52",
+        "timestamp": "1662778010695"
+    },
+    {
+        "f1_score_macro": "0.8001824000000001",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "53",
+        "timestamp": "1662781388226"
+    },
+    {
+        "f1_score_macro": "0.8004432000000005",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "54",
+        "timestamp": "1662784766058"
+    },
+    {
+        "f1_score_macro": "0.8097231999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "55",
+        "timestamp": "1662788132157"
+    },
+    {
+        "f1_score_macro": "0.8046079999999999",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "56",
+        "timestamp": "1662791476939"
+    },
+    {
+        "f1_score_macro": "0.8084832000000002",
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "57",
+        "timestamp": "1662794860470"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "f1_score_macro",
+                    "type": "quantitative",
+                    "title": "f1_score_macro",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "f1_score_macro"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "f1_score_macro",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_f1_score_macro_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_train_accuracy_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1662616842344",
+        "train/accuracy": "0.8289835694608424"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1662619176570",
+        "train/accuracy": "0.8414107755880484"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1662622143011",
+        "train/accuracy": "0.8490543547361727"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1662625048706",
+        "train/accuracy": "0.8558697817334181"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1662627972875",
+        "train/accuracy": "0.8610738700693245"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1662630907957",
+        "train/accuracy": "0.8658403747767374"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1662633866129",
+        "train/accuracy": "0.8699058774558778"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1662636846740",
+        "train/accuracy": "0.873130248539339"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1662639807437",
+        "train/accuracy": "0.8764651621106162"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1662642790233",
+        "train/accuracy": "0.8796504253322434"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1662645798922",
+        "train/accuracy": "0.8828334529107257"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1662648805628",
+        "train/accuracy": "0.8857922895286532"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1662651853611",
+        "train/accuracy": "0.8885882693064506"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1662654892471",
+        "train/accuracy": "0.8912649683649679"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1662657933602",
+        "train/accuracy": "0.8927567750431388"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1662660937107",
+        "train/accuracy": "0.895301307783126"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1662663911878",
+        "train/accuracy": "0.8974933672388219"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1662666834698",
+        "train/accuracy": "0.8996576378167281"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1662669682723",
+        "train/accuracy": "0.8652792192655834"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1662672532573",
+        "train/accuracy": "0.8691268549632185"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1662675508850",
+        "train/accuracy": "0.8908665198437918"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1662678438760",
+        "train/accuracy": "0.8975175612266516"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1662681483621",
+        "train/accuracy": "0.9001609526836796"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1662684560963",
+        "train/accuracy": "0.9031016059697881"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1662687645772",
+        "train/accuracy": "0.9047541973178334"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1662690696760",
+        "train/accuracy": "0.9061353706899162"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1662693765932",
+        "train/accuracy": "0.9071023310023322"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1662696869491",
+        "train/accuracy": "0.9086668286259193"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1662699963189",
+        "train/accuracy": "0.9097245042835947"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1662703079929",
+        "train/accuracy": "0.9113915644961104"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1662706182151",
+        "train/accuracy": "0.9124043047861231"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1662709321185",
+        "train/accuracy": "0.9133934625980074"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1662712499482",
+        "train/accuracy": "0.9147809448127633"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1662715682038",
+        "train/accuracy": "0.9154152044924766"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1662718858834",
+        "train/accuracy": "0.9171435534162805"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1662722030620",
+        "train/accuracy": "0.9184437486755674"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "36",
+        "timestamp": "1662725193706",
+        "train/accuracy": "0.9188593860684772"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "37",
+        "timestamp": "1662728374755",
+        "train/accuracy": "0.9207449308267495"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "38",
+        "timestamp": "1662731575374",
+        "train/accuracy": "0.9221119229255584"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "39",
+        "timestamp": "1662734756497",
+        "train/accuracy": "0.9233124875124875"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "40",
+        "timestamp": "1662737960456",
+        "train/accuracy": "0.9243061150970249"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "41",
+        "timestamp": "1662741163824",
+        "train/accuracy": "0.9259665349801715"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "42",
+        "timestamp": "1662744410051",
+        "train/accuracy": "0.9268259800805257"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "43",
+        "timestamp": "1662747643837",
+        "train/accuracy": "0.927144606908244"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "44",
+        "timestamp": "1662750924563",
+        "train/accuracy": "0.9292619214119204"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "45",
+        "timestamp": "1662754216388",
+        "train/accuracy": "0.9307883631519999"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "46",
+        "timestamp": "1662757486613",
+        "train/accuracy": "0.9322784745557466"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "47",
+        "timestamp": "1662760757481",
+        "train/accuracy": "0.9335631050767417"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "48",
+        "timestamp": "1662764057078",
+        "train/accuracy": "0.9349545454545458"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "49",
+        "timestamp": "1662767356183",
+        "train/accuracy": "0.9362124254533337"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "50",
+        "timestamp": "1662770681284",
+        "train/accuracy": "0.937728709169618"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "51",
+        "timestamp": "1662774007408",
+        "train/accuracy": "0.9387077331759159"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "52",
+        "timestamp": "1662777358919",
+        "train/accuracy": "0.9398203160475892"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "53",
+        "timestamp": "1662780727374",
+        "train/accuracy": "0.94156257833076"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "54",
+        "timestamp": "1662784105594",
+        "train/accuracy": "0.9425119153573698"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "55",
+        "timestamp": "1662787479485",
+        "train/accuracy": "0.943918678291406"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "56",
+        "timestamp": "1662790830340",
+        "train/accuracy": "0.9452792798110974"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "57",
+        "timestamp": "1662794202173",
+        "train/accuracy": "0.946478889292526"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "train/accuracy",
+                    "type": "quantitative",
+                    "title": "train/accuracy",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "train/accuracy"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "train/accuracy",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_train_accuracy_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_train_loss_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1662616842344",
+        "train/loss": "0.006088664431869984"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1662619176568",
+        "train/loss": "0.0055581195697188375"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1662622143009",
+        "train/loss": "0.0053009160488843915"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1662625048704",
+        "train/loss": "0.005075658291578293"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1662627972874",
+        "train/loss": "0.0049065981760621075"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1662630907955",
+        "train/loss": "0.004748257614672184"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1662633866127",
+        "train/loss": "0.004618368712067604"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1662636846738",
+        "train/loss": "0.004514324797689915"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1662639807435",
+        "train/loss": "0.004401209641993046"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1662642790231",
+        "train/loss": "0.004300671434402466"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1662645798920",
+        "train/loss": "0.00420798125937581"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1662648805627",
+        "train/loss": "0.004119493933022023"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1662651853609",
+        "train/loss": "0.004027810277789831"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1662654892469",
+        "train/loss": "0.003941357660293579"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1662657933600",
+        "train/loss": "0.0039003578893840314"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1662660937105",
+        "train/loss": "0.003815655057877302"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1662663911876",
+        "train/loss": "0.003746755924075842"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1662666834697",
+        "train/loss": "0.0036778111696243285"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1662669682722",
+        "train/loss": "0.005303092607110739"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1662672532572",
+        "train/loss": "0.0047209829390048984"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1662675508848",
+        "train/loss": "0.00398728753849864"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1662678438759",
+        "train/loss": "0.0037546967655420305"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1662681483620",
+        "train/loss": "0.003660620955377817"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1662684560962",
+        "train/loss": "0.003563040828704834"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1662687645760",
+        "train/loss": "0.003504565317928791"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1662690696759",
+        "train/loss": "0.003458062794059515"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1662693765930",
+        "train/loss": "0.0034267332747578622"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1662696869489",
+        "train/loss": "0.003373975319415331"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1662699963187",
+        "train/loss": "0.003337118136137724"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1662703079928",
+        "train/loss": "0.0032811807192862034"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1662706182150",
+        "train/loss": "0.0032549117527902126"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1662709321183",
+        "train/loss": "0.003215992285311222"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1662712499480",
+        "train/loss": "0.0031682749584317207"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1662715682036",
+        "train/loss": "0.0031552431538701057"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1662718858832",
+        "train/loss": "0.0030911995179951192"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1662722030618",
+        "train/loss": "0.00304669521600008"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "36",
+        "timestamp": "1662725193704",
+        "train/loss": "0.0030306815758347513"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "37",
+        "timestamp": "1662728374753",
+        "train/loss": "0.002965250796079636"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "38",
+        "timestamp": "1662731575372",
+        "train/loss": "0.0029220060646533968"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "39",
+        "timestamp": "1662734756496",
+        "train/loss": "0.00287856158092618"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "40",
+        "timestamp": "1662737960455",
+        "train/loss": "0.0028429905407130716"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "41",
+        "timestamp": "1662741163822",
+        "train/loss": "0.0027897207282483578"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "42",
+        "timestamp": "1662744410049",
+        "train/loss": "0.0027632239520549774"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "43",
+        "timestamp": "1662747643836",
+        "train/loss": "0.002758090730011463"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "44",
+        "timestamp": "1662750924561",
+        "train/loss": "0.002685415019094944"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "45",
+        "timestamp": "1662754216386",
+        "train/loss": "0.0026282022200524806"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "46",
+        "timestamp": "1662757486611",
+        "train/loss": "0.002577247855067253"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "47",
+        "timestamp": "1662760757479",
+        "train/loss": "0.002535819159448147"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "48",
+        "timestamp": "1662764057076",
+        "train/loss": "0.002484044509381056"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "49",
+        "timestamp": "1662767356182",
+        "train/loss": "0.0024447491213679313"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "50",
+        "timestamp": "1662770681283",
+        "train/loss": "0.002396880653500557"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "51",
+        "timestamp": "1662774007406",
+        "train/loss": "0.0023645697362720966"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "52",
+        "timestamp": "1662777358917",
+        "train/loss": "0.002335818934440613"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "53",
+        "timestamp": "1662780727372",
+        "train/loss": "0.00226974271312356"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "54",
+        "timestamp": "1662784105592",
+        "train/loss": "0.0022488186217844487"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "55",
+        "timestamp": "1662787479483",
+        "train/loss": "0.0021896279498934746"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "56",
+        "timestamp": "1662790830339",
+        "train/loss": "0.002149127046763897"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "57",
+        "timestamp": "1662794202171",
+        "train/loss": "0.002105030218884349"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "train/loss",
+                    "type": "quantitative",
+                    "title": "train/loss",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "train/loss"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "train/loss",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_train_loss_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_valid_accuracy_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1662616842345",
+        "valid/accuracy": "0.8422478006841638"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1662619741478",
+        "valid/accuracy": "0.8492202948566586"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1662622694486",
+        "valid/accuracy": "0.8579467926013389"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1662625605305",
+        "valid/accuracy": "0.8630976962431512"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1662628522460",
+        "valid/accuracy": "0.8668822268640454"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1662631473895",
+        "valid/accuracy": "0.8727456119637934"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1662634433597",
+        "valid/accuracy": "0.8775471982562897"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1662637408517",
+        "valid/accuracy": "0.8782331305058573"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1662640375987",
+        "valid/accuracy": "0.8850816577362035"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1662643366539",
+        "valid/accuracy": "0.8861179184451917"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1662646372499",
+        "valid/accuracy": "0.8881577452850181"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1662649381545",
+        "valid/accuracy": "0.8928240365694917"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1662652427402",
+        "valid/accuracy": "0.8972650924832742"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1662655470163",
+        "valid/accuracy": "0.8990983077528536"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1662658512100",
+        "valid/accuracy": "0.8967311960766517"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1662661502112",
+        "valid/accuracy": "0.9012741803650904"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1662664480192",
+        "valid/accuracy": "0.904074640511004"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1662667370644",
+        "valid/accuracy": "0.9072849271940189"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1662670229628",
+        "valid/accuracy": "0.8582977749523201"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1662673080670",
+        "valid/accuracy": "0.8938910604546967"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1662676085061",
+        "valid/accuracy": "0.9033690672963399"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1662678997649",
+        "valid/accuracy": "0.9069117306935486"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1662682078042",
+        "valid/accuracy": "0.9099710652983375"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1662685148505",
+        "valid/accuracy": "0.9117204250295168"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1662688237391",
+        "valid/accuracy": "0.9121789241061968"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1662691287737",
+        "valid/accuracy": "0.913689801107982"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1662694361239",
+        "valid/accuracy": "0.9146926528017446"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1662697470727",
+        "valid/accuracy": "0.9132441074077433"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1662700563306",
+        "valid/accuracy": "0.9168991493355126"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1662703677219",
+        "valid/accuracy": "0.9176535343444421"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1662706795640",
+        "valid/accuracy": "0.9181508188780916"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1662709935936",
+        "valid/accuracy": "0.9183544818817543"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1662713114841",
+        "valid/accuracy": "0.9205873338782427"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1662716296066",
+        "valid/accuracy": "0.9202308176671813"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1662719470067",
+        "valid/accuracy": "0.9223700541882365"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1662722642867",
+        "valid/accuracy": "0.9228631852995491"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "36",
+        "timestamp": "1662725810375",
+        "valid/accuracy": "0.9236919141464605"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "37",
+        "timestamp": "1662729003284",
+        "valid/accuracy": "0.9226709351254793"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "38",
+        "timestamp": "1662732193538",
+        "valid/accuracy": "0.9231297187660821"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "39",
+        "timestamp": "1662735374476",
+        "valid/accuracy": "0.9256454151908703"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "40",
+        "timestamp": "1662738587530",
+        "valid/accuracy": "0.9254534132534141"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "41",
+        "timestamp": "1662741790291",
+        "valid/accuracy": "0.9257219386673929"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "42",
+        "timestamp": "1662745042698",
+        "valid/accuracy": "0.9259092422728787"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "43",
+        "timestamp": "1662748273734",
+        "valid/accuracy": "0.9271528410982959"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "44",
+        "timestamp": "1662751556877",
+        "valid/accuracy": "0.928926534071988"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "45",
+        "timestamp": "1662754852205",
+        "valid/accuracy": "0.9296054369872547"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "46",
+        "timestamp": "1662758125413",
+        "valid/accuracy": "0.929814567250931"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "47",
+        "timestamp": "1662761393920",
+        "valid/accuracy": "0.9303166590984773"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "48",
+        "timestamp": "1662764696681",
+        "valid/accuracy": "0.930253855235673"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "49",
+        "timestamp": "1662767999392",
+        "valid/accuracy": "0.9299723791360144"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "50",
+        "timestamp": "1662771323829",
+        "valid/accuracy": "0.9274373202555027"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "51",
+        "timestamp": "1662774659641",
+        "valid/accuracy": "0.9306190415644958"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "52",
+        "timestamp": "1662778010695",
+        "valid/accuracy": "0.9307690915145451"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "53",
+        "timestamp": "1662781388226",
+        "valid/accuracy": "0.9314731874186424"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "54",
+        "timestamp": "1662784766057",
+        "valid/accuracy": "0.9309803408712495"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "55",
+        "timestamp": "1662788132156",
+        "valid/accuracy": "0.933690128053765"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "56",
+        "timestamp": "1662791476939",
+        "valid/accuracy": "0.9313304453122626"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "57",
+        "timestamp": "1662794860470",
+        "valid/accuracy": "0.9337077891805168"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "valid/accuracy",
+                    "type": "quantitative",
+                    "title": "valid/accuracy",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "valid/accuracy"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "valid/accuracy",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_valid_accuracy_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_valid_loss_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1662616842345",
+        "valid/loss": "0.04441634291410446"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1662619741477",
+        "valid/loss": "0.042279186087846754"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1662622694484",
+        "valid/loss": "0.039759782540798184"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1662625605304",
+        "valid/loss": "0.03866145751178265"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1662628522458",
+        "valid/loss": "0.03754965082705021"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1662631473893",
+        "valid/loss": "0.036038190481066705"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1662634433596",
+        "valid/loss": "0.03457398348152638"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1662637408516",
+        "valid/loss": "0.03448177930414677"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1662640375986",
+        "valid/loss": "0.032620076715946196"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1662643366538",
+        "valid/loss": "0.032447901847958566"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1662646372497",
+        "valid/loss": "0.032191964155435564"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1662649381544",
+        "valid/loss": "0.03131501266360283"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1662652427401",
+        "valid/loss": "0.029709962129592895"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1662655470161",
+        "valid/loss": "0.02935821177661419"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1662658512099",
+        "valid/loss": "0.02985216113626957"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1662661502111",
+        "valid/loss": "0.031730645129084585"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1662664480191",
+        "valid/loss": "0.027735279792547227"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1662667370643",
+        "valid/loss": "0.027164343145489694"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1662670229627",
+        "valid/loss": "0.04069198087751865"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1662673080669",
+        "valid/loss": "0.03059258921146393"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1662676085060",
+        "valid/loss": "0.028303079172968863"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1662678997647",
+        "valid/loss": "0.027067657658457756"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1662682078041",
+        "valid/loss": "0.0264203617811203"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1662685148504",
+        "valid/loss": "0.025858179983496665"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1662688237389",
+        "valid/loss": "0.02610207399427891"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1662691287736",
+        "valid/loss": "0.025269319373369216"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1662694361237",
+        "valid/loss": "0.025146786212921143"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1662697470725",
+        "valid/loss": "0.02748656829595566"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1662700563305",
+        "valid/loss": "0.0243942487180233"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1662703677218",
+        "valid/loss": "0.02421411135494709"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1662706795639",
+        "valid/loss": "0.02438698057830334"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1662709935935",
+        "valid/loss": "0.024869872777163984"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1662713114840",
+        "valid/loss": "0.023612701036036014"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1662716296065",
+        "valid/loss": "0.023510541358590126"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1662719470065",
+        "valid/loss": "0.022910921204090117"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1662722642866",
+        "valid/loss": "0.022849616143107414"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "36",
+        "timestamp": "1662725810373",
+        "valid/loss": "0.02249306084215641"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "37",
+        "timestamp": "1662729003283",
+        "valid/loss": "0.023124124652147294"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "38",
+        "timestamp": "1662732193536",
+        "valid/loss": "0.02284766719341278"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "39",
+        "timestamp": "1662735374475",
+        "valid/loss": "0.022109818282723428"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "40",
+        "timestamp": "1662738587529",
+        "valid/loss": "0.022256916579604148"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "41",
+        "timestamp": "1662741790290",
+        "valid/loss": "0.02210368135869503"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "42",
+        "timestamp": "1662745042697",
+        "valid/loss": "0.022183737097680567"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "43",
+        "timestamp": "1662748273733",
+        "valid/loss": "0.02178690841794014"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "44",
+        "timestamp": "1662751556876",
+        "valid/loss": "0.02152168212980032"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "45",
+        "timestamp": "1662754852203",
+        "valid/loss": "0.02153390973061323"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "46",
+        "timestamp": "1662758125412",
+        "valid/loss": "0.021418330469727517"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "47",
+        "timestamp": "1662761393919",
+        "valid/loss": "0.021094937424361707"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "48",
+        "timestamp": "1662764696680",
+        "valid/loss": "0.021502179658412935"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "49",
+        "timestamp": "1662767999391",
+        "valid/loss": "0.02191415116637945"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "50",
+        "timestamp": "1662771323828",
+        "valid/loss": "0.023475048431754113"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "51",
+        "timestamp": "1662774659639",
+        "valid/loss": "0.021547081649303437"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "52",
+        "timestamp": "1662778010694",
+        "valid/loss": "0.021424941082298754"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "53",
+        "timestamp": "1662781388224",
+        "valid/loss": "0.02113425112515688"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "54",
+        "timestamp": "1662784766056",
+        "valid/loss": "0.021524592690169812"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "55",
+        "timestamp": "1662788132155",
+        "valid/loss": "0.021206547325849534"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "56",
+        "timestamp": "1662791476938",
+        "valid/loss": "0.022906001615524293"
+    },
+    {
+        "filename": "experiments/Poliphonic-PANN-sed-no-pretrained-valid-loss/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "57",
+        "timestamp": "1662794860469",
+        "valid/loss": "0.021332881620526312"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "valid/loss",
+                    "type": "quantitative",
+                    "title": "valid/loss",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "valid/loss"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "valid/loss",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-PANN-sed-no-pretrained-valid-loss_training_metrics_scalars_valid_loss_tsv', spec);
+        </script>
+    </div>
+    
+</body>
+</html>

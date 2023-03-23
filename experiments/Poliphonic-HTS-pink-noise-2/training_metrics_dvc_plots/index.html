@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="5">
+    <title>DVC Plot</title>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    
+</head>
+<body>
+    <table>
+<thead>
+<tr><th>training_metrics.json                                                                                                                                                                                                                          </th></tr>
+</thead>
+<tbody>
+<tr><td>{&#x27;data&#x27;: {&#x27;step&#x27;: 35, &#x27;train&#x27;: {&#x27;loss&#x27;: 0.004671559849381447, &#x27;accuracy&#x27;: 0.8671469445430868}, &#x27;valid&#x27;: {&#x27;loss&#x27;: 0.03453286718726158, &#x27;accuracy&#x27;: 0.8771164417613634}, &#x27;f1_score_macro&#x27;: 0.5980591999999997, &#x27;error_rate&#x27;: 0.5100239999999995}}</td></tr>
+</tbody>
+</table>
+<br>
+
+    <div id = "plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_error_rate_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "error_rate": "0.7461696000000001",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1668113159331"
+    },
+    {
+        "error_rate": "0.6919567999999999",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1668116377925"
+    },
+    {
+        "error_rate": "0.6792480000000002",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1668119687502"
+    },
+    {
+        "error_rate": "0.6544783999999995",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1668122976863"
+    },
+    {
+        "error_rate": "0.6298911999999999",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1668126305952"
+    },
+    {
+        "error_rate": "0.6162960000000005",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1668129605132"
+    },
+    {
+        "error_rate": "0.6273984000000001",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1668132975767"
+    },
+    {
+        "error_rate": "0.6070192",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1668136404533"
+    },
+    {
+        "error_rate": "0.5609904",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1668139874186"
+    },
+    {
+        "error_rate": "0.5832368000000001",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1668143331745"
+    },
+    {
+        "error_rate": "0.5462335999999997",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1668146871902"
+    },
+    {
+        "error_rate": "0.5361839999999995",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1668150405690"
+    },
+    {
+        "error_rate": "0.5364832",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1668153949195"
+    },
+    {
+        "error_rate": "0.5297696000000003",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1668157557684"
+    },
+    {
+        "error_rate": "0.5074319999999999",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1668161230893"
+    },
+    {
+        "error_rate": "0.5290735999999995",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1668164882398"
+    },
+    {
+        "error_rate": "0.5009919999999998",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1668168607633"
+    },
+    {
+        "error_rate": "0.5174224000000004",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1668172381477"
+    },
+    {
+        "error_rate": "0.5529408000000002",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1668176194457"
+    },
+    {
+        "error_rate": "0.5208239999999997",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1668180059895"
+    },
+    {
+        "error_rate": "0.5124960000000001",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1668183973555"
+    },
+    {
+        "error_rate": "0.5183823999999996",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1668187862097"
+    },
+    {
+        "error_rate": "0.5209488",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1668191851065"
+    },
+    {
+        "error_rate": "0.6541792000000005",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1668195864758"
+    },
+    {
+        "error_rate": "0.7322544000000004",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1668199957063"
+    },
+    {
+        "error_rate": "0.6626575999999994",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1668203988916"
+    },
+    {
+        "error_rate": "0.6059264000000003",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1668208054332"
+    },
+    {
+        "error_rate": "0.5654432",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1668212240491"
+    },
+    {
+        "error_rate": "0.5591392",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1668216379576"
+    },
+    {
+        "error_rate": "0.5340527999999996",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1668220616780"
+    },
+    {
+        "error_rate": "0.5265567999999998",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1668224828922"
+    },
+    {
+        "error_rate": "0.5419567999999998",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1668229122816"
+    },
+    {
+        "error_rate": "0.5289951999999992",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1668233484344"
+    },
+    {
+        "error_rate": "0.5328863999999995",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1668237910390"
+    },
+    {
+        "error_rate": "0.5364383999999996",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1668242208921"
+    },
+    {
+        "error_rate": "0.5100239999999995",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1668246663827"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "error_rate",
+                    "type": "quantitative",
+                    "title": "error_rate",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "error_rate"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "error_rate",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_error_rate_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_f1_score_macro_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "f1_score_macro": "0.3550224000000002",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1668113159330"
+    },
+    {
+        "f1_score_macro": "0.41984479999999996",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1668116377924"
+    },
+    {
+        "f1_score_macro": "0.4307631999999997",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1668119687502"
+    },
+    {
+        "f1_score_macro": "0.4593824000000005",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1668122976862"
+    },
+    {
+        "f1_score_macro": "0.47929920000000004",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1668126305952"
+    },
+    {
+        "f1_score_macro": "0.48958240000000014",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1668129605131"
+    },
+    {
+        "f1_score_macro": "0.4836863999999998",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1668132975766"
+    },
+    {
+        "f1_score_macro": "0.5051040000000002",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1668136404533"
+    },
+    {
+        "f1_score_macro": "0.5428895999999998",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1668139874186"
+    },
+    {
+        "f1_score_macro": "0.5291392000000004",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1668143331745"
+    },
+    {
+        "f1_score_macro": "0.5591200000000004",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1668146871902"
+    },
+    {
+        "f1_score_macro": "0.5676703999999997",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1668150405690"
+    },
+    {
+        "f1_score_macro": "0.5699183999999998",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1668153949195"
+    },
+    {
+        "f1_score_macro": "0.5773887999999999",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1668157557684"
+    },
+    {
+        "f1_score_macro": "0.5965312000000004",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1668161230893"
+    },
+    {
+        "f1_score_macro": "0.580982400000001",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1668164882397"
+    },
+    {
+        "f1_score_macro": "0.6016416000000003",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1668168607632"
+    },
+    {
+        "f1_score_macro": "0.5914336000000016",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1668172381477"
+    },
+    {
+        "f1_score_macro": "0.5588655999999999",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1668176194456"
+    },
+    {
+        "f1_score_macro": "0.5908927999999998",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1668180059894"
+    },
+    {
+        "f1_score_macro": "0.5973536000000003",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1668183973555"
+    },
+    {
+        "f1_score_macro": "0.5927663999999999",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1668187862097"
+    },
+    {
+        "f1_score_macro": "0.5835392000000003",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1668191851064"
+    },
+    {
+        "f1_score_macro": "0.4582239999999997",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1668195864757"
+    },
+    {
+        "f1_score_macro": "0.37825600000000004",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1668199957063"
+    },
+    {
+        "f1_score_macro": "0.44889440000000014",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1668203988915"
+    },
+    {
+        "f1_score_macro": "0.5041903999999998",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1668208054332"
+    },
+    {
+        "f1_score_macro": "0.5400815999999999",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1668212240490"
+    },
+    {
+        "f1_score_macro": "0.5510992000000002",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1668216379576"
+    },
+    {
+        "f1_score_macro": "0.5705488000000005",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1668220616779"
+    },
+    {
+        "f1_score_macro": "0.5792160000000004",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1668224828922"
+    },
+    {
+        "f1_score_macro": "0.5661760000000003",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1668229122815"
+    },
+    {
+        "f1_score_macro": "0.5780016000000001",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1668233484344"
+    },
+    {
+        "f1_score_macro": "0.5772640000000003",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1668237910390"
+    },
+    {
+        "f1_score_macro": "0.5769695999999991",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1668242208920"
+    },
+    {
+        "f1_score_macro": "0.5980591999999997",
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1668246663826"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "f1_score_macro",
+                    "type": "quantitative",
+                    "title": "f1_score_macro",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "f1_score_macro"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "f1_score_macro",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_f1_score_macro_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_train_accuracy_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1668113159329",
+        "train/accuracy": "0.824796849846117"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1668115891425",
+        "train/accuracy": "0.8357624304569136"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1668119186653",
+        "train/accuracy": "0.8398203110203596"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1668122461771",
+        "train/accuracy": "0.8421089740175189"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1668125794975",
+        "train/accuracy": "0.8443702252012312"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1668129087297",
+        "train/accuracy": "0.8460364420572916"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1668132448550",
+        "train/accuracy": "0.849360474372633"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1668135871271",
+        "train/accuracy": "0.8515070090553978"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1668139345968",
+        "train/accuracy": "0.8527611875591857"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1668142786088",
+        "train/accuracy": "0.8557625547466851"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1668146312856",
+        "train/accuracy": "0.8581809762665722"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1668149862720",
+        "train/accuracy": "0.8597940444483902"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1668153388055",
+        "train/accuracy": "0.862070065400094"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1668156980439",
+        "train/accuracy": "0.8632259395714961"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1668160654670",
+        "train/accuracy": "0.8649275050307768"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1668164296579",
+        "train/accuracy": "0.8648986579663824"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1668168010856",
+        "train/accuracy": "0.866809574751421"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1668171790293",
+        "train/accuracy": "0.8673351222182757"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1668175591818",
+        "train/accuracy": "0.8617119155421405"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1668179447871",
+        "train/accuracy": "0.8654475452769886"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1668183360463",
+        "train/accuracy": "0.8681281619910038"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1668187244406",
+        "train/accuracy": "0.8696546149976326"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1668191213156",
+        "train/accuracy": "0.869940002071496"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1668195210269",
+        "train/accuracy": "0.8434588822798295"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1668199305632",
+        "train/accuracy": "0.8374393806226326"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1668203339049",
+        "train/accuracy": "0.8379864953243376"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1668207386818",
+        "train/accuracy": "0.8462934141216855"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1668211572600",
+        "train/accuracy": "0.8529866492069131"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1668215714599",
+        "train/accuracy": "0.8573877175071027"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1668219929167",
+        "train/accuracy": "0.8587943492542612"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1668224145355",
+        "train/accuracy": "0.8611903453480111"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1668228432018",
+        "train/accuracy": "0.8624651145241472"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1668232780594",
+        "train/accuracy": "0.8615410851680871"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1668237208859",
+        "train/accuracy": "0.864692366536458"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1668241505689",
+        "train/accuracy": "0.8659088378906242"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1668245947867",
+        "train/accuracy": "0.8671469445430868"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "train/accuracy",
+                    "type": "quantitative",
+                    "title": "train/accuracy",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "train/accuracy"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "train/accuracy",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_train_accuracy_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_train_loss_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1668113159328",
+        "train/loss": "0.006163110485672951"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1668115891423",
+        "train/loss": "0.005784423734247685"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1668119186652",
+        "train/loss": "0.005635916166007519"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1668122461770",
+        "train/loss": "0.005540075846016407"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1668125794973",
+        "train/loss": "0.005462732523679733"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1668129087296",
+        "train/loss": "0.005421164731681347"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1668132448548",
+        "train/loss": "0.005295490574836731"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1668135871269",
+        "train/loss": "0.005212714928388595"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1668139345967",
+        "train/loss": "0.0051673317164182666"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1668142786086",
+        "train/loss": "0.005066392435133457"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1668146312855",
+        "train/loss": "0.004988114649057389"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1668149862719",
+        "train/loss": "0.004933728860318661"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1668153388053",
+        "train/loss": "0.004862349244952202"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1668156980437",
+        "train/loss": "0.004826756209135055"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1668160654669",
+        "train/loss": "0.004759901505708694"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1668164296577",
+        "train/loss": "0.004772097955644131"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1668168010855",
+        "train/loss": "0.00470265184789896"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1668171790291",
+        "train/loss": "0.004686300645768643"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1668175591817",
+        "train/loss": "0.004886911141872406"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1668179447869",
+        "train/loss": "0.004747594739496708"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1668183360462",
+        "train/loss": "0.004652231293916702"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1668187244404",
+        "train/loss": "0.004600974422693253"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1668191213155",
+        "train/loss": "0.0045883843660354615"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1668195210267",
+        "train/loss": "0.005550285701453685"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1668199305630",
+        "train/loss": "0.005773475524783135"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1668203339048",
+        "train/loss": "0.005746502490341664"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1668207386816",
+        "train/loss": "0.005432710012793541"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1668211572599",
+        "train/loss": "0.005183792543411255"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1668215714598",
+        "train/loss": "0.005024238100647926"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1668219929165",
+        "train/loss": "0.004974004852771759"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1668224145353",
+        "train/loss": "0.004885627771914005"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1668228432016",
+        "train/loss": "0.00483136915564537"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1668232780592",
+        "train/loss": "0.004871282269060612"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1668237208858",
+        "train/loss": "0.004758857728540898"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1668241505688",
+        "train/loss": "0.004713120487332344"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1668245947866",
+        "train/loss": "0.004671559849381447"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "train/loss",
+                    "type": "quantitative",
+                    "title": "train/loss",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "train/loss"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "train/loss",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_train_loss_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_valid_accuracy_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1668113159330",
+        "valid/accuracy": "0.8323876657196968"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1668116377924",
+        "valid/accuracy": "0.8435378314393943"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1668119687501",
+        "valid/accuracy": "0.8448979048295451"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1668122976862",
+        "valid/accuracy": "0.8515867069128784"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1668126305951",
+        "valid/accuracy": "0.851637535511364"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1668129605131",
+        "valid/accuracy": "0.8519622987689396"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1668132975766",
+        "valid/accuracy": "0.8536455492424245"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1668136404532",
+        "valid/accuracy": "0.8586976444128795"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1668139874185",
+        "valid/accuracy": "0.8601266098484855"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1668143331745",
+        "valid/accuracy": "0.8634640151515152"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1668146871901",
+        "valid/accuracy": "0.8656628906250003"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1668150405689",
+        "valid/accuracy": "0.8677963541666665"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1668153949195",
+        "valid/accuracy": "0.8696323035037873"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1668157557684",
+        "valid/accuracy": "0.8712635771780298"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1668161230892",
+        "valid/accuracy": "0.873215696022728"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1668164882397",
+        "valid/accuracy": "0.8742183948863632"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1668168607632",
+        "valid/accuracy": "0.8742174360795454"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1668172381477",
+        "valid/accuracy": "0.8769151278409086"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1668176194456",
+        "valid/accuracy": "0.8691015625000004"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1668180059894",
+        "valid/accuracy": "0.877238920454545"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1668183973554",
+        "valid/accuracy": "0.8781956557765156"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1668187862096",
+        "valid/accuracy": "0.8776273200757571"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1668191851064",
+        "valid/accuracy": "0.8717570549242423"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1668195864757",
+        "valid/accuracy": "0.8498674360795457"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1668199957063",
+        "valid/accuracy": "0.8398466500946972"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1668203988915",
+        "valid/accuracy": "0.847642814867424"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1668208054332",
+        "valid/accuracy": "0.8575892163825756"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1668212240490",
+        "valid/accuracy": "0.8622316287878792"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1668216379575",
+        "valid/accuracy": "0.8667048058712115"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1668220616779",
+        "valid/accuracy": "0.8673672348484852"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1668224828922",
+        "valid/accuracy": "0.8717021070075758"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1668229122815",
+        "valid/accuracy": "0.8682346946022721"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1668233484343",
+        "valid/accuracy": "0.8717207386363632"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1668237910389",
+        "valid/accuracy": "0.8735011482007565"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1668242208920",
+        "valid/accuracy": "0.875115814393941"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1668246663826",
+        "valid/accuracy": "0.8771164417613634"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "valid/accuracy",
+                    "type": "quantitative",
+                    "title": "valid/accuracy",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "valid/accuracy"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "valid/accuracy",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_valid_accuracy_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_valid_loss_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1668113159330",
+        "valid/loss": "0.046114493662118915"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "1",
+        "timestamp": "1668116377923",
+        "valid/loss": "0.04423101467490196"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "2",
+        "timestamp": "1668119687500",
+        "valid/loss": "0.04356961557865143"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "3",
+        "timestamp": "1668122976861",
+        "valid/loss": "0.041971996003389356"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "4",
+        "timestamp": "1668126305950",
+        "valid/loss": "0.04181372032761574"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "5",
+        "timestamp": "1668129605130",
+        "valid/loss": "0.04150899133682251"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "6",
+        "timestamp": "1668132975765",
+        "valid/loss": "0.04094356777071953"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "7",
+        "timestamp": "1668136404531",
+        "valid/loss": "0.039600068628787996"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "8",
+        "timestamp": "1668139874184",
+        "valid/loss": "0.038966286167502404"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "9",
+        "timestamp": "1668143331743",
+        "valid/loss": "0.03819359787702561"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "10",
+        "timestamp": "1668146871900",
+        "valid/loss": "0.037509834709763525"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "11",
+        "timestamp": "1668150405688",
+        "valid/loss": "0.036989109072089195"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "12",
+        "timestamp": "1668153949194",
+        "valid/loss": "0.03641166643202305"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "13",
+        "timestamp": "1668157557682",
+        "valid/loss": "0.035990315794944765"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "14",
+        "timestamp": "1668161230891",
+        "valid/loss": "0.03549358742833138"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "15",
+        "timestamp": "1668164882396",
+        "valid/loss": "0.03540451259613037"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "16",
+        "timestamp": "1668168607631",
+        "valid/loss": "0.0354095174998045"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "17",
+        "timestamp": "1668172381475",
+        "valid/loss": "0.03469418715834618"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "18",
+        "timestamp": "1668176194455",
+        "valid/loss": "0.036719374287128445"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "19",
+        "timestamp": "1668180059893",
+        "valid/loss": "0.034514746850728986"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "20",
+        "timestamp": "1668183973553",
+        "valid/loss": "0.03424289362430572"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "21",
+        "timestamp": "1668187862095",
+        "valid/loss": "0.034443862396478654"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "22",
+        "timestamp": "1668191851063",
+        "valid/loss": "0.036025568532943725"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "23",
+        "timestamp": "1668195864756",
+        "valid/loss": "0.04228900316953659"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "24",
+        "timestamp": "1668199957061",
+        "valid/loss": "0.04582024953365326"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "25",
+        "timestamp": "1668203988914",
+        "valid/loss": "0.043179977405071256"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "26",
+        "timestamp": "1668208054330",
+        "valid/loss": "0.04026724696755409"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "27",
+        "timestamp": "1668212240489",
+        "valid/loss": "0.038813574358820914"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "28",
+        "timestamp": "1668216379574",
+        "valid/loss": "0.03733370998799801"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "29",
+        "timestamp": "1668220616778",
+        "valid/loss": "0.03709505260884762"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "30",
+        "timestamp": "1668224828921",
+        "valid/loss": "0.03586885569691658"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "31",
+        "timestamp": "1668229122814",
+        "valid/loss": "0.036858176994323734"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "32",
+        "timestamp": "1668233484342",
+        "valid/loss": "0.035907858607172966"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "33",
+        "timestamp": "1668237910388",
+        "valid/loss": "0.03539230720996857"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "34",
+        "timestamp": "1668242208918",
+        "valid/loss": "0.034935785445570945"
+    },
+    {
+        "filename": "experiments/Poliphonic-HTS-pink-noise-2/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "35",
+        "timestamp": "1668246663825",
+        "valid/loss": "0.03453286718726158"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "valid/loss",
+                    "type": "quantitative",
+                    "title": "valid/loss",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "valid/loss"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "valid/loss",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-pink-noise-2_training_metrics_scalars_valid_loss_tsv', spec);
+        </script>
+    </div>
+    
+</body>
+</html>

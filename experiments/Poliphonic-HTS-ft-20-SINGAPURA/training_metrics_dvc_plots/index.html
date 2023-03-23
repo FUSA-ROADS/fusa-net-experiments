@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="5">
+    <title>DVC Plot</title>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    
+</head>
+<body>
+    <table>
+<thead>
+<tr><th>training_metrics.json                                                                                                                                                                                                                       </th></tr>
+</thead>
+<tbody>
+<tr><td>{&#x27;data&#x27;: {&#x27;step&#x27;: 0, &#x27;train&#x27;: {&#x27;loss&#x27;: 0.01041095100698017, &#x27;accuracy&#x27;: 0.6041890569885362}, &#x27;valid&#x27;: {&#x27;loss&#x27;: 0.07697539670126778, &#x27;accuracy&#x27;: 0.668233989197531}, &#x27;f1_score_macro&#x27;: 0.11529166666666668, &#x27;error_rate&#x27;: 4.337458333333332}}</td></tr>
+</tbody>
+</table>
+<br>
+
+    <div id = "plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_error_rate_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "error_rate": "4.337458333333332",
+        "filename": "experiments/Poliphonic-HTS-ft-20-SINGAPURA/training_metrics/scalars/error_rate.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1675385551989"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "error_rate",
+                    "type": "quantitative",
+                    "title": "error_rate",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "error_rate"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "error_rate",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_error_rate_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_f1_score_macro_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "f1_score_macro": "0.11529166666666668",
+        "filename": "experiments/Poliphonic-HTS-ft-20-SINGAPURA/training_metrics/scalars/f1_score_macro.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1675385551989"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "f1_score_macro",
+                    "type": "quantitative",
+                    "title": "f1_score_macro",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "f1_score_macro"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "f1_score_macro",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_f1_score_macro_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_train_accuracy_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-HTS-ft-20-SINGAPURA/training_metrics/scalars/train/accuracy.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1675385551988",
+        "train/accuracy": "0.6041890569885362"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "train/accuracy",
+                    "type": "quantitative",
+                    "title": "train/accuracy",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "train/accuracy"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "train/accuracy",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_train_accuracy_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_train_loss_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-HTS-ft-20-SINGAPURA/training_metrics/scalars/train/loss.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1675385551987",
+        "train/loss": "0.01041095100698017"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "train/loss",
+                    "type": "quantitative",
+                    "title": "train/loss",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "train/loss"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "train/loss",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_train_loss_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_valid_accuracy_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-HTS-ft-20-SINGAPURA/training_metrics/scalars/valid/accuracy.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1675385551988",
+        "valid/accuracy": "0.668233989197531"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "valid/accuracy",
+                    "type": "quantitative",
+                    "title": "valid/accuracy",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "valid/accuracy"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "valid/accuracy",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_valid_accuracy_tsv', spec);
+        </script>
+    </div>
+    
+
+    <div id = "plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_valid_loss_tsv">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "filename": "experiments/Poliphonic-HTS-ft-20-SINGAPURA/training_metrics/scalars/valid/loss.tsv",
+        "rev": "workspace",
+        "step": "0",
+        "timestamp": "1675385551988",
+        "valid/loss": "0.07697539670126778"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "valid/loss",
+                    "type": "quantitative",
+                    "title": "valid/loss",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                }
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "selection": {
+                        "label": {
+                            "type": "single",
+                            "nearest": true,
+                            "on": "mouseover",
+                            "encodings": [
+                                "x"
+                            ],
+                            "empty": "none",
+                            "clear": "mouseout"
+                        }
+                    },
+                    "mark": "point",
+                    "encoding": {
+                        "opacity": {
+                            "condition": {
+                                "selection": "label",
+                                "value": 1
+                            },
+                            "value": 0
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "transform": [
+                {
+                    "filter": {
+                        "selection": "label"
+                    }
+                }
+            ],
+            "layer": [
+                {
+                    "mark": {
+                        "type": "rule",
+                        "color": "gray"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        }
+                    }
+                },
+                {
+                    "encoding": {
+                        "text": {
+                            "type": "quantitative",
+                            "field": "valid/loss"
+                        },
+                        "x": {
+                            "field": "step",
+                            "type": "quantitative"
+                        },
+                        "y": {
+                            "field": "valid/loss",
+                            "type": "quantitative"
+                        }
+                    },
+                    "layer": [
+                        {
+                            "mark": {
+                                "type": "text",
+                                "align": "left",
+                                "dx": 5,
+                                "dy": -5
+                            },
+                            "encoding": {
+                                "color": {
+                                    "type": "nominal",
+                                    "field": "rev"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#plot_experiments_Poliphonic-HTS-ft-20-SINGAPURA_training_metrics_scalars_valid_loss_tsv', spec);
+        </script>
+    </div>
+    
+</body>
+</html>
