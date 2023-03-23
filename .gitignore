@@ -136,3 +136,8 @@ dmypy.json
 /pretrained_models
 /fusa-training
 /fusa-net-utils
+/plots
+
+/notebooks/pedro_tesis/audios_pedro
+/notebooks/pedro_tesis/audios_pedro_procesados
+/notebooks/pedro_tesis/etiquetas_pedro
