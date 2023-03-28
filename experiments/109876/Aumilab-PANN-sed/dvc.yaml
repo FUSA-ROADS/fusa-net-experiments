@@ -1,0 +1,42 @@
+stages:
+  train:
+    cmd: python ../../run_experiment.py --verbose --train --cuda --root_path ../../../ --model_path model.pt
+    deps:
+    - ../../run_experiment.py
+    params:
+    - features.collate_resize
+    - features.number_of_channels
+    - features.sampling_rate
+    - features.waveform_normalization.scope
+    - features.waveform_normalization.type
+    - train.batch_size
+    - train.train_percent
+    - train.learning_rate
+    - train.nepochs
+    - train.random_seed
+    - train.dataset
+    outs:
+    - model.pt
+    - traced_model.pt
+    live:
+      training_metrics:
+        summary: true
+        html: true
+  evaluate:
+    cmd: python ../run_experiment.py --verbose --evaluate --cuda --root_path ../../ --model_path model.pt
+    deps:
+    - ../run_experiment.py
+    params:
+    - features.collate_resize
+    - features.number_of_channels
+    - features.sampling_rate
+    - features.waveform_normalization.scope
+    - features.waveform_normalization.type
+    - train.batch_size
+    - train.dataset
+    - train.learning_rate
+    - train.nepochs
+    - train.random_seed
+    outs:
+    - classification_table.csv
+    - classification_report.csv
