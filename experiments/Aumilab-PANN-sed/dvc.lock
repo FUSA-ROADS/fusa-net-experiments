@@ -9,7 +9,7 @@ stages:
       size: 2526
     params:
       params.yaml:
-        features.collate_resize: random-crop
+        features.collate_resize: none
         features.number_of_channels: 1
         features.sampling_rate: 32000
         features.waveform_normalization.scope: none
@@ -23,12 +23,12 @@ stages:
         train.train_percent: 0.7
     outs:
     - path: model.pt
-      md5: ac61d86af2c117a4ee09479bd3fb4b59
+      md5: a5fa883f2a5c878e3a74f3973b927b93
       size: 349815380
     - path: traced_model.pt
-      md5: 59f1cb80b9a2c4f47de8c424eff49b69
-      size: 323675841
+      md5: 86ae1212d077a65bad748dd971734073
+      size: 323676353
     - path: training_metrics
-      md5: 76b9f63166b2d9d244ec7fe1bb51c84d.dir
-      size: 102939
+      md5: a71e23c7898de0d530a62378584cc769.dir
+      size: 115760
       nfiles: 6
