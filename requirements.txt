@@ -3,7 +3,8 @@ dvc==2.10.1
 dvclive==0.6.0
 librosa==0.8.1
 matplotlib==3.4.3
-sshfs==2022.11.0
+sshfs==2022.6.0
+pyOpenSSL==24.2.1
 --find-links https://download.pytorch.org/whl/cu113/torch_stable.html
 torch==1.11.0+cu113
 torchtext==0.12.0
