@@ -1,0 +1,38 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python ../run_experiment.py --verbose --train --cuda --root_path ../../ --model_path
+      model.pt
+    deps:
+    - path: ../run_experiment.py
+      md5: b55d536790f95df04eb94d5ec772a60b
+      size: 2526
+    params:
+      params.yaml:
+        features.collate_resize: random-crop
+        features.number_of_channels: 1
+        features.sampling_rate: 32000
+        features.waveform_normalization.scope: none
+        features.waveform_normalization.type: none
+        train.batch_size: 64
+        train.clf_head: 3L
+        train.dataset:
+        - VitGlobalROADS
+        train.finetuning: SPASS
+        train.freeze: false
+        train.learning_rate: 1e-06
+        train.nepochs: 1
+        train.random_seed: 12345
+        train.test_percent: 0.1
+        train.train_percent: 0.75
+    outs:
+    - path: model.pt
+      md5: e04c2d673c86cbee2602dd78a21d50f4
+      size: 344115208
+    - path: traced_model.pt
+      md5: 8d07828a20317af9afa1d85d0164dfe3
+      size: 317969725
+    - path: training_metrics
+      md5: 5c289a6d9358e845a08ad01ef11ceb8c.dir
+      size: 392
+      nfiles: 6
