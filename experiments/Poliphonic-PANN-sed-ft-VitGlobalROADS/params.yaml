@@ -19,7 +19,7 @@ train:
   dataset: ['VitGlobalROADS'] #SINGAPURA AUMILAB
   stopping_criteria: 'valid_loss'
   patience: 50
-  finetuning: 'SPASS' #None, 'SPASS', 'PANN-pretrained'
+  finetuning: 'VitGlobalROADS' #None, 'SPASS', 'PANN-pretrained'
   freeze: False # True, False
   clf_head: '3L' #None, '1L', '3L'
   
