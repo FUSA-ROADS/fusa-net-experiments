@@ -12,14 +12,14 @@ train:
   random_seed: 12345 # int
   train_percent: 0.75 # float [0,1]
   test_percent: 0.1
-  nepochs: 500 # int
+  nepochs: 5 # int
   learning_rate: 0.000001 # float
-  batch_size: 64 # int
+  batch_size: 4 # int
   model: 'PANN-sed'
   dataset: ['VitGlobalROADS'] #SINGAPURA AUMILAB
   stopping_criteria: 'valid_loss'
   patience: 50
-  finetuning: 'VitGlobalROADS' #None, 'SPASS', 'PANN-pretrained'
+  finetuning: 'PANN-pretrained' #None, 'SPASS', 'PANN-pretrained'
   freeze: False # True, False
   clf_head: '3L' #None, '1L', '3L'
   
